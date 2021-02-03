@@ -1,9 +1,20 @@
 <template>
-  <div id="nav">
+  <!-- <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </div>
-  <router-view/>
+  <router-view/> -->
+  <div>
+    <tabbar> </tabbar>
+    <br>
+    <div id="nav">
+      <router-link to="/Home">Home</router-link> |
+      <router-link to="/Project">Project</router-link> |
+      <router-link to="/Model">Model</router-link> |
+      <router-link to="/Team">Team</router-link>
+    </div>
+    <router-view/>
+  </div>
 </template>
 
 <style lang="scss">
@@ -28,3 +39,13 @@
   }
 }
 </style>
+
+<script>
+// import Vue from 'vue'
+import tabbar from './components/Tabbar'
+export default {
+  components: {
+    tabbar: tabbar
+  }
+}
+</script>script
