@@ -11,7 +11,8 @@
     </div>
     <router-view/>
     <br>
-    <myfooter v-bind:class="{'bottom-fix-footer': isnotFull}"> </myfooter>
+    <myfooter> </myfooter>
+    <!-- <myfooter v-bind:class="{'bottom-fix-footer': isnotFull}"> </myfooter> -->
   </div>
 </template>
 
@@ -36,10 +37,10 @@
     }
   };
 }
-.bottom-fix-footer{
-  position: fixed;
-  bottom: 0%;
-}
+// .bottom-fix-footer{
+//   position: fixed;
+//   bottom: 0%;
+// }
 </style>
 
 <script>
@@ -55,15 +56,15 @@ export default {
   router, 
   data: function(){
     return{
-      isnotFull: false
+      // isnotFull: false
     }
   },
   mounted(){
-    console.log(this.isnotFull)
-    var _wh = window.innerHeight;
-    // var _dh = $(document).height();
-    var _bh = document.body.offsetHeight;
-    this.isnotFull = _bh < _wh;
+    // console.log(this.isnotFull)
+    // var _wh = window.innerHeight;
+    // // var _dh = $(document).height();
+    // var _bh = document.body.offsetHeight;
+    // this.isnotFull = _bh < _wh;
     // console.log(_bh, _wh, this.isnotFull)
   },
   methods:{
