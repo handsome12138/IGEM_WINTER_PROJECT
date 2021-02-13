@@ -26,8 +26,8 @@ const routes = [
     component: Project
   },
   {
-    path: '/',
-    name: 'Home',
+    path: '/*',
+    name: 'default',
     component: Home
   },
   {

@@ -1,9 +1,5 @@
 <template>
-  <!-- <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/> -->
+
   <div>
     <tabbar> </tabbar>
     <br>
@@ -14,6 +10,8 @@
       <router-link to="/Team">Team</router-link>
     </div>
     <router-view/>
+    <br>
+    <myfooter v-bind:class="{'bottom-fix-footer': isnotFull}"> </myfooter>
   </div>
 </template>
 
@@ -36,16 +34,40 @@
     &.router-link-exact-active {
       color: #42b983;
     }
-  }
+  };
+}
+.bottom-fix-footer{
+  position: fixed;
+  bottom: 0%;
 }
 </style>
 
 <script>
-// import Vue from 'vue'
+import Vue from 'vue'
+import myfooter from './components/Footer'
+import router from './router/index.js'
 import tabbar from './components/Tabbar'
 export default {
   components: {
-    tabbar: tabbar
+    tabbar: tabbar,
+    myfooter,
+  },
+  router, 
+  data: function(){
+    return{
+      isnotFull: false
+    }
+  },
+  mounted(){
+    console.log(this.isnotFull)
+    var _wh = window.innerHeight;
+    // var _dh = $(document).height();
+    var _bh = document.body.offsetHeight;
+    this.isnotFull = _bh < _wh;
+    // console.log(_bh, _wh, this.isnotFull)
+  },
+  methods:{
+
   }
 }
-</script>script
+</script>
