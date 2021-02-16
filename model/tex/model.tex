@@ -1,0 +1,119 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% MCM/ICM LaTeX Template %%
+%% 2021 MCM/ICM           %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{ctex}
+\usepackage{diagbox}
+\usepackage{makecell}
+\geometry{left=1in,right=0.75in,top=1in,bottom=1in}
+
+
+%New colors defined below
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+%Code listing style named "mystyle"
+\lstdefinestyle{mystyle}{
+  backgroundcolor=\color{backcolour},   commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,         
+  breaklines=true,                 
+  captionpos=b,                    
+  keepspaces=true,                 
+  numbers=left,                    
+  numbersep=5pt,                  
+  showspaces=false,                
+  showstringspaces=false,
+  showtabs=false,                  
+  tabsize=2
+}
+
+%"mystyle" code listing set
+\lstset{style=mystyle}
+\usepackage{indentfirst}
+\setlength{\parindent}{2em}
+\bibliographystyle{unsrt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Replace ABCDEF in the next line with your chosen problem
+% and replace 1111111 with your Team Control Number
+\newcommand{\Problem}{A}
+\newcommand{\Team}{2016174}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amsmath,amssymb,amsthm}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}{Definition}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\graphicspath{{.}}  % Place your graphic files in the same directory as your main document
+\DeclareGraphicsExtensions{.pdf, .jpg, .tif, .png}
+\thispagestyle{empty}
+
+
+%%%%%%%%%%% Begin Summary %%%%%%%%%%%
+% Enter your summary here replacing the (red) text
+% Replace the text from here ...
+
+\vspace{20pt}
+\centerline{{\Large \textbf{Fungi}}}
+\vspace{15pt}
+
+\centerline{{\large \textbf{Summary}}}
+\vspace{7pt}
+
+
+
+% to here
+%%%%%%%%%%% End Summary %%%%%%%%%%%
+
+
+%Begin your paper here
+
+%====================目录页========================================
+\newpage
+\thispagestyle{empty}
+\setcounter{page}{0}
+%{\begin{center}\Large \textbf{Dynamic Model of ``Sweet Spot Effect''}\end{center}}
+\tableofcontents                                                  %
+\newpage                                                          %
+%==================================================================
+
+\section{ODE model}
+AI-2模型
+\begin{equation}
+    \left\{
+    \begin{array}{lll}
+        \frac{\mathrm{d}  }{\mathrm{d}t}  & = &  1\\
+        \frac{\mathrm{d}  }{\mathrm{d}t}  & = &  1
+    \end{array}\right.
+\end{equation}
+
+\begin{equation}
+    \left\{
+    \begin{array}{lll}
+        \frac{\mathrm{d}  }{\mathrm{d}t}  & = &  1\\
+        \frac{\mathrm{d}  }{\mathrm{d}t}  & = &  1
+    \end{array}\right.
+\end{equation}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

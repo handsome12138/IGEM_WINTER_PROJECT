@@ -38,27 +38,57 @@ export default {
             members: [
                 {
                     id: 1,
-                    avatar: 'https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=323840868,2919772715&fm=26&gp=0.jpg',
+                    avatar: require('@/assets/avatars/chen.jpg'),
                     info: 'this is my info'
                 },
                 {
                     id: 2,
-                    avatar: 'https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=323840868,2919772715&fm=26&gp=0.jpg',
+                    avatar: require('@/assets/avatars/cheng.jpg'),
                     info: 'this is my info'
                 },
                 {
                     id: 3,
-                    avatar: 'https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=323840868,2919772715&fm=26&gp=0.jpg',
+                    avatar: require('@/assets/avatars/huang.jpg'),
                     info: 'this is my info'
                 },
                 {
                     id: 4,
-                    avatar: 'https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=323840868,2919772715&fm=26&gp=0.jpg',
+                    avatar: require('@/assets/avatars/ji.jpg'),
                     info: 'this is my info'
                 },
                 {
                     id: 5,
-                    avatar: 'https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=323840868,2919772715&fm=26&gp=0.jpg',
+                    avatar: require('@/assets/avatars/lei.jpg'),
+                    info: 'this is my info'
+                },
+                {
+                    id: 6,
+                    avatar: require('@/assets/avatars/shen.jpg'),
+                    info: 'this is my info'
+                },
+                {
+                    id: 7,
+                    avatar: require('@/assets/avatars/wang.jpg'),
+                    info: 'this is my info'
+                },
+                {
+                    id: 8,
+                    avatar: require('@/assets/avatars/wu.jpg'),
+                    info: 'this is my info'
+                },
+                {
+                    id: 9,
+                    avatar: require('@/assets/avatars/yu.jpg'),
+                    info: 'this is my info'
+                },
+                {
+                    id: 10,
+                    avatar: require('@/assets/avatars/zhang.jpg'),
+                    info: 'this is my info'
+                },
+                {
+                    id: 11,
+                    avatar: require('@/assets/avatars/zheng.jpg'),
                     info: 'this is my info'
                 },
             ]
