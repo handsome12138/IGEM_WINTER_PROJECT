@@ -94,15 +94,25 @@
 %{\begin{center}\Large \textbf{Dynamic Model of ``Sweet Spot Effect''}\end{center}}
 \tableofcontents                                                  %
 \newpage                                                          %
-%==================================================================
+%==================================================================、
+\section{Notations}
+关于符号的约定：
+\begin{enumerate}
+    \item g开头为基因
+    \item m开头为mRNA
+    \item 无开头为Protein蛋白质
+    \item p开头为promoter启动子
+\end{enumerate}
 
 \section{ODE model}
 AI-2模型
 \begin{equation}
     \left\{
-    \begin{array}{lll}
-        \frac{\mathrm{d}  }{\mathrm{d}t}  & = &  1\\
-        \frac{\mathrm{d}  }{\mathrm{d}t}  & = &  1
+    \begin{array}{lllll}
+        gAI2  & \overset{转录}{\rightarrow}  &  mAI2 & \overset{翻译}{\rightarrow}  &  AI2\\
+        gCqs-s  & \overset{转录}{\rightarrow}  &  mCqs-S & \overset{翻译}{\rightarrow}  &  Cqs-S\\
+        AI-2 + Cqs-S & \underset{解离}{\overset{结合}{ \rightleftharpoons }} & AI-2/Cqs-S \\
+        AI-2/Cqs-S + pLuxU &  \underset{解离}{\overset{结合}{ \rightleftharpoons }} & AI-2/Cqs-S/pLuxU
     \end{array}\right.
 \end{equation}
 
@@ -114,6 +124,12 @@ AI-2模型
     \end{array}\right.
 \end{equation}
 
-
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cc}
+        parameters & meaning \\ 
+        
+    \end{tabular}
+\end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}

@@ -1,6 +1,6 @@
 <template>
 
-  <div>
+  <div id="app">
     <tabbar> </tabbar>
     <br>
     <div id="nav">
