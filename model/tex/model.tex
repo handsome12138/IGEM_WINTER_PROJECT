@@ -4,14 +4,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[12pt]{article}
 \usepackage{geometry}
-\usepackage{enumerate}
 \usepackage{amsmath}
+\usepackage{chemarrow}
+\usepackage{enumerate}
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage{subfigure}
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{ctex}
+\usepackage{extarrows}
 \usepackage{diagbox}
 \usepackage{makecell}
 \geometry{left=1in,right=0.75in,top=1in,bottom=1in}
@@ -102,25 +104,66 @@
     \item m开头为mRNA
     \item 无开头为Protein蛋白质
     \item p开头为promoter启动子
+    \item $\alpha$为转录项
+    \item $\beta$为翻译项
+    \item $d$为分解项
 \end{enumerate}
 
-\section{ODE model}
-AI-2模型
+\section{$TGF-\beta$ model}
+input : $TGF-\beta$
 \begin{equation}
     \left\{
     \begin{array}{lllll}
-        gAI2  & \overset{转录}{\rightarrow}  &  mAI2 & \overset{翻译}{\rightarrow}  &  AI2\\
-        gCqs-s  & \overset{转录}{\rightarrow}  &  mCqs-S & \overset{翻译}{\rightarrow}  &  Cqs-S\\
-        AI-2 + Cqs-S & \underset{解离}{\overset{结合}{ \rightleftharpoons }} & AI-2/Cqs-S \\
-        AI-2/Cqs-S + pLuxU &  \underset{解离}{\overset{结合}{ \rightleftharpoons }} & AI-2/Cqs-S/pLuxU
+        gTGFBR1  & \xLongrightarrow[]{Transcription}  &  mTGFBR1 & \xLongrightarrow[]{Translation}  &  TGFBR1\\
+        gTGFBR2  & \xLongrightarrow[]{Transcription}  &  mTGFBR2 & \xLongrightarrow[]{Translation}  &  TGFBR2 \\
+        TGF-\beta + TGFBR2 & \autorightleftharpoons{associate}{disassociate} & TGF-\beta/TGFBR2 \\
+        P + TGFBR1 & & \autorightleftharpoons{$TGF-\beta/TGFBR2$}{disassociate} & TGFBR1-P \\
+        gSos  & \xLongrightarrow[]{Transcription}  &  mSos & \xLongrightarrow[]{Translation}  &  Sos \\
+        gGrb2  & \xLongrightarrow[]{Transcription}  &  mGrb2 & \xLongrightarrow[]{Translation}  &  Grb2 \\
+        gShc  & \xLongrightarrow[]{Transcription}  &  mShc & \xLongrightarrow[]{Translation}  &  Shc \\
+        gSara  & \xLongrightarrow[]{Transcription}  &  mSara & \xLongrightarrow[]{Translation}  &  Sara \\
+        Sos + Grb2 + Shc + Sara & \autorightleftharpoons{associate}{disassociate} & SGSS(quadruplet)\\
+        gSmad2 & \xLongrightarrow[]{SGSS}  &  mSmad2 & \xLongrightarrow[]{Translation}  &  Smad2 \\
+        Smad2 + P & \autorightleftharpoons{TGFBR1-P}{disassociate} & Smad2-P \\
+        gAI-2 & \xLongrightarrow[]{Smad2-P} &  mAI-2 & \xLongrightarrow[]{Translation}  &  AI-2 \\
+        gCqs-S & \xLongrightarrow[]{Transcription}  &  mCqs-S & \xLongrightarrow[]{Translation}  &  Cqs-S \\
+        AI-2 + Cqs-S &  \autorightleftharpoons{associate}{disassociate} & AI-2/Cqs-S \\
+        AI-2/Cqs-S + pLuxU &  \autorightleftharpoons{associate}{disassociate} & AI-2/Cqs-S/pLuxU\\
+        gRhoA & \xLongrightarrow[]{AI-2/Cqs-S/pLuxU} &  mRhoA & \xLongrightarrow[]{Translation}  &  RhoA \\
     \end{array}\right.
 \end{equation}
 
 \begin{equation}
     \left\{
     \begin{array}{lll}
+        \frac{\mathrm{d} mTGFBR2 }{\mathrm{d}t}  & = &  \alpha_{TGFBR2} \cdot gTGFBR2 - d_{mTGFBR2} \cdot mTGFBR2 \\
+        \frac{\mathrm{d} TGFBR2 }{\mathrm{d}t}  & = &  \beta_{TGFBR2} \cdot mTGFBR2 - d_{TGFBR2} \cdot mTGFBR2 \\
+
+        \frac{\mathrm{d} mTGFBR2 }{\mathrm{d}t}  & = &  \alpha_{TGFBR2} \cdot gTGFBR2 - d_{mTGFBR2} \cdot mTGFBR2 \\
+        \frac{\mathrm{d} TGFBR2 }{\mathrm{d}t}  & = &  \beta_{TGFBR2} \cdot mTGFBR2 - d_{TGFBR2} \cdot mTGFBR2 \\
+
+        \frac{\mathrm{d} mSos }{\mathrm{d}t}  & = &  \alpha_{Sos} \cdot gSos - d_{mSos} \cdot mSos \\
+        \frac{\mathrm{d} Sos }{\mathrm{d}t}  & = &  \beta_{Sos} \cdot mSos - d_{Sos} \cdot mSos \\
+
+        
+        \frac{\mathrm{d} mGrb2 }{\mathrm{d}t}  & = &  \alpha_{Grb2} \cdot gGrb2 - d_{mGrb2} \cdot mGrb2 \\
+        \frac{\mathrm{d} Grb2 }{\mathrm{d}t}  & = &  \beta_{Grb2} \cdot mGrb2 - d_{Grb2} \cdot mGrb2 \\
+
+
+        \frac{\mathrm{d} mShc }{\mathrm{d}t}  & = &  \alpha_{Shc} \cdot gShc - d_{mShc} \cdot mShc \\
+        \frac{\mathrm{d} Shc }{\mathrm{d}t}  & = &  \beta_{Shc} \cdot mShc - d_{Shc} \cdot mShc \\
+
+        
+        \frac{\mathrm{d} mSara }{\mathrm{d}t}  & = &  \alpha_{Sara} \cdot gSara - d_{mSara} \cdot mSara \\
+        \frac{\mathrm{d} Sara }{\mathrm{d}t}  & = &  \beta_{Sara} \cdot mSara - d_{Sara} \cdot mSara \\
+
         \frac{\mathrm{d}  }{\mathrm{d}t}  & = &  1\\
-        \frac{\mathrm{d}  }{\mathrm{d}t}  & = &  1
+
+
+
+        
+        \frac{\mathrm{d} mMARKER }{\mathrm{d}t}  & = &  \alpha_{MARKER} \cdot gMARKER - d_{mMARKER} \cdot mMARKER \\
+        \frac{\mathrm{d} MARKER }{\mathrm{d}t}  & = &  \beta_{MARKER} \cdot mMARKER - d_{MARKER} \cdot mMARKER \\
     \end{array}\right.
 \end{equation}
 

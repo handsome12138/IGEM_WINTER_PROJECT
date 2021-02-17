@@ -6,7 +6,7 @@
         <div class="col-sm-12 col-md-6">
           <h6>About</h6>
           <p class="text-justify">
-            IGEM Winter Project Team 2 
+            IGEM Winter Project Team 2
           </p>
         </div>
 
@@ -40,7 +40,6 @@
     </div>
   </div>
 </template>
-
 
 <style lang="scss" scoped>
 .fix-footer{

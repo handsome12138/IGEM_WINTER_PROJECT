@@ -3,12 +3,12 @@
   <div id="app">
     <tabbar> </tabbar>
     <br>
-    <div id="nav">
+    <!-- <div id="nav">
       <router-link to="/Home">Home</router-link> |
       <router-link to="/Project">Project</router-link> |
       <router-link to="/Model">Model</router-link> |
       <router-link to="/Team">Team</router-link>
-    </div>
+    </div> -->
     <router-view/>
     <br>
     <myfooter> </myfooter>
@@ -44,24 +44,24 @@
 </style>
 
 <script>
-import Vue from 'vue'
+// import Vue from 'vue'
 import myfooter from './components/Footer'
 import router from './router/index.js'
 import tabbar from './components/Tabbar'
 export default {
   components: {
     tabbar: tabbar,
-    myfooter,
+    myfooter
   },
-  router, 
-  data: function(){
-    return{
+  router,
+  data: function () {
+    return {
       // isnotFull: false
     }
   },
-  mounted(){
+  mounted () {
   },
-  methods:{
+  methods: {
 
   }
 }

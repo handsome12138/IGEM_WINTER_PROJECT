@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2020.2.28)  16 FEB 2021 18:28
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2020.2.28)  17 FEB 2021 15:23
 entering extended mode
 **model
 (d:\Mycode\igem\wp\IGEM_WINTER_PROJECT\model\tex\model.tex
@@ -48,10 +48,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen109
 \Gm@layoutvoffset=\dimen110
 \Gm@dimlist=\toks15
- (D:\CTEX\MiKTeX\tex\xelatex\xetexconfig\geometry.cfg)) (D:\CTEX\MiKTeX\tex\latex\tools\enumerate.sty
-Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
-\@enLab=\toks16
-) (D:\CTEX\MiKTeX\tex\latex\ams\math\amsmath.sty
+ (D:\CTEX\MiKTeX\tex\xelatex\xetexconfig\geometry.cfg)) (D:\CTEX\MiKTeX\tex\latex\ams\math\amsmath.sty
 Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip43
 
@@ -60,7 +57,7 @@ For additional information on amsmath, use the `?' option.
 Package: amstext 2000/06/29 v2.01
  (D:\CTEX\MiKTeX\tex\latex\ams\math\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks17
+\@emptytoks=\toks16
 \ex@=\dimen111
 )) (D:\CTEX\MiKTeX\tex\latex\ams\math\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
@@ -88,23 +85,32 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \dotsspace@=\muskip10
 \c@parentequation=\count98
 \dspbrk@lvl=\count99
-\tag@help=\toks18
+\tag@help=\toks17
 \row@=\count100
 \column@=\count101
 \maxfields@=\count102
-\andhelp@=\toks19
+\andhelp@=\toks18
 \eqnshift@=\dimen114
 \alignsep@=\dimen115
 \tagshift@=\dimen116
 \tagwidth@=\dimen117
 \totwidth@=\dimen118
 \lineht@=\dimen119
-\@envbody=\toks20
+\@envbody=\toks19
 \multlinegap=\skip44
 \multlinetaggap=\skip45
-\mathdisplay@stack=\toks21
+\mathdisplay@stack=\toks20
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
+) (D:\CTEX\MiKTeX\tex\latex\chemarrow\chemarrow.sty
+\z@=\dimen120
+\z@skip=\skip46
+\autotop=\dimen121
+\autobottom=\dimen122
+\autosize=\dimen123
+) (D:\CTEX\MiKTeX\tex\latex\tools\enumerate.sty
+Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
+\@enLab=\toks21
 ) (D:\CTEX\MiKTeX\tex\latex\float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count103
@@ -125,16 +131,16 @@ Package graphics Info: Driver file: xetex.def on input line 91.
  (D:\CTEX\MiKTeX\tex\xelatex\xetex-def\xetex.def
 File: xetex.def 2009/11/22 v0.94 LaTeX color/graphics driver for XeTeX (RRM/JK)
 ))
-\Gin@req@height=\dimen120
-\Gin@req@width=\dimen121
+\Gin@req@height=\dimen124
+\Gin@req@width=\dimen125
 ) (D:\CTEX\MiKTeX\tex\latex\subfigure\subfigure.sty
 Package: subfigure 2002/07/30 v2.1.4 subfigure package
-\subfigtopskip=\skip46
-\subfigcapskip=\skip47
-\subfigcaptopadj=\dimen122
-\subfigbottomskip=\skip48
-\subfigcapmargin=\dimen123
-\subfiglabelskip=\skip49
+\subfigtopskip=\skip47
+\subfigcapskip=\skip48
+\subfigcaptopadj=\dimen126
+\subfigbottomskip=\skip49
+\subfigcapmargin=\dimen127
+\subfiglabelskip=\skip50
 \c@subfigure=\count104
 \c@lofdepth=\count105
 \c@subtable=\count106
@@ -144,21 +150,21 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 * Local config file subfigure.cfg used *
 ****************************************
 (D:\CTEX\MiKTeX\tex\latex\subfigure\subfigure.cfg)
-\subfig@top=\skip50
-\subfig@bottom=\skip51
+\subfig@top=\skip51
+\subfig@bottom=\skip52
 ) (D:\CTEX\MiKTeX\tex\latex\listings\listings.sty
 \lst@mode=\count108
 \lst@gtempboxa=\box30
 \lst@token=\toks24
 \lst@length=\count109
-\lst@currlwidth=\dimen124
+\lst@currlwidth=\dimen128
 \lst@column=\count110
 \lst@pos=\count111
-\lst@lostspace=\dimen125
-\lst@width=\dimen126
+\lst@lostspace=\dimen129
+\lst@width=\dimen130
 \lst@newlines=\count112
 \lst@lineno=\count113
-\lst@maxwidth=\dimen127
+\lst@maxwidth=\dimen131
  (D:\CTEX\MiKTeX\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 \c@lstnumber=\count114
@@ -232,16 +238,16 @@ Package: l3file 2012/02/26 v3464 L3 Experimental file and I/O operations
 \l_iow_current_indentation_int=\count129
 ) (D:\CTEX\MiKTeX\tex\latex\l3kernel\l3skip.sty
 Package: l3skip 2012/02/26 v3460 L3 Experimental dimensions and skips
-\l_tmpa_dim=\dimen128
-\l_tmpb_dim=\dimen129
-\l_tmpc_dim=\dimen130
-\g_tmpa_dim=\dimen131
-\g_tmpb_dim=\dimen132
-\l_tmpa_skip=\skip52
-\l_tmpb_skip=\skip53
-\l_tmpc_skip=\skip54
-\g_tmpa_skip=\skip55
-\g_tmpb_skip=\skip56
+\l_tmpa_dim=\dimen132
+\l_tmpb_dim=\dimen133
+\l_tmpc_dim=\dimen134
+\g_tmpa_dim=\dimen135
+\g_tmpb_dim=\dimen136
+\l_tmpa_skip=\skip53
+\l_tmpb_skip=\skip54
+\l_tmpc_skip=\skip55
+\g_tmpa_skip=\skip56
+\g_tmpb_skip=\skip57
 ) (D:\CTEX\MiKTeX\tex\latex\l3kernel\l3keys.sty
 Package: l3keys 2011/12/22 v3086 L3 Experimental key-value interfaces
 \g_keyval_level_int=\count130
@@ -299,50 +305,50 @@ Package: l3fp 2012/02/06 v3315 L3 Experimental floating-point operations
 \l_fp_trig_sign_int=\count180
 \l_fp_trig_decimal_int=\count181
 \l_fp_trig_extended_int=\count182
-\l_fp_internal_dim=\dimen133
-\l_fp_internal_skip=\skip57
+\l_fp_internal_dim=\dimen137
+\l_fp_internal_skip=\skip58
 ) (D:\CTEX\MiKTeX\tex\latex\l3kernel\l3box.sty
 Package: l3box 2012/02/18 v3432 L3 Experimental boxes
 \l_tmpb_box=\box32
-\l_box_top_dim=\dimen134
-\l_box_bottom_dim=\dimen135
-\l_box_left_dim=\dimen136
-\l_box_right_dim=\dimen137
-\l_box_top_new_dim=\dimen138
-\l_box_bottom_new_dim=\dimen139
-\l_box_left_new_dim=\dimen140
-\l_box_right_new_dim=\dimen141
+\l_box_top_dim=\dimen138
+\l_box_bottom_dim=\dimen139
+\l_box_left_dim=\dimen140
+\l_box_right_dim=\dimen141
+\l_box_top_new_dim=\dimen142
+\l_box_bottom_new_dim=\dimen143
+\l_box_left_new_dim=\dimen144
+\l_box_right_new_dim=\dimen145
 \l_box_internal_box=\box33
 ) (D:\CTEX\MiKTeX\tex\latex\l3kernel\l3coffins.sty
 Package: l3coffins 2012/02/26 v3460 L3 Experimental coffin code layer
 \l_coffin_internal_box=\box34
-\l_coffin_internal_dim=\dimen142
-\l_coffin_offset_x_dim=\dimen143
-\l_coffin_offset_y_dim=\dimen144
-\l_coffin_x_dim=\dimen145
-\l_coffin_y_dim=\dimen146
-\l_coffin_x_prime_dim=\dimen147
-\l_coffin_y_prime_dim=\dimen148
-\l_coffin_Depth_dim=\dimen149
-\l_coffin_Height_dim=\dimen150
-\l_coffin_TotalHeight_dim=\dimen151
-\l_coffin_Width_dim=\dimen152
+\l_coffin_internal_dim=\dimen146
+\l_coffin_offset_x_dim=\dimen147
+\l_coffin_offset_y_dim=\dimen148
+\l_coffin_x_dim=\dimen149
+\l_coffin_y_dim=\dimen150
+\l_coffin_x_prime_dim=\dimen151
+\l_coffin_y_prime_dim=\dimen152
+\l_coffin_Depth_dim=\dimen153
+\l_coffin_Height_dim=\dimen154
+\l_coffin_TotalHeight_dim=\dimen155
+\l_coffin_Width_dim=\dimen156
 \c_empty_coffin=\box35
 \l_coffin_aligned_coffin=\box36
 \l_coffin_aligned_internal_coffin=\box37
-\l_coffin_bounding_shift_dim=\dimen153
-\l_coffin_left_corner_dim=\dimen154
-\l_coffin_right_corner_dim=\dimen155
-\l_coffin_bottom_corner_dim=\dimen156
-\l_coffin_top_corner_dim=\dimen157
-\l_coffin_scaled_total_height_dim=\dimen158
-\l_coffin_scaled_width_dim=\dimen159
+\l_coffin_bounding_shift_dim=\dimen157
+\l_coffin_left_corner_dim=\dimen158
+\l_coffin_right_corner_dim=\dimen159
+\l_coffin_bottom_corner_dim=\dimen160
+\l_coffin_top_corner_dim=\dimen161
+\l_coffin_scaled_total_height_dim=\dimen162
+\l_coffin_scaled_width_dim=\dimen163
 \l_coffin_display_coffin=\box38
 \l_coffin_display_coord_coffin=\box39
 \l_coffin_display_pole_coffin=\box40
-\l_coffin_display_offset_dim=\dimen160
-\l_coffin_display_x_dim=\dimen161
-\l_coffin_display_y_dim=\dimen162
+\l_coffin_display_offset_dim=\dimen164
+\l_coffin_display_x_dim=\dimen165
+\l_coffin_display_y_dim=\dimen166
 ) (D:\CTEX\MiKTeX\tex\latex\l3kernel\l3color.sty
 Package: l3color 2011/09/07 v2776 L3 Experimental colour support
 ) (D:\CTEX\MiKTeX\tex\latex\l3kernel\l3luatex.sty
@@ -386,9 +392,9 @@ Package: xparse 2012/02/26 v3471 L3 Experimental document command parser
 \l_fontspec_script_int=\count192
 \l_fontspec_language_int=\count193
 \l_fontspec_strnum_int=\count194
-\l_fontspec_tmpa_dim=\dimen163
-\l_fontspec_tmpb_dim=\dimen164
-\l_fontspec_tmpc_dim=\dimen165
+\l_fontspec_tmpa_dim=\dimen167
+\l_fontspec_tmpb_dim=\dimen168
+\l_fontspec_tmpc_dim=\dimen169
 Variant \tl_gset:cV already defined; not changing it on line 66
  (D:\CTEX\MiKTeX\tex\latex\fontspec\fontspec-patches.sty
 Package: fontspec-patches 2011/09/18 v2.2a Advanced font selection for XeLaTeX/LuaLaTeX
@@ -564,20 +570,22 @@ LaTeX Info: Redefining \upshape on input line 1893.
 \xeCJK@cntc=\count199
 \xeCJK@cntd=\count200
 \xeCJK@cnte=\count201
-\xeCJK@dima=\dimen166
+\xeCJK@dima=\dimen170
 LaTeX Info: Redefining \normalfont on input line 886.
 LaTeX Info: Redefining \rmfamily on input line 895.
 LaTeX Info: Redefining \sffamily on input line 899.
 LaTeX Info: Redefining \ttfamily on input line 903.
 Normal \count register pool exhausted, switching to extended pool.
 \xeCJK@featureadded=\count277
-\g_xecjk_exspace_dim=\dimen167
+\g_xecjk_exspace_dim=\dimen171
 ) (D:\CTEX\MiKTeX\tex\latex\ctex\engine\ctex-cjk-common.def
-\ccwd=\dimen168
+\ccwd=\dimen172
 ) (D:\CTEX\MiKTeX\tex\latex\ctex\fontset\ctex-xecjk-winfonts.def))
 \CTEX@q=\count278
 \CTEX@r=\count279
-)) (D:\CTEX\MiKTeX\tex\latex\ctex\def\ctex-utf8.def) (D:\CTEX\MiKTeX\tex\latex\ctex\cfg\ctex.cfg) (D:\CTEX\MiKTeX\tex\latex\diagbox\diagbox.sty
+)) (D:\CTEX\MiKTeX\tex\latex\ctex\def\ctex-utf8.def) (D:\CTEX\MiKTeX\tex\latex\ctex\cfg\ctex.cfg) (D:\CTEX\MiKTeX\tex\latex\extarrows\extarrows.sty
+Package: extarrows 2008/05/15 v1.0b Some extensible arrows
+) (D:\CTEX\MiKTeX\tex\latex\diagbox\diagbox.sty
 Package: diagbox 2011/11/23 v2.0 Making table heads with diagonal lines
  (D:\CTEX\MiKTeX\tex\latex\pict2e\pict2e.sty
 Package: pict2e 2011/04/05 v0.2y Improved picture commands (HjG,RN,JT)
@@ -593,9 +601,9 @@ Package pict2e Info: Driver file for pict2e: p2e-dvips.def on input line 121.
 File: p2e-dvips.def 2011/04/05 v0.1t Driver-dependant file (RN,HjG,JT)
 )
 \pIIe@GRAPH=\toks29
-\@arclen=\dimen169
-\@arcrad=\dimen170
-\@tempdimd=\dimen171
+\@arclen=\dimen173
+\@arcrad=\dimen174
+\@tempdimd=\dimen175
 ) (D:\CTEX\MiKTeX\tex\latex\fp\fp.sty
 Package: fp 1995/04/02
  `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich (D:\CTEX\MiKTeX\tex\latex\fp\defpattern.sty
@@ -635,21 +643,21 @@ Package: fp-eval 1995/04/03
 \diagbox@boxa=\box41
 \diagbox@boxb=\box42
 \diagbox@boxm=\box43
-\diagbox@wd=\dimen172
-\diagbox@ht=\dimen173
-\diagbox@sepl=\dimen174
-\diagbox@sepr=\dimen175
+\diagbox@wd=\dimen176
+\diagbox@ht=\dimen177
+\diagbox@sepl=\dimen178
+\diagbox@sepr=\dimen179
 ) (D:\CTEX\MiKTeX\tex\latex\makecell\makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
  (D:\CTEX\MiKTeX\tex\latex\tools\array.sty
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen176
-\extrarowheight=\dimen177
+\col@sep=\dimen180
+\extrarowheight=\dimen181
 \NC@list=\toks30
-\extratabsurround=\skip58
-\backup@length=\skip59
+\extratabsurround=\skip59
+\backup@length=\skip60
 )
-\rotheadsize=\dimen178
+\rotheadsize=\dimen182
 \c@nlinenum=\count291
 \TeXr@lab=\toks31
 ) (D:\CTEX\MiKTeX\tex\latex\amsfonts\amssymb.sty
@@ -667,36 +675,37 @@ Package: amsthm 2004/08/06 v2.20
 \thm@headfont=\toks34
 \thm@notefont=\toks35
 \thm@headpunct=\toks36
-\thm@preskip=\skip60
-\thm@postskip=\skip61
-\thm@headsep=\skip62
+\thm@preskip=\skip61
+\thm@postskip=\skip62
+\thm@headsep=\skip63
 \dth@everypar=\toks37
 )
 \c@theorem=\count292
 \c@definition=\count293
- (d:\Mycode\igem\wp\IGEM_WINTER_PROJECT\model\tex\model.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 65.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 65.
- (D:\CTEX\MiKTeX\tex\latex\tipa\t3cmr.fd
+
+No file model.aux.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 67.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 67.
+(D:\CTEX\MiKTeX\tex\latex\tipa\t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    ... okay on input line 67.
 Requested font "[lmroman12-regular]:mapping=tex-text" at 12.0pt
  -> D:/CTEX/MiKTeX/fonts/opentype/public/lm/lmroman12-regular.otf
 
@@ -741,60 +750,60 @@ Requested font "[lmroman12-regular]:mapping=tex-text" at 12.0pt
 .................................................
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 65.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 65.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 65.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 65.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 65.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 65.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 65.
-LaTeX Font Info:    Redeclaring math accent \check on input line 65.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 65.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 65.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 65.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 65.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 65.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 65.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 65.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 65.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 65.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 65.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 65.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 65.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 65.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 65.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 65.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 65.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 67.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 67.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 67.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 67.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 67.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 67.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 67.
+LaTeX Font Info:    Redeclaring math accent \check on input line 67.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 67.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 67.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 67.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 67.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `normal' on input line 65.
+(Font)              `operators' in the math version `normal' on input line 67.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> EU1/lmr/m/n on input line 65.
+(Font)                  OT1/cmr/m/n --> EU1/lmr/m/n on input line 67.
 LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
-(Font)              `operators' in the math version `bold' on input line 65.
+(Font)              `operators' in the math version `bold' on input line 67.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> EU1/lmr/m/n on input line 65.
+(Font)                  OT1/cmr/bx/n --> EU1/lmr/m/n on input line 67.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 65.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 65.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/m/n on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> EU1/lmr/m/it on input line 65.
+(Font)                  OT1/cmr/m/it --> EU1/lmr/m/it on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> EU1/lmr/bx/n on input line 65.
+(Font)                  OT1/cmr/bx/n --> EU1/lmr/bx/n on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> EU1/lmss/m/n on input line 65.
+(Font)                  OT1/cmss/m/n --> EU1/lmss/m/n on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> EU1/lmtt/m/n on input line 65.
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/m/n on input line 67.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 65.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 65.
+(Font)                  EU1/lmr/m/n --> EU1/lmr/bx/n on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> EU1/lmr/bx/it on input line 65.
+(Font)                  OT1/cmr/bx/it --> EU1/lmr/bx/it on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> EU1/lmss/bx/n on input line 65.
+(Font)                  OT1/cmss/bx/n --> EU1/lmss/bx/n on input line 67.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> EU1/lmtt/bx/n on input line 65.
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/bx/n on input line 67.
 Requested font "[lmroman17-regular]:mapping=tex-text" at 17.28pt
  -> D:/CTEX/MiKTeX/fonts/opentype/public/lm/lmroman17-regular.otf
 Requested font "[lmroman12-bold]:mapping=tex-text" at 17.28pt
@@ -805,12 +814,10 @@ Requested font "[lmroman12-bold]:mapping=tex-text" at 14.4pt
  -> D:/CTEX/MiKTeX/fonts/opentype/public/lm/lmroman12-bold.otf
 [1
 
-] (d:\Mycode\igem\wp\IGEM_WINTER_PROJECT\model\tex\model.toc
-Requested font "[lmroman12-bold]:mapping=tex-text" at 12.0pt
- -> D:/CTEX/MiKTeX/fonts/opentype/public/lm/lmroman12-bold.otf
-)
+]
+No file model.toc.
 \tf@toc=\write3
- [0]
+[0]
 Requested font "SimSun" at 12.0pt
  -> D:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf
 Requested font "SimSun/ICU" at 12.0pt
@@ -868,7 +875,7 @@ Requested font "cmex8" at 8.0pt
  -> cmex8
 Requested font "cmex7" at 6.0pt
  -> cmex7
-LaTeX Font Info:    Try loading font information for U+msa on input line 109.
+LaTeX Font Info:    Try loading font information for U+msa on input line 107.
  (D:\CTEX\MiKTeX\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
@@ -878,7 +885,7 @@ Requested font "msam10" at 8.0pt
  -> msam10
 Requested font "msam7" at 6.0pt
  -> msam7
-LaTeX Font Info:    Try loading font information for U+msb on input line 109.
+LaTeX Font Info:    Try loading font information for U+msb on input line 107.
  (D:\CTEX\MiKTeX\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
@@ -892,38 +899,20 @@ Requested font "cmr8" at 8.0pt
  -> cmr8
 Requested font "cmr6" at 6.0pt
  -> cmr6
-Missing character: There is no 转 in font [lmroman8-regular]:mapping=tex-text!
-Missing character: There is no 录 in font [lmroman8-regular]:mapping=tex-text!
-Missing character: There is no 翻 in font [lmroman8-regular]:mapping=tex-text!
-Missing character: There is no 译 in font [lmroman8-regular]:mapping=tex-text!
-Missing character: There is no 转 in font [lmroman8-regular]:mapping=tex-text!
-Missing character: There is no 录 in font [lmroman8-regular]:mapping=tex-text!
-Missing character: There is no 翻 in font [lmroman8-regular]:mapping=tex-text!
-Missing character: There is no 译 in font [lmroman8-regular]:mapping=tex-text!
-Missing character: There is no 结 in font [lmroman8-regular]:mapping=tex-text!
-Missing character: There is no 合 in font [lmroman8-regular]:mapping=tex-text!
-Missing character: There is no 结 in font [lmroman8-regular]:mapping=tex-text!
-Missing character: There is no 合 in font [lmroman8-regular]:mapping=tex-text!
-Missing character: There is no 结 in font [lmroman8-regular]:mapping=tex-text!
-Missing character: There is no 合 in font [lmroman8-regular]:mapping=tex-text!
-Missing character: There is no 解 in font [lmroman8-regular]:mapping=tex-text!
-Missing character: There is no 离 in font [lmroman8-regular]:mapping=tex-text!
-Missing character: There is no 结 in font [lmroman8-regular]:mapping=tex-text!
-Missing character: There is no 合 in font [lmroman8-regular]:mapping=tex-text!
-Missing character: There is no 结 in font [lmroman8-regular]:mapping=tex-text!
-Missing character: There is no 合 in font [lmroman8-regular]:mapping=tex-text!
-Missing character: There is no 结 in font [lmroman8-regular]:mapping=tex-text!
-Missing character: There is no 合 in font [lmroman8-regular]:mapping=tex-text!
-Missing character: There is no 解 in font [lmroman8-regular]:mapping=tex-text!
-Missing character: There is no 离 in font [lmroman8-regular]:mapping=tex-text!
- [1] (d:\Mycode\igem\wp\IGEM_WINTER_PROJECT\model\tex\model.aux) ) 
-Here is how much of TeX's memory you used:
- 18823 strings out of 430478
- 360389 string characters out of 3191502
- 395950 words of memory out of 3000000
- 21689 multiletter control sequences out of 15000+200000
- 8429 words of font info for 50 fonts, out of 3000000 for 9000
- 14 hyphenation exceptions out of 8191
- 54i,12n,54p,833b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
-
-Output written on model.pdf (3 pages).
+Requested font "cmmi12" at 17.28pt
+ -> cmmi12
+Requested font "cmsy10" at 17.28pt
+ -> cmsy10
+Requested font "cmex10" at 17.28pt
+ -> cmex10
+Requested font "msam10" at 17.28pt
+ -> msam10
+Requested font "msam10" at 10.0pt
+ -> msam10
+Requested font "msbm10" at 17.28pt
+ -> msbm10
+Requested font "msbm10" at 10.0pt
+ -> msbm10
+Requested font "cmr17" at 17.28pt
+ -> cmr17
+Requested font "arrow" at 12.0pt
