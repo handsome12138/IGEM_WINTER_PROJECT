@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2020.2.28)  17 FEB 2021 15:23
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2020.2.28)  18 FEB 2021 12:52
 entering extended mode
 **model
 (d:\Mycode\igem\wp\IGEM_WINTER_PROJECT\model\tex\model.tex
@@ -682,8 +682,7 @@ Package: amsthm 2004/08/06 v2.20
 )
 \c@theorem=\count292
 \c@definition=\count293
-
-No file model.aux.
+ (d:\Mycode\igem\wp\IGEM_WINTER_PROJECT\model\tex\model.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
 LaTeX Font Info:    ... okay on input line 67.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
@@ -702,7 +701,7 @@ LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 67.
 LaTeX Font Info:    ... okay on input line 67.
 LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 67.
 LaTeX Font Info:    Try loading font information for T3+cmr on input line 67.
-(D:\CTEX\MiKTeX\tex\latex\tipa\t3cmr.fd
+ (D:\CTEX\MiKTeX\tex\latex\tipa\t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
 LaTeX Font Info:    ... okay on input line 67.
@@ -814,45 +813,9 @@ Requested font "[lmroman12-bold]:mapping=tex-text" at 14.4pt
  -> D:/CTEX/MiKTeX/fonts/opentype/public/lm/lmroman12-bold.otf
 [1
 
-]
-No file model.toc.
-\tf@toc=\write3
-[0]
-Requested font "SimSun" at 12.0pt
- -> D:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf
-Requested font "SimSun/ICU" at 12.0pt
- -> D:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf
-\g_fontspec_family_SimSun_int=\count295
-Requested font "SimHei/ICU" at 12.0pt
- -> C:/WINDOWS/Fonts/simhei.ttf
-Requested font "[SIMKAI.TTF]/ICU" at 12.0pt
- -> C:/WINDOWS/Fonts/SIMKAI.TTF
-Requested font "SimHei/I/ICU" at 12.0pt
- -> C:/WINDOWS/Fonts/simhei.ttf
-.................................................
-. fontspec info: "no-font-shape"
-. 
-. Could not resolve font SimHei/I (it probably doesn't exist).
-.................................................
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'SimSun(0)' created for font 'SimSun' with options
-. [Ligatures=TeX,BoldFont={SimHei},ItalicFont={[SIMKAI.TTF]}].
-. 
-. This font family consists of the following shapes:
-. 
-. * 'normal' with NFSS spec.:
-. <->"SimSun/ICU:script=latn;language=DFLT;mapping=tex-text;"
-. 
-. * 'bold' with NFSS spec.:
-. <->"SimHei/ICU:script=latn;language=DFLT;mapping=tex-text;"
-. 
-. * 'italic' with NFSS spec.:
-. <->"[SIMKAI.TTF]/ICU:script=latn;language=DFLT;mapping=tex-text;"
-.................................................
-Requested font "SimSun/ICU:script=latn;language=DFLT;mapping=tex-text;" at 12.0pt
- -> D:/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf
+] (d:\Mycode\igem\wp\IGEM_WINTER_PROJECT\model\tex\model.toc
+Requested font "[lmroman12-bold]:mapping=tex-text" at 12.0pt
+ -> D:/CTEX/MiKTeX/fonts/opentype/public/lm/lmroman12-bold.otf
 Requested font "[lmroman8-regular]:mapping=tex-text" at 8.0pt
  -> D:/CTEX/MiKTeX/fonts/opentype/public/lm/lmroman8-regular.otf
 Requested font "[lmroman6-regular]:mapping=tex-text" at 6.0pt
@@ -875,7 +838,7 @@ Requested font "cmex8" at 8.0pt
  -> cmex8
 Requested font "cmex7" at 6.0pt
  -> cmex7
-LaTeX Font Info:    Try loading font information for U+msa on input line 107.
+LaTeX Font Info:    Try loading font information for U+msa on input line 3.
  (D:\CTEX\MiKTeX\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
@@ -885,7 +848,7 @@ Requested font "msam10" at 8.0pt
  -> msam10
 Requested font "msam7" at 6.0pt
  -> msam7
-LaTeX Font Info:    Try loading font information for U+msb on input line 107.
+LaTeX Font Info:    Try loading font information for U+msb on input line 3.
  (D:\CTEX\MiKTeX\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
@@ -899,20 +862,16 @@ Requested font "cmr8" at 8.0pt
  -> cmr8
 Requested font "cmr6" at 6.0pt
  -> cmr6
-Requested font "cmmi12" at 17.28pt
- -> cmmi12
-Requested font "cmsy10" at 17.28pt
- -> cmsy10
-Requested font "cmex10" at 17.28pt
- -> cmex10
-Requested font "msam10" at 17.28pt
- -> msam10
-Requested font "msam10" at 10.0pt
- -> msam10
-Requested font "msbm10" at 17.28pt
- -> msbm10
-Requested font "msbm10" at 10.0pt
- -> msbm10
-Requested font "cmr17" at 17.28pt
- -> cmr17
-Requested font "arrow" at 12.0pt
+)
+\tf@toc=\write3
+ [0] [1] [2] [3] (d:\Mycode\igem\wp\IGEM_WINTER_PROJECT\model\tex\model.aux) ) 
+Here is how much of TeX's memory you used:
+ 18845 strings out of 430478
+ 360363 string characters out of 3191502
+ 399363 words of memory out of 3000000
+ 21717 multiletter control sequences out of 15000+200000
+ 8389 words of font info for 45 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 54i,6n,54p,835b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on model.pdf (5 pages).

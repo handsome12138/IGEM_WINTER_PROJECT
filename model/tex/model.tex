@@ -75,7 +75,7 @@
 % Replace the text from here ...
 
 \vspace{20pt}
-\centerline{{\Large \textbf{Fungi}}}
+\centerline{{\Large \textbf{IGEM WP Model}}}
 \vspace{15pt}
 
 \centerline{{\large \textbf{Summary}}}
@@ -96,83 +96,61 @@
 %{\begin{center}\Large \textbf{Dynamic Model of ``Sweet Spot Effect''}\end{center}}
 \tableofcontents                                                  %
 \newpage                                                          %
-%==================================================================、
+%==================================================================
 \section{Notations}
-关于符号的约定：
+Here are some conventions about notation.
 \begin{enumerate}
-    \item g开头为基因
-    \item m开头为mRNA
-    \item 无开头为Protein蛋白质
-    \item p开头为promoter启动子
-    \item $\alpha$为转录项
-    \item $\beta$为翻译项
-    \item $d$为分解项
+  \item words begin with $g$ represent gene(eg., gSos).
+  \item words begin with $m$ represent mRNA(eg., mSos).
+  \item words begin with $p$ represent promoter(eg., pSos).
+  \item other words represent protein(eg., Sos).
+  \item $\alpha$ represents transcription term(eg., $\alpha_{Sos}$).
+  \item $\beta$ represents translation term(eg., $\beta_{Sos}$).
+  \item $d$ represents decomposition term(eg., $d_{Sos}$).
 \end{enumerate}
 
-\section{$TGF-\beta$ model}
-input : $TGF-\beta$
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 2015 KU Model %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{2015 KU Model}
+Since it is a model reproduction work, I am not going to show a lot details about model design. Instead, I am going to point out the key to the model and the problems while I try to reproduce the result. Besides, I'd like to share what I gain in this process.
+\subsection{Basic Ideas}
+The basic model to describe the amount of chemical substances is \textbf{ODE Model}. If we totally figure out the transformation among chemical substances we concerned about, then we can use some submodels to describe their transformation rate, which is $\frac{\mathrm{d}amount}{\mathrm{d}t}$, the derivative of the amount.
+
+In the following, I will show the basic chemical reactions and the submodels to describe them.
+\subsection{Transcription and Hill Function}
+According to central dogma, the first step of build a protein is transcription. If the transcription rate is a const, we can describe the process as $\frac{\mathrm{d}mRNA}{\mathrm{d}t} = r \cdot gRNA$ where $r$ is the transcription rate.
+
+Actually, we always need a transcription factor. Only after the factor is binded to DNA, can they begin to transcribe. Hill Function is used to describe such a situation(cf., Fig. )
 \begin{equation}
-    \left\{
-    \begin{array}{lllll}
-        gTGFBR1  & \xLongrightarrow[]{Transcription}  &  mTGFBR1 & \xLongrightarrow[]{Translation}  &  TGFBR1\\
-        gTGFBR2  & \xLongrightarrow[]{Transcription}  &  mTGFBR2 & \xLongrightarrow[]{Translation}  &  TGFBR2 \\
-        TGF-\beta + TGFBR2 & \autorightleftharpoons{associate}{disassociate} & TGF-\beta/TGFBR2 \\
-        P + TGFBR1 & & \autorightleftharpoons{$TGF-\beta/TGFBR2$}{disassociate} & TGFBR1-P \\
-        gSos  & \xLongrightarrow[]{Transcription}  &  mSos & \xLongrightarrow[]{Translation}  &  Sos \\
-        gGrb2  & \xLongrightarrow[]{Transcription}  &  mGrb2 & \xLongrightarrow[]{Translation}  &  Grb2 \\
-        gShc  & \xLongrightarrow[]{Transcription}  &  mShc & \xLongrightarrow[]{Translation}  &  Shc \\
-        gSara  & \xLongrightarrow[]{Transcription}  &  mSara & \xLongrightarrow[]{Translation}  &  Sara \\
-        Sos + Grb2 + Shc + Sara & \autorightleftharpoons{associate}{disassociate} & SGSS(quadruplet)\\
-        gSmad2 & \xLongrightarrow[]{SGSS}  &  mSmad2 & \xLongrightarrow[]{Translation}  &  Smad2 \\
-        Smad2 + P & \autorightleftharpoons{TGFBR1-P}{disassociate} & Smad2-P \\
-        gAI-2 & \xLongrightarrow[]{Smad2-P} &  mAI-2 & \xLongrightarrow[]{Translation}  &  AI-2 \\
-        gCqs-S & \xLongrightarrow[]{Transcription}  &  mCqs-S & \xLongrightarrow[]{Translation}  &  Cqs-S \\
-        AI-2 + Cqs-S &  \autorightleftharpoons{associate}{disassociate} & AI-2/Cqs-S \\
-        AI-2/Cqs-S + pLuxU &  \autorightleftharpoons{associate}{disassociate} & AI-2/Cqs-S/pLuxU\\
-        gRhoA & \xLongrightarrow[]{AI-2/Cqs-S/pLuxU} &  mRhoA & \xLongrightarrow[]{Translation}  &  RhoA \\
-    \end{array}\right.
+    \theta = \frac{[L]^n}{K_d^n + [L]^n} = \frac{1}{1 + (\frac{K_d}{[L]})^n} 
 \end{equation}
 
-\begin{equation}
-    \left\{
-    \begin{array}{lll}
-        \frac{\mathrm{d} mTGFBR2 }{\mathrm{d}t}  & = &  \alpha_{TGFBR2} \cdot gTGFBR2 - d_{mTGFBR2} \cdot mTGFBR2 \\
-        \frac{\mathrm{d} TGFBR2 }{\mathrm{d}t}  & = &  \beta_{TGFBR2} \cdot mTGFBR2 - d_{TGFBR2} \cdot mTGFBR2 \\
+$\theta$ is the amount of DNA bound by the protein, $[L]$ is the amount of protein, $K_d$ is the dissociation constant and $n$ is the Hill coefficient.
 
-        \frac{\mathrm{d} mTGFBR2 }{\mathrm{d}t}  & = &  \alpha_{TGFBR2} \cdot gTGFBR2 - d_{mTGFBR2} \cdot mTGFBR2 \\
-        \frac{\mathrm{d} TGFBR2 }{\mathrm{d}t}  & = &  \beta_{TGFBR2} \cdot mTGFBR2 - d_{TGFBR2} \cdot mTGFBR2 \\
+For the repressors, we are interested in how much of the DNA is still unbound and active: $\frac{1}{1 + (\frac{[Repressor]}{K_d})^n}$
 
-        \frac{\mathrm{d} mSos }{\mathrm{d}t}  & = &  \alpha_{Sos} \cdot gSos - d_{mSos} \cdot mSos \\
-        \frac{\mathrm{d} Sos }{\mathrm{d}t}  & = &  \beta_{Sos} \cdot mSos - d_{Sos} \cdot mSos \\
+For the activators, we are interested in how much of the DNA is bound and active: $ \frac{1}{1 + (\frac{K_d}{[Activator]})^n}$
 
-        
-        \frac{\mathrm{d} mGrb2 }{\mathrm{d}t}  & = &  \alpha_{Grb2} \cdot gGrb2 - d_{mGrb2} \cdot mGrb2 \\
-        \frac{\mathrm{d} Grb2 }{\mathrm{d}t}  & = &  \beta_{Grb2} \cdot mGrb2 - d_{Grb2} \cdot mGrb2 \\
+So the ODE is modified as $$\frac{\mathrm{d}mRNA}{\mathrm{d}t} = r \cdot (\frac{1}{1 + (\frac{K_d}{[Activator]})^n} gRNA)$$
+\subsection{Translation}
+Translation is quite easy. We consider translate rate as a const, so the contribution of translation in derivative term is $$\frac{\mathrm{d}Protein}{\mathrm{d}t} = r_{Translation} \cdot mRNA$$
+\subsection{Protein Association and Disassociation}
+\subsection{Ping-Pong Bi-Bi}
+\subsection{Spread}
+\subsection{Reproduction Result and Problems}
+\subsection{What have I gained}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% our model %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-        \frac{\mathrm{d} mShc }{\mathrm{d}t}  & = &  \alpha_{Shc} \cdot gShc - d_{mShc} \cdot mShc \\
-        \frac{\mathrm{d} Shc }{\mathrm{d}t}  & = &  \beta_{Shc} \cdot mShc - d_{Shc} \cdot mShc \\
+\section{Our Model}
+\subsection{Baisc View}
+Our design is a feedback system in which the output protein $RhoA$ can detect the amount of input $TGF-\beta$ and change accordingly through a series of pathways.
 
-        
-        \frac{\mathrm{d} mSara }{\mathrm{d}t}  & = &  \alpha_{Sara} \cdot gSara - d_{mSara} \cdot mSara \\
-        \frac{\mathrm{d} Sara }{\mathrm{d}t}  & = &  \beta_{Sara} \cdot mSara - d_{Sara} \cdot mSara \\
+The sketch of metabolic pathway is shown as following.
 
-        \frac{\mathrm{d}  }{\mathrm{d}t}  & = &  1\\
-
-
-
-        
-        \frac{\mathrm{d} mMARKER }{\mathrm{d}t}  & = &  \alpha_{MARKER} \cdot gMARKER - d_{mMARKER} \cdot mMARKER \\
-        \frac{\mathrm{d} MARKER }{\mathrm{d}t}  & = &  \beta_{MARKER} \cdot mMARKER - d_{MARKER} \cdot mMARKER \\
-    \end{array}\right.
-\end{equation}
-
-\begin{table}[H]
-    \centering
-    \begin{tabular}{cc}
-        parameters & meaning \\ 
-        
-    \end{tabular}
-\end{table}
+\subsection{Michaelis-Menten Equation}
+\subsection{Hill Function}
+\subsection{Protein Association and Disassociation}
+\subsection{Results and Conclusion}
+\subsection{Evaluation and Further Improvement}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
