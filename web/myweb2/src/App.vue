@@ -33,7 +33,7 @@
 
                 </li>     
 
-                <li><router-link to="/Modeling" id="amodel">Modeling</router-link>
+                <li><router-link to="/Model" id="amodel">Modeling</router-link>
 
                 </li>        
 
