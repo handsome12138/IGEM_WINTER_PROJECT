@@ -23,6 +23,7 @@
             <p>
               The sketch of metabolic pathway is shown as following.
             </p>
+            <img :src="pathway_sketch" class="pathway-sketch">
           </div>
 
           <h1 id="submodels"> Submodels </h1>
@@ -100,6 +101,24 @@
             Combining all these factors above and the sketch of metabolic pathway, the whole equations are listed as following:
             <p v-html="katexhtml2"></p>
           </div>
+
+          <h1 id="model-KU_Leuven"> Appendix: Reproduction of 2015-igem-KU_Leuven Model </h1>
+          <div class="model-KU">
+            <p>
+            As their model is described in detail in their own wiki, I am going to share the problems I met when I was trying to reproduce their results.
+            </p>
+            <p>
+              First, there are some mistakes in their ODE. For example, the mistake of writing <span v-katex:auto>\(k_{+}\)</span> as <span v-katex:auto>\(k_{-}\)</span>. According to the symmetry of the formula, it is not hard to find these mistakes. 
+            </p>
+            <p>
+              Besides, the most important problem is the lack of parameters. Except for the parameters that are vaguely described, there are some parameters in the model can not be found According to their description like the initial value of the ODE.
+            </p>
+            <p>
+              So, I estimated some parameters and their result figure and mine are in the following respectively. Though the order of magnitudes differ from their results, the shape of each curve remains the same. The code and the estimated parameters can be found in our <a href="https://github.com/handsome12138/IGEM_WINTER_PROJECT" class="mylink"> <b>Github</b> </a>
+            </p>
+            <img :src="require('@/assets/model/KUL_model_ori.png')" class="KUL-figure">
+            <img :src="require('@/assets/model/KUL_model_mine.jpg')" class="KUL-figure">
+          </div>
         </div>
     </div>
 </template>
@@ -121,6 +140,8 @@ export default {
     return {
       mylatex: "test latex a = \sqrt{3}",
       submodel_active:1,
+      pathway_sketch: require("@/assets/model/pathway.jpg"),
+      // pathway_sketch: require("@/assets/model/pathway.png"),
       katexhtml1:katex.renderToString(String.raw`
       \left\{ \begin{aligned}
         &\frac{\mathrm{d}A}{\mathrm{d}t} &=& -k_{associate} \cdot A \cdot B + k_{disassociate} \cdot A/B \\
@@ -131,52 +152,52 @@ export default {
       katexhtml2:katex.renderToString(String.raw`
       \left\{
       \begin{array}{lll}
-        \dfrac{\mathrm{d} mTGFBR1 }{\mathrm{d}t}  & = &  \alpha_{TGFBR1} \cdot gTGFBR1 - d_{mTGFBR1} \cdot mTGFBR1 \\
-        \dfrac{\mathrm{d} TGFBR1 }{\mathrm{d}t}  & = &  \beta_{TGFBR1} \cdot mTGFBR1 - d_{TGFBR1} \cdot mTGFB1 - v_{max,TGFBR1-P} \frac{TGF-\beta/TGFBR2 \cdot TGFBR1}{K_{m, TGFBR1} + TGFBR1} \\
+        \frac{\mathrm{d} mTGFBR1 }{\mathrm{d}t}  & = &  \alpha_{TGFBR1} \cdot gTGFBR1 - d_{mTGFBR1} \cdot mTGFBR1 \\[.5ex] 
+        \frac{\mathrm{d} TGFBR1 }{\mathrm{d}t}  & = &  \beta_{TGFBR1} \cdot mTGFBR1 - d_{TGFBR1} \cdot mTGFB1 - v_{max,TGFBR1-P} \frac{TGF-\beta/TGFBR2 \cdot TGFBR1}{K_{m, TGFBR1} + TGFBR1} \\[.5ex] 
 
-        \dfrac{\mathrm{d} mTGFBR2 }{\mathrm{d}t}  & = &  \alpha_{TGFBR2} \cdot gTGFBR2 - d_{mTGFBR2} \cdot mTGFBR2 \\
-        \dfrac{\mathrm{d} TGFBR2 }{\mathrm{d}t}  & = &  \beta_{TGFBR2} \cdot mTGFBR2 - d_{TGFBR2} \cdot mTGFBR2 \\ & & - k_{as,TGFBR2} \cdot TGF-\beta \cdot TGFBR2 + k_{dis,TGFBR2} \cdot TGF-\beta/TGFBR2\\
+        \frac{\mathrm{d} mTGFBR2 }{\mathrm{d}t}  & = &  \alpha_{TGFBR2} \cdot gTGFBR2 - d_{mTGFBR2} \cdot mTGFBR2 \\[.5ex] 
+        \frac{\mathrm{d} TGFBR2 }{\mathrm{d}t}  & = &  \beta_{TGFBR2} \cdot mTGFBR2 - d_{TGFBR2} \cdot mTGFBR2 \\ & & - k_{as,TGFBR2} \cdot TGF-\beta \cdot TGFBR2 + k_{dis,TGFBR2} \cdot TGF-\beta/TGFBR2\\[.5ex] 
         
-        \frac{\mathrm{d} TGF-\beta/TGFBR2 }{\mathrm{d}t}  & = &  k_{as,TGFBR2} \cdot TGF-\beta \cdot TGFBR2 - k_{dis,TGFBR2} \cdot TGF-\beta/TGFBR2  \\&& - d_{TGF-\beta/TGFBR2} * TGF-\beta/TGFBR2 \\
+        \frac{\mathrm{d} TGF-\beta/TGFBR2 }{\mathrm{d}t}  & = &  k_{as,TGFBR2} \cdot TGF-\beta \cdot TGFBR2 - k_{dis,TGFBR2} \cdot TGF-\beta/TGFBR2  \\&& - d_{TGF-\beta/TGFBR2} * TGF-\beta/TGFBR2 \\[.5ex]
         
-        \frac{\mathrm{d} TGFBR1-P }{\mathrm{d}t}  & = &  v_{max,TGFBR1-P} \frac{TGF-\beta/TGFBR2 \cdot TGFBR1}{K_{m, TGFBR1} + TGFBR1} - d_{TGFBR1-P} \cdot TGFBR1-P\\
+        \frac{\mathrm{d} TGFBR1-P }{\mathrm{d}t}  & = &  v_{max,TGFBR1-P} \frac{TGF-\beta/TGFBR2 \cdot TGFBR1}{K_{m, TGFBR1} + TGFBR1} - d_{TGFBR1-P} \cdot TGFBR1-P\\[.5ex]
         
-        \frac{\mathrm{d} mSos }{\mathrm{d}t}  & = &  \alpha_{Sos} \frac{1}{1 + (K_{d,pSos}/(TGFBR1-P))^{n_{pSos}}} \cdot gSos - d_{mSos} \cdot mSos \\
-        \frac{\mathrm{d} Sos }{\mathrm{d}t}  & = &  \beta_{Sos} \cdot mSos - d_{Sos} \cdot Sos - k_{as,SGSS} \cdot Sos \cdot Grb2 \cdot Shc \cdot Sara + k_{dis,SGSS} \cdot SGSS \\
-
-        
-        \frac{\mathrm{d} mGrb2 }{\mathrm{d}t}  & = &  \alpha_{Grb2} \frac{1}{1 + (K_{d,pGrb2}/(TGFBR1-P))^{n_{pGrb2}}} \cdot gGrb2 - d_{mGrb2} \cdot mGrb2 \\
-        \frac{\mathrm{d} Grb2 }{\mathrm{d}t}  & = &  \beta_{Grb2} \cdot mGrb2 - d_{Grb2} \cdot Grb2 - k_{as,SGSS} \cdot Sos \cdot Grb2 \cdot Shc \cdot Sara + k_{dis,SGSS} \cdot SGSS \\
-
-
-        \frac{\mathrm{d} mShc }{\mathrm{d}t}  & = &  \alpha_{Shc} \frac{1}{1 + (K_{d,pShc}/(TGFBR1-P))^{n_{pShc}}} \cdot gShc - d_{mShc} \cdot mShc \\
-        \frac{\mathrm{d} Shc }{\mathrm{d}t}  & = &  \beta_{Shc} \cdot mShc - d_{Shc} \cdot Shc - k_{as,SGSS} \cdot Sos \cdot Grb2 \cdot Shc \cdot Sara + k_{dis,SGSS} \cdot SGSS \\
+        \frac{\mathrm{d} mSos }{\mathrm{d}t}  & = &  \alpha_{Sos} \frac{1}{1 + (K_{d,pSos}/(TGFBR1-P))^{n_{pSos}}} \cdot gSos - d_{mSos} \cdot mSos \\[.5ex]
+        \frac{\mathrm{d} Sos }{\mathrm{d}t}  & = &  \beta_{Sos} \cdot mSos - d_{Sos} \cdot Sos - k_{as,SGSS} \cdot Sos \cdot Grb2 \cdot Shc \cdot Sara + k_{dis,SGSS} \cdot SGSS \\[.5ex]
 
         
-        \frac{\mathrm{d} mSara }{\mathrm{d}t}  & = &  \alpha_{Sara} \frac{1}{1 + (K_{d,pSara}/(TGFBR1-P))^{n_{pSara}}} \cdot gSara - d_{mSara} \cdot mSara \\
-        \frac{\mathrm{d} Sara }{\mathrm{d}t}  & = &  \beta_{Sara} \cdot mSara - d_{Sara} \cdot Sara - k_{as,SGSS} \cdot Sos \cdot Grb2 \cdot Shc \cdot Sara + k_{dis,SGSS} \cdot SGSS \\
+        \frac{\mathrm{d} mGrb2 }{\mathrm{d}t}  & = &  \alpha_{Grb2} \frac{1}{1 + (K_{d,pGrb2}/(TGFBR1-P))^{n_{pGrb2}}} \cdot gGrb2 - d_{mGrb2} \cdot mGrb2 \\[.5ex]
+        \frac{\mathrm{d} Grb2 }{\mathrm{d}t}  & = &  \beta_{Grb2} \cdot mGrb2 - d_{Grb2} \cdot Grb2 - k_{as,SGSS} \cdot Sos \cdot Grb2 \cdot Shc \cdot Sara + k_{dis,SGSS} \cdot SGSS \\[.5ex]
 
-        \frac{\mathrm{d} SGSS }{\mathrm{d}t}  & = &  k_{as,SGSS} \cdot Sos \cdot Grb2 \cdot Shc \cdot Sara - k_{dis,SGSS} \cdot SGSS - d_{SGSS} * SGSS\\
 
-        \frac{\mathrm{d} mSmad2 }{\mathrm{d}t}  & = &  \alpha_{Smad2} \frac{1}{1 + (K_{d,Smad2}/SGSS)^{n_{Smad2}}} \cdot gSmad2 - d_{mSmad2} \cdot mSmad2 \\
-        \frac{\mathrm{d} Smad2 }{\mathrm{d}t}  & = &  \beta_{Smad2} \cdot mSmad2 - d_{Smad2} \cdot Smad2 - v_{max,Smad2-P}\frac{SGSS \cdot Smad2}{K_{m, Smad2} + Smad2} \\
+        \frac{\mathrm{d} mShc }{\mathrm{d}t}  & = &  \alpha_{Shc} \frac{1}{1 + (K_{d,pShc}/(TGFBR1-P))^{n_{pShc}}} \cdot gShc - d_{mShc} \cdot mShc \\[.5ex]
+        \frac{\mathrm{d} Shc }{\mathrm{d}t}  & = &  \beta_{Shc} \cdot mShc - d_{Shc} \cdot Shc - k_{as,SGSS} \cdot Sos \cdot Grb2 \cdot Shc \cdot Sara + k_{dis,SGSS} \cdot SGSS \\[.5ex]
+
         
-        \frac{\mathrm{d} Smad2-P }{\mathrm{d}t}  & = & v_{max,Smad2-P}\frac{TGFBR1-P \cdot Smad2}{K_{m, Smad2} + Smad2} - d_{Smad2-P} \cdot Smad2-P\\
+        \frac{\mathrm{d} mSara }{\mathrm{d}t}  & = &  \alpha_{Sara} \frac{1}{1 + (K_{d,pSara}/(TGFBR1-P))^{n_{pSara}}} \cdot gSara - d_{mSara} \cdot mSara \\[.5ex]
+        \frac{\mathrm{d} Sara }{\mathrm{d}t}  & = &  \beta_{Sara} \cdot mSara - d_{Sara} \cdot Sara - k_{as,SGSS} \cdot Sos \cdot Grb2 \cdot Shc \cdot Sara + k_{dis,SGSS} \cdot SGSS \\[.5ex]
+
+        \frac{\mathrm{d} SGSS }{\mathrm{d}t}  & = &  k_{as,SGSS} \cdot Sos \cdot Grb2 \cdot Shc \cdot Sara - k_{dis,SGSS} \cdot SGSS - d_{SGSS} * SGSS\\[.5ex]
+
+        \frac{\mathrm{d} mSmad2 }{\mathrm{d}t}  & = &  \alpha_{Smad2} \frac{1}{1 + (K_{d,Smad2}/SGSS)^{n_{Smad2}}} \cdot gSmad2 - d_{mSmad2} \cdot mSmad2 \\[.5ex]
+        \frac{\mathrm{d} Smad2 }{\mathrm{d}t}  & = &  \beta_{Smad2} \cdot mSmad2 - d_{Smad2} \cdot Smad2 - v_{max,Smad2-P}\frac{SGSS \cdot Smad2}{K_{m, Smad2} + Smad2} \\[.5ex]
         
-        \frac{\mathrm{d} mAI-2 }{\mathrm{d}t}  & = &  \alpha_{AI-2} \frac{1}{1 + (K_{d,AI-2}/Smad2-P)^{n_{AI-2}}} \cdot gAI-2 - d_{mAI-2} \cdot mAI-2 \\
-        \frac{\mathrm{d} AI-2 }{\mathrm{d}t}  & = &  \beta_{AI-2} \cdot mAI-2 - d_{AI-2} \cdot AI-2 \\&& - k_{as,AI-2/Cqs-S} \cdot AI-2 \cdot Cqs-S + k_{dis,AI-2/Cqs-S} \cdot AI-2/Cqs-S\\
+        \frac{\mathrm{d} Smad2-P }{\mathrm{d}t}  & = & v_{max,Smad2-P}\frac{TGFBR1-P \cdot Smad2}{K_{m, Smad2} + Smad2} - d_{Smad2-P} \cdot Smad2-P\\[.5ex]
         
-        \frac{\mathrm{d} mCqs-S }{\mathrm{d}t}  & = &  \alpha_{Cqs-S} \cdot gCqs-S - d_{mCqs-S} \cdot mCqs-S \\
-        \frac{\mathrm{d} Cqs-S }{\mathrm{d}t}  & = &  \beta_{Cqs-S} \cdot mCqs-S - d_{Cqs-S} \cdot Cqs-S \\&&  - k_{as,AI-2/Cqs-S} \cdot AI-2 \cdot Cqs-S + k_{dis,AI-2/Cqs-S} \cdot AI-2/Cqs-S \\
+        \frac{\mathrm{d} mAI-2 }{\mathrm{d}t}  & = &  \alpha_{AI-2} \frac{1}{1 + (K_{d,AI-2}/Smad2-P)^{n_{AI-2}}} \cdot gAI-2 - d_{mAI-2} \cdot mAI-2 \\[.5ex]
+        \frac{\mathrm{d} AI-2 }{\mathrm{d}t}  & = &  \beta_{AI-2} \cdot mAI-2 - d_{AI-2} \cdot AI-2 \\&& - k_{as,AI-2/Cqs-S} \cdot AI-2 \cdot Cqs-S + k_{dis,AI-2/Cqs-S} \cdot AI-2/Cqs-S\\[.5ex]
         
-        \frac{\mathrm{d} AI-2/Cqs-S }{\mathrm{d}t}  & = &  k_{as,AI-2/Cqs-S} \cdot AI-2 \cdot Cqs-S - k_{dis,AI-2/Cqs-S} \cdot AI-2/Cqs-S \\&& -d_{AI-2/Cqs-S} AI-2/Cqs-S\\
+        \frac{\mathrm{d} mCqs-S }{\mathrm{d}t}  & = &  \alpha_{Cqs-S} \cdot gCqs-S - d_{mCqs-S} \cdot mCqs-S \\[.5ex]
+        \frac{\mathrm{d} Cqs-S }{\mathrm{d}t}  & = &  \beta_{Cqs-S} \cdot mCqs-S - d_{Cqs-S} \cdot Cqs-S \\&&  - k_{as,AI-2/Cqs-S} \cdot AI-2 \cdot Cqs-S + k_{dis,AI-2/Cqs-S} \cdot AI-2/Cqs-S \\[.5ex]
         
-        \frac{\mathrm{d} mRhoA }{\mathrm{d}t}  & = &  \alpha_{RhoA} \frac{1}{1 + (K_{d,pLuxU}/(AI-2/Cqs-S))^{n_{pLuxU}}} \cdot gRhoA - d_{mRhoA} \cdot mSmad2 \\
-        \frac{\mathrm{d} RhoA }{\mathrm{d}t}  & = &  \beta_{RhoA} \cdot mRhoA - d_{RhoA} \cdot RhoA \\
+        \frac{\mathrm{d} AI-2/Cqs-S }{\mathrm{d}t}  & = &  k_{as,AI-2/Cqs-S} \cdot AI-2 \cdot Cqs-S - k_{dis,AI-2/Cqs-S} \cdot AI-2/Cqs-S \\&& -d_{AI-2/Cqs-S} AI-2/Cqs-S\\[.5ex]
+        
+        \frac{\mathrm{d} mRhoA }{\mathrm{d}t}  & = &  \alpha_{RhoA} \frac{1}{1 + (K_{d,pLuxU}/(AI-2/Cqs-S))^{n_{pLuxU}}} \cdot gRhoA - d_{mRhoA} \cdot mSmad2 \\[.5ex]
+        \frac{\mathrm{d} RhoA }{\mathrm{d}t}  & = &  \beta_{RhoA} \cdot mRhoA - d_{RhoA} \cdot RhoA \\[.5ex]
         
         
-        % \frac{\mathrm{d} mMARKER }{\mathrm{d}t}  & = &  \alpha_{MARKER} \cdot gMARKER - d_{mMARKER} \cdot mMARKER \\
-        % \frac{\mathrm{d} MARKER }{\mathrm{d}t}  & = &  \beta_{MARKER} \cdot mMARKER - d_{MARKER} \cdot MARKER \\
+        % \frac{\mathrm{d} mMARKER }{\mathrm{d}t}  & = &  \alpha_{MARKER} \cdot gMARKER - d_{mMARKER} \cdot mMARKER \\[.5ex]
+        % \frac{\mathrm{d} MARKER }{\mathrm{d}t}  & = &  \beta_{MARKER} \cdot mMARKER - d_{MARKER} \cdot MARKER \\[.5ex]
     \end{array}\right.
       `),
     }
@@ -185,14 +206,35 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.pathway-sketch{
+  width:100%;
+}
+.KUL-figure{
+  width:100%;
+}
 .model-body{
   margin:10%;
   h1{
     text-align: center;
     margin-top: 5%;
+    margin-bottom: 2%;
   }
   .model-submodel{
     margin:10%;
+  }
+}
+.mylink{
+  // font-size: 13px;
+  // color: black;
+  // font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1px;
+  transition: color 100ms linear;
+  text-decoration: none;
+  &:link, &:visited{
+    color:black
+  }
+  &:hover, &:active{
+    color: yellowgreen
   }
 }
 </style>

@@ -13,14 +13,14 @@
         <div class="col-xs-6 col-md-3">
           <h6>Thanks</h6>
           <ul class="footer-links">
-            <li><a href="https://www.qsc.zju.edu.cn">浙江大学求是潮</a></li>
+            <li><a href="http://www.zju.edu.cn/">浙江大学</a></li>
           </ul>
         </div>
 
         <div class="col-xs-6 col-md-3">
           <h6>Quick Links</h6>
           <ul class="footer-links">
-            <li><a href="https://space.bilibili.com/32772424">乙酰胆碱过突触</a></li>
+            <li><a href="https://github.com/handsome12138/IGEM_WINTER_PROJECT">Github</a></li>
           </ul>
         </div>
       </div>
