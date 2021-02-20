@@ -1,14 +1,15 @@
 <template>
     <div class="model" style="text-align:left">
+        <sidenav :navs="mynav" class="sidenav"> </sidenav>
         <div class="model-body">
-          <h1 id="Notations"> Notations </h1>
+          <h1 id="notations"> Notations </h1>
           <div class="model-notations">
             Here are some conventions about notation.
             <ol style="text-align:left">
-              <li>words begin with <span v-katex:auto>\(g\)</span> represent gene(eg., <span v-katex:auto>\(gSos\)</span>).</li>
-              <li>words begin with <span v-katex:auto>\(m\)</span> represent mRNA(eg., <span v-katex:auto>\(mSos\)</span>).</li>
-              <li>words begin with <span v-katex:auto>\(p\)</span> represent promoter(eg., <span v-katex:auto>\(pSos\)</span>).</li>
-              <li>other words represent protein(eg., <span v-katex:auto>\(Sos\)</span>).</li>
+              <li>words begin with <span v-katex:auto>\(g\)</span> represent the concentration of gene(eg., <span v-katex:auto>\(gSos\)</span>).</li>
+              <li>words begin with <span v-katex:auto>\(m\)</span> represent the concentration of mRNA(eg., <span v-katex:auto>\(mSos\)</span>).</li>
+              <li>words begin with <span v-katex:auto>\(p\)</span> represent the concentration of promoter(eg., <span v-katex:auto>\(pSos\)</span>).</li>
+              <li>other words represent the concentration of protein(eg., <span v-katex:auto>\(Sos\)</span>).</li>
               <li><span v-katex:auto>\(\alpha\)</span> represents transcription term(eg., <span v-katex:auto>\(\alpha_{Sos}\)</span>).</li>
               <li><span v-katex:auto>\(\beta\)</span> represents translation term(eg., <span v-katex:auto>\(\beta_{Sos}\)</span>).</li>
               <li><span v-katex:auto>\(d\)</span> represents decomposition term(eg., <span v-katex:auto>\(d_{Sos}\)</span>).</li>
@@ -91,6 +92,13 @@
                   
                 </div>
               </el-collapse-item>
+              <el-collapse-item title="Decomposition" name="5">
+                <div>
+                  <p>
+                    The decomposition is also considers. Each compound has its own decompositon rate including gene, mRNA, protein and so on. The decomposition rate is prepresented as <span v-katex:auto>\( \frac{\mathrm{d}Protein}{\mathrm{d}t} = r_{decomposition} \cdot Protein \)</span>.
+                  </p>
+                </div>
+              </el-collapse-item> 
               <!-- <el-collapse-item title="可控 Controllability" name="4">
               </el-collapse-item> -->
             </el-collapse>
@@ -102,7 +110,21 @@
             <p v-html="katexhtml2"></p>
           </div>
 
-          <h1 id="model-KU_Leuven"> Appendix: Reproduction of 2015-igem-KU_Leuven Model </h1>
+          <h1 id="result"> Results </h1>
+          <div>
+            <p>
+            Because of the time constraint, most parameters are estimated by ourselves and the value can be found in our <a href="https://github.com/handsome12138/IGEM_WINTER_PROJECT/tree/main/model/code" class="mylink"> <b>Github</b> </a>. The result are shown as following where <span style="color:green"> <b>green</b></span> curve is high <span v-katex:auto>\(TGF-\beta\)</span> situation while <span style="color:red"> <b>red</b></span> curve is low <span v-katex:auto>\(TGF-\beta\)</span> situation.We can see that the shape of curve indicates that 
+            <b> the amount of output <span v-katex:auto>\(RhoA\)</span> and some intermediate products like <span v-katex:auto>\(SGSS\)</span> are closely related to the input <span v-katex:auto>\(TGF-\beta\)</span></b>     
+            </p>
+            <img :src="require('@/assets/model/model_wp.png')" class="figure">
+          </div>
+
+          <h1 id="reference">Refenrences</h1>
+          <div>
+              The model design mainly refers to <a href="http://2015.igem.org/Team:KU_Leuven/Modeling" class="mylink">2015 igem KU Leuven Model</a> 
+          </div>
+
+          <h1 id="model-KU_Leuven"> Appendix: Reproduction of 2015 igem KU Leuven Model </h1>
           <div class="model-KU">
             <p>
             As their model is described in detail in their own wiki, I am going to share the problems I met when I was trying to reproduce their results.
@@ -114,10 +136,10 @@
               Besides, the most important problem is the lack of parameters. Except for the parameters that are vaguely described, there are some parameters in the model can not be found According to their description like the initial value of the ODE.
             </p>
             <p>
-              So, I estimated some parameters and their result figure and mine are in the following respectively. Though the order of magnitudes differ from their results, the shape of each curve remains the same. The code and the estimated parameters can be found in our <a href="https://github.com/handsome12138/IGEM_WINTER_PROJECT" class="mylink"> <b>Github</b> </a>
+              So, I estimated some parameters and their result figure and mine are in the following respectively. Though the order of magnitudes differ from their results, the shape of each curve remains the same. The code and the estimated parameters can be found in our <a href="https://github.com/handsome12138/IGEM_WINTER_PROJECT/tree/main/KULmodel/pythoncode" class="mylink"> <b>Github</b> </a>
             </p>
-            <img :src="require('@/assets/model/KUL_model_ori.png')" class="KUL-figure">
-            <img :src="require('@/assets/model/KUL_model_mine.jpg')" class="KUL-figure">
+            <img :src="require('@/assets/model/KUL_model_ori.png')" class="figure">
+            <img :src="require('@/assets/model/KUL_model_mine.jpg')" class="figure">
           </div>
         </div>
     </div>
@@ -128,6 +150,7 @@ import Vue from 'vue'
 import VueKatex from 'vue-katex'
 import katex from 'katex';
 import 'katex/dist/katex.min.css'
+import sidenav from '@/components/Side_nav.vue'
 
 Vue.use(VueKatex, {
   globalOptions: {
@@ -200,7 +223,50 @@ export default {
         % \frac{\mathrm{d} MARKER }{\mathrm{d}t}  & = &  \beta_{MARKER} \cdot mMARKER - d_{MARKER} \cdot MARKER \\[.5ex]
     \end{array}\right.
       `),
+      // katextabal_d:katex.renderToString(String.raw`
+      // `),
+      mynav:[
+        {
+          name:"Notations",
+          id:"notations"
+        },
+        {
+          name:"Basic View",
+          id:"basic"
+        },
+        {
+          name:"Submodels",
+          id:"submodels"
+        },
+        {
+          name:"Complete Model",
+          id:"mainmodel"
+        },
+        {
+          name:"Results",
+          id:"result"
+        },
+        {
+          name:"References",
+          id:"reference"
+        },
+        {
+          name:"KU Leuven Model",
+          id:"model-KU_Leuven"
+        },
+      ]
     }
+  },
+  components:{
+    sidenav:sidenav,
+  },
+  mounted(){
+    var item, index;
+    // console.log(this.$refs.collapse)
+    // for (item of this.$refs.collapse.$children){
+    //   console.log(item)
+    //   item.$el.style.cssText = 'font-size:1rem';
+    // }
   }
 }
 </script>
@@ -209,24 +275,40 @@ export default {
 .pathway-sketch{
   width:100%;
 }
-.KUL-figure{
+.figure{
   width:100%;
 }
-.model-body{
-  margin:10%;
-  h1{
-    text-align: center;
-    margin-top: 5%;
-    margin-bottom: 2%;
+.model{
+  display: flex;
+  .sidenav{
+    width:15%;
   }
-  .model-submodel{
-    margin:10%;
+  .model-body{
+    margin:5%;
+    h1{
+      text-align: center;
+      margin-top: 5%;
+      margin-bottom: 2%;
+    }
+    .model-submodel{
+      margin-left:10%;
+      margin-right:10%;
+    }
   }
 }
+.el-collapse-item div .el-collapse-item__content div p{
+  font-size:1rem
+}
+/deep/ .el-collapse-item__header{
+  font-size:1rem;
+  font-weight: bold;
+}
+
 .mylink{
   // font-size: 13px;
   // color: black;
   // font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
   letter-spacing: 1px;
   transition: color 100ms linear;
   text-decoration: none;

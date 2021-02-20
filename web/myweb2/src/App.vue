@@ -14,7 +14,6 @@
 
                 <li><router-link to="/Home" id="ahome">Home</router-link></li>
 
-
                 <li><router-link to="/Project" class="aproject">Project</router-link>
 
                   <div class="dropdown-content1">
@@ -74,8 +73,8 @@
     <br>
     <myfooter> </myfooter>
     <!-- <myfooter v-bind:class="{'bottom-fix-footer': isnotFull}"> </myfooter> -->
-    <div id="goup" style="display: inline;">
-      <img :src="up" style="width: 100%;" v-if="isshow" @click="backtop" />
+    <div id="goup" style="display: inline;" v-if="isshow">
+      <img :src="up" style="width: 100%;" @click="backtop" />
     </div>
   </div>
 
