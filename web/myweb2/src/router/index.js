@@ -12,7 +12,6 @@ import Future from '../views/Future.vue'
 
 Vue.use(VueRouter)
 
-
 const routes = [
   {
     path: '/Home',

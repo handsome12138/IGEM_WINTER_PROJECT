@@ -2,7 +2,8 @@
     <div class="model" style="text-align:left">
         <sidenav :navs="mynav" class="sidenav"> </sidenav>
         <div class="model-body">
-          <h1 id="notations"> Notations </h1>
+          <a class="anchor" name="notation" id="notation"></a>
+          <h1> Notations </h1>
           <div class="model-notations">
             Here are some conventions about notation.
             <ol style="text-align:left">
@@ -16,10 +17,11 @@
             </ol>
           </div>
 
-          <h1 id="basic"> Basic View of Our Model </h1>
+          <a class="anchor" name="basic" id="basic"></a>
+          <h1> Basic View of Our Model </h1>
           <div class="model-basic">
             <p>
-              Our design is a feedback system in which the output protein $RhoA$ can detect the amount of input <span v-katex:auto>\(TGF-\beta\)</span> and change accordingly through a series of pathways.
+              Our design is a feedback system in which the output protein <span v-katex:auto>\(RhoA\)</span> can detect the amount of input <span v-katex:auto>\(TGF-\beta\)</span> and change accordingly through a series of pathways.
             </p>
             <p>
               The sketch of metabolic pathway is shown as following.
@@ -27,19 +29,24 @@
             <img :src="pathway_sketch" class="pathway-sketch">
           </div>
 
-          <h1 id="submodels"> Submodels </h1>
+          <a class="anchor" name="submodels" id="submodels"></a>
+          <h1> Submodels </h1>
           <div class="model-submodel">
+            <p>
+              For each possible chemical reaction process, we build a submodel to describe it.
+              As long as we finally synthesize the submodels, we can get a complete model.
+            </p>
             <el-collapse v-model="submodel_active" accordion>
               <el-collapse-item title="Transcription and Hill Function" name="1">
                 <div>
                   <p>
-                    According to central dogma, the first step of build a protein is transcription. If the transcription rate is a const, we can describe the process as <span v-katex:auto>\(\frac{\mathrm{d}mRNA}{\mathrm{d}t} = r \cdot gRNA\)</span>  where <span v-katex:auto>\(r\)</span> is the transcription rate.
+                    According to central dogma, the first step of build a protein is transcription. If the transcription rate is a const, we can describe the process as <span v-katex:auto>\(\frac{\mathrm{d}mRNA}{\mathrm{d}t} = r \cdot gene\)</span>  where <span v-katex:auto>\(r\)</span> is the transcription rate.
                   </p>
                   <p>
                     Actually, we always need a transcription factor. Only after the factor is binded to DNA, can they begin to transcribe. Hill Function is used to describe such a situation:
                   </p>
                   <p>
-                    <span v-katex:auto>\(\theta = \frac{[L]^n}{K_d^n + [L]^n} = \frac{1}{1 + (\frac{K_d}{[L]})^n} \)</span> 
+                    <span v-katex:auto>\(\theta = \frac{[L]^n}{K_d^n + [L]^n} = \frac{1}{1 + (\frac{K_d}{[L]})^n} \)</span>
                   </p>
                   <p>
                     <span v-katex:auto>\(\theta\)</span> is the amount of DNA bound by the protein, <span v-katex:auto>\([L]\)</span> is the amount of protein,<span v-katex:auto>\(K_d\)</span> is the dissociation constant and <span v-katex:auto>\(n\)</span> is the Hill coefficient.
@@ -58,7 +65,7 @@
               <el-collapse-item title="Translation" name="2">
                 <div>
                   <p>
-                    Translation is quite easy. We consider translate rate as a const, so the contribution of translation in derivative term is <span v-katex:auto>\( \frac{\mathrm{d}Protein}{\mathrm{d}t} = r_{translation} \cdot mRNA \)</span> 
+                    Translation is quite easy. We consider translate rate as a const, so the contribution of translation in derivative term is <span v-katex:auto>\( \frac{\mathrm{d}Protein}{\mathrm{d}t} = r_{translation} \cdot mRNA \)</span>
                   </p>
                 </div>
               </el-collapse-item>
@@ -71,14 +78,14 @@
                     <span v-katex:auto>\( v = \frac{v_{max}[S]}{K_m + [S]} \)</span>
                   </p>
                   <p>
-                    Where <span v-katex:auto>\([S]\)</span> represents concentration of substrate, 
-                    <span v-katex:auto>\(v_{max}\)</span> represents the reaction rate when the enzyme is saturated with the substrate, 
-                    <span v-katex:auto>\(K_m\)</span> represents Michaelis constant. Because the concentration of enzyme is not a constant in our model, we assume <span v-katex:auto>\(v_{max}\)</span> is linearly related to <span v-katex:auto>\( the concentration of enzyme \)</span>.<span v-katex:auto>\(v_{max} = Enzyme \cdot \lambda \)</span>.
-                    The modified version is as following.
+                    Where <span v-katex:auto>\([S]\)</span> represents concentration of substrate,
+                    <span v-katex:auto>\(v_{max}\)</span> represents the reaction rate when the enzyme is saturated with the substrate,
+                    <span v-katex:auto>\(K_m\)</span> represents Michaelis constant. Because the concentration of enzyme is not a constant in our model, we assume <span v-katex:auto>\(v_{max}\)</span> is linearly related to the concentration of enzyme.<span v-katex:auto>\(v_{max} = Enzyme \cdot v_{max,E} \)</span>.
+                    The modified version is as following. <span v-katex:auto>\(v_{max,E}\)</span> represents the rate per unit enzyme.
                     <!-- <span v-katex:auto>\(\)</span> -->
                   </p>
                   <p>
-                    <span v-katex:auto>\( \frac{\mathrm{d}[S]}{\mathrm{d}t} = v = \lambda \cdot Enzyme \cdot \frac{[S]}{K_m + [S]} \)</span>
+                    <span v-katex:auto>\( \frac{\mathrm{d}[S]}{\mathrm{d}t} = v = v_{max,E} \cdot Enzyme \cdot \frac{[S]}{K_m + [S]} \)</span>
                   </p>
                 </div>
               </el-collapse-item>
@@ -89,7 +96,7 @@
                   </p>
                   <p v-html="katexhtml1">
                   </p>
-                  
+
                 </div>
               </el-collapse-item>
               <el-collapse-item title="Decomposition" name="5">
@@ -98,48 +105,56 @@
                     The decomposition is also considers. Each compound has its own decompositon rate including gene, mRNA, protein and so on. The decomposition rate is prepresented as <span v-katex:auto>\( \frac{\mathrm{d}Protein}{\mathrm{d}t} = r_{decomposition} \cdot Protein \)</span>.
                   </p>
                 </div>
-              </el-collapse-item> 
+              </el-collapse-item>
               <!-- <el-collapse-item title="可控 Controllability" name="4">
               </el-collapse-item> -->
             </el-collapse>
           </div>
 
-          <h1 id="mainmodel"> Complete model </h1>
+          <a class="anchor" name="mainmodel" id="mainmodel"></a>
+          <h1> Complete model </h1>
           <div class="model-complete">
             Combining all these factors above and the sketch of metabolic pathway, the whole equations are listed as following:
             <p v-html="katexhtml2"></p>
           </div>
 
-          <h1 id="result"> Results </h1>
+          <a class="anchor" name="result" id="result"></a>
+          <h1> Results </h1>
           <div>
             <p>
-            Because of the time constraint, most parameters are estimated by ourselves and the value can be found in our <a href="https://github.com/handsome12138/IGEM_WINTER_PROJECT/tree/main/model/code" class="mylink"> <b>Github</b> </a>. The result are shown as following where <span style="color:green"> <b>green</b></span> curve is high <span v-katex:auto>\(TGF-\beta\)</span> situation while <span style="color:red"> <b>red</b></span> curve is low <span v-katex:auto>\(TGF-\beta\)</span> situation.We can see that the shape of curve indicates that 
-            <b> the amount of output <span v-katex:auto>\(RhoA\)</span> and some intermediate products like <span v-katex:auto>\(SGSS\)</span> are closely related to the input <span v-katex:auto>\(TGF-\beta\)</span></b>     
+            Because of the time constraint, most parameters are estimated by ourselves and the value can be found in our <a href="https://github.com/handsome12138/IGEM_WINTER_PROJECT/tree/main/model/code" class="mylink" target="_blank"> <b>Github</b> </a>. The result are shown as following where <span style="color:green"> <b>green</b></span> curve is high <span v-katex:auto>\(TGF-\beta\)</span> situation while <span style="color:red"> <b>red</b></span> curve is low <span v-katex:auto>\(TGF-\beta\)</span> situation.We can see that the shape of curve indicates that
+            <b> the amount of output <span v-katex:auto>\(RhoA\)</span> and some intermediate products like <span v-katex:auto>\(SGSS\)</span> are closely related to the input <span v-katex:auto>\(TGF-\beta\)</span></b>
             </p>
             <img :src="require('@/assets/model/model_wp.png')" class="figure">
           </div>
 
-          <h1 id="reference">Refenrences</h1>
+          <a class="anchor" name="reference" id="reference"></a>
+          <h1>Refenrences</h1>
           <div>
-              The model design mainly refers to <a href="http://2015.igem.org/Team:KU_Leuven/Modeling" class="mylink">2015 igem KU Leuven Model</a> 
+              The model design mainly refers to <a href="http://2015.igem.org/Team:KU_Leuven/Modeling" class="mylink">2015 igem KU Leuven Model</a>
           </div>
 
-          <h1 id="model-KU_Leuven"> Appendix: Reproduction of 2015 igem KU Leuven Model </h1>
+          <a class="anchor" name="model-KU_Leuven" id="model-KU_Leuven"></a>
+          <h1> Appendix: Reproduction of 2015 igem KU Leuven Model </h1>
           <div class="model-KU">
             <p>
             As their model is described in detail in their own wiki, I am going to share the problems I met when I was trying to reproduce their results.
             </p>
             <p>
-              First, there are some mistakes in their ODE. For example, the mistake of writing <span v-katex:auto>\(k_{+}\)</span> as <span v-katex:auto>\(k_{-}\)</span>. According to the symmetry of the formula, it is not hard to find these mistakes. 
+              First, there are some mistakes in their ODE. For example, the mistake of writing <span v-katex:auto>\(k_{+}\)</span> as <span v-katex:auto>\(k_{-}\)</span>. According to the symmetry of the formula, it is not hard to find these mistakes.
             </p>
             <p>
-              Besides, the most important problem is the lack of parameters. Except for the parameters that are vaguely described, there are some parameters in the model can not be found According to their description like the initial value of the ODE.
+              Besides, the most important problem is the lack of parameters. Except for the parameters that are vaguely described, there are some parameters in the model can not be found according to their description like the initial value of the ODE.
             </p>
             <p>
-              So, I estimated some parameters and their result figure and mine are in the following respectively. Though the order of magnitudes differ from their results, the shape of each curve remains the same. The code and the estimated parameters can be found in our <a href="https://github.com/handsome12138/IGEM_WINTER_PROJECT/tree/main/KULmodel/pythoncode" class="mylink"> <b>Github</b> </a>
+              So, I estimated some parameters and their result figure and mine are in the following respectively. Though the order of magnitudes differ from their results, the shape of each curve remains the same. 
+              The code and the estimated parameters can be found in our <a href="https://github.com/handsome12138/IGEM_WINTER_PROJECT/tree/main/KULmodel/pythoncode" class="mylink" target="_blank"> <b>Github</b> </a>
             </p>
             <img :src="require('@/assets/model/KUL_model_ori.png')" class="figure">
+            <div style="text-align:center;marigin:auto"> <b>Original Result</b> </div>
+            <br>
             <img :src="require('@/assets/model/KUL_model_mine.jpg')" class="figure">
+            <div style="text-align:center;marigin:auto"> <b>Our Result</b> </div>
           </div>
         </div>
     </div>
@@ -148,7 +163,7 @@
 <script>
 import Vue from 'vue'
 import VueKatex from 'vue-katex'
-import katex from 'katex';
+import katex from 'katex'
 import 'katex/dist/katex.min.css'
 import sidenav from '@/components/Side_nav.vue'
 
@@ -161,18 +176,18 @@ Vue.use(VueKatex, {
 export default {
   data () {
     return {
-      mylatex: "test latex a = \sqrt{3}",
-      submodel_active:1,
-      pathway_sketch: require("@/assets/model/pathway.jpg"),
+      mylatex: 'test latex a = \sqrt{3}',
+      submodel_active: 1,
+      pathway_sketch: require('@/assets/model/pathway.jpg'),
       // pathway_sketch: require("@/assets/model/pathway.png"),
-      katexhtml1:katex.renderToString(String.raw`
+      katexhtml1: katex.renderToString(String.raw`
       \left\{ \begin{aligned}
         &\frac{\mathrm{d}A}{\mathrm{d}t} &=& -k_{associate} \cdot A \cdot B + k_{disassociate} \cdot A/B \\
         &\frac{\mathrm{d}B}{\mathrm{d}t} &=& -k_{associate} \cdot A \cdot B + k_{disassociate} \cdot A/B \\
         &\frac{\mathrm{d}A/B}{\mathrm{d}t} &=& + k_{associate} \cdot A \cdot B - k_{disassociate} \cdot A/B 
       \end{aligned} \right.
       `),
-      katexhtml2:katex.renderToString(String.raw`
+      katexhtml2: katex.renderToString(String.raw`
       \left\{
       \begin{array}{lll}
         \frac{\mathrm{d} mTGFBR1 }{\mathrm{d}t}  & = &  \alpha_{TGFBR1} \cdot gTGFBR1 - d_{mTGFBR1} \cdot mTGFBR1 \\[.5ex] 
@@ -225,53 +240,63 @@ export default {
       `),
       // katextabal_d:katex.renderToString(String.raw`
       // `),
-      mynav:[
+      mynav: [
         {
-          name:"Notations",
-          id:"notations"
+          name: 'Notations',
+          id: 'notation'
         },
         {
-          name:"Basic View",
-          id:"basic"
+          name: 'Basic View',
+          id: 'basic'
         },
         {
-          name:"Submodels",
-          id:"submodels"
+          name: 'Submodels',
+          id: 'submodels'
         },
         {
-          name:"Complete Model",
-          id:"mainmodel"
+          name: 'Complete Model',
+          id: 'mainmodel'
         },
         {
-          name:"Results",
-          id:"result"
+          name: 'Results',
+          id: 'result'
         },
         {
-          name:"References",
-          id:"reference"
+          name: 'References',
+          id: 'reference'
         },
         {
-          name:"KU Leuven Model",
-          id:"model-KU_Leuven"
-        },
+          name: 'KU Leuven Model',
+          id: 'model-KU_Leuven'
+        }
       ]
     }
   },
-  components:{
-    sidenav:sidenav,
+  components: {
+    sidenav: sidenav
   },
-  mounted(){
-    var item, index;
+  mounted () {
+    var item, index
     // console.log(this.$refs.collapse)
     // for (item of this.$refs.collapse.$children){
     //   console.log(item)
     //   item.$el.style.cssText = 'font-size:1rem';
     // }
+  },
+  methods: {
+
   }
 }
 </script>
 
 <style lang="scss" scoped>
+.anchor{
+  position: relative;
+  top: -44px; // 偏移值
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
 .pathway-sketch{
   width:100%;
 }
@@ -284,7 +309,7 @@ export default {
     width:15%;
   }
   .model-body{
-    margin:5%;
+    margin:0% 5% 5% 5%;
     h1{
       text-align: center;
       margin-top: 5%;
@@ -300,7 +325,7 @@ export default {
   font-size:1rem
 }
 /deep/ .el-collapse-item__header{
-  font-size:1rem;
+  font-size:1.2rem;
   font-weight: bold;
 }
 

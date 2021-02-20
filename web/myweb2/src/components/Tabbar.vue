@@ -1,9 +1,9 @@
 <template>
     <div>
         <div class="tabbar" :style="{ 'background-image':'url('+ urltabbar +')' }">
-            <router-link to="/Home">Home</router-link> 
-            <router-link to="/Project">Project</router-link> 
-            <router-link to="/Model">Model</router-link> 
+            <router-link to="/Home">Home</router-link>
+            <router-link to="/Project">Project</router-link>
+            <router-link to="/Model">Model</router-link>
             <router-link to="/Team">Team</router-link>
         </div>
     </div>
@@ -34,10 +34,10 @@
 
 <script>
 export default {
-    data(){
-        return{
-            urltabbar: require('@/assets/tabbar.png')
-        }
+  data () {
+    return {
+      urltabbar: require('@/assets/tabbar.png')
     }
+  }
 }
 </script>

@@ -17,8 +17,8 @@
 import loading from '../assets/home/loading.gif'
 
 export default {
-  data: function(){
-    return{
+  data: function () {
+    return {
     	load: loading
     }
   }

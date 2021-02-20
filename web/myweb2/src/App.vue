@@ -1,7 +1,7 @@
 <template>
 
   <div id="app">
-    
+
     <div id="nav" >
 
       <img :src="logo" id="logo" />
@@ -18,9 +18,9 @@
 
                   <div class="dropdown-content1">
 
-                    <router-link to="/Description">Description</router-link>    
+                    <router-link to="/Description">Description</router-link>
 
-                    <router-link to="/Design">Design</router-link>   
+                    <router-link to="/Design">Design</router-link>
 
                     <router-link to="/Safety">Safety</router-link>
 
@@ -30,43 +30,42 @@
 
                   </div>
 
-                </li>     
+                </li>
 
                 <li><router-link to="/Model" id="amodel">Modeling</router-link>
 
-                </li>        
+                </li>
 
                 <li><router-link to="/HP" id="ahp">Human Practice</router-link>
 
                   <div class="dropdown-content2">
 
-                    <router-link to="/HP">HP1</router-link>      
+                    <router-link to="/HP">HP1</router-link>
 
-                    <router-link to="/HP">HP2</router-link>    
+                    <router-link to="/HP">HP2</router-link>
 
                   </div>
 
-                </li>      
+                </li>
 
                 <li><router-link to="/Team" id="ateam">Team</router-link>
 
                 <div class="dropdown-content3">
 
-                  <router-link to="/Team">Team</router-link>       
+                  <router-link to="/Team">Team</router-link>
 
-                  <router-link to="/Members">Members</router-link>  
+                  <router-link to="/Members">Members</router-link>
 
-                  <router-link to="/Attributions">Attributions</router-link>  
+                  <router-link to="/Attributions">Attributions</router-link>
 
                 </div>
 
-                </li>        
+                </li>
 
-            </ul>  
+            </ul>
 
-      </div>     
-      
-      
+      </div>
+
     </div>
     <br>
     <router-view id="insert" />
@@ -78,7 +77,6 @@
     </div>
   </div>
 
-  
 </template>
 
 <style lang="scss">
@@ -89,7 +87,6 @@
   text-align: center;
   color: #2c3e50;
 }
-
 
 #nav{
   background-color: #87CEEB;
@@ -149,7 +146,6 @@
   margin-top: 60px;
 }
 
-
 // .bottom-fix-footer{
 //   position: fixed;
 //   bottom: 0%;
@@ -160,11 +156,11 @@
   padding: 0px;
   height:75px;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
 }
 
-.header_bottom ul{  
+.header_bottom ul{
   height:30px;
   line-height:30px;
   width:680px;
@@ -177,8 +173,8 @@
   display:inline;
 }
 
-.header_bottom ul li a{ 
-  color:#afeeee; 
+.header_bottom ul li a{
+  color:#afeeee;
   font-size:17px;
   font-weight: bold;
   text-decoration: none;
@@ -194,9 +190,8 @@
    line-height: 50px;
    color: white;
    padding-left: 20px;
-   padding-right: 20px;   
+   padding-right: 20px;
 }
-
 
 .dropdown-content1{
   display: none;
@@ -228,8 +223,6 @@
 .dropdown-content1 a,.dropdown-content2 a,.dropdown-content3 a{
   text-align: left;
 }
-
-
 
 .nav li:hover .dropdown-content1{
   display: block;
@@ -278,45 +271,45 @@ import nav1 from './assets/home/nav3.png'
 export default {
   components: {
     tabbar: tabbar,
-    myfooter,
+    myfooter
   },
-  router, 
+  router,
 
-  data: function(){
-    return{
+  data: function () {
+    return {
       up: up,
       nav1: nav1,
       logo: logo,
       isshow: false,
       scrollTop: 0,
-      bgImg:{ backgroundImage:"url(" + require("./assets/home/nav1.png") + ")",
-              height:'100vh',
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "70% 25%",
-            }
+      bgImg: {
+        backgroundImage: 'url(' + require('./assets/home/nav1.png') + ')',
+        height: '100vh',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '70% 25%'
       }
-    
+    }
   },
 
- mounted() {
-    window.addEventListener("scroll", this.handleScroll, true);
+  mounted () {
+    window.addEventListener('scroll', this.handleScroll, true)
   },
   methods: {
-    handleScroll() {
-          const that = this
-          let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-          that.scrollTop = scrollTop
-          if (that.scrollTop > 60) {
-            that.isshow = true
-          } else {
-            that.isshow = false
-          }
+    handleScroll () {
+      const that = this
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+      that.scrollTop = scrollTop
+      if (that.scrollTop > 60) {
+        that.isshow = true
+      } else {
+        that.isshow = false
+      }
     },
 
-    backtop() {  
-        const that = this
-        let timer = setInterval(() => {
-        let ispeed = Math.floor(-that.scrollTop / 5)
+    backtop () {
+      const that = this
+      const timer = setInterval(() => {
+        const ispeed = Math.floor(-that.scrollTop / 5)
         document.documentElement.scrollTop = document.body.scrollTop = that.scrollTop + ispeed
         if (that.scrollTop === 0) {
           clearInterval(timer)
@@ -325,6 +318,5 @@ export default {
     }
   }
 }
-
 
 </script>

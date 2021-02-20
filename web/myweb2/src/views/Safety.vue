@@ -21,15 +21,15 @@
 	</div>
 
 	<section>
-		<p>   
+		<p>
 			As it should, safety has always been a top priority to the ZJU-China iGEM team. This is especially true when considering the potential bad consequences that may caused by engineered cells. Our planned experiments presented in detail does not have any biosafety concerns in the laboratory or the environment.
-		</p>	
+		</p>
 	</section>
 	<hr>
 
 	<section>
 		<h2 id="Subtitle1">Lab Safety</h2>
-		<p>   
+		<p>
 			All of the laboratory team members in our team underwent detailed safety training before any laboratory work had begun. Basic rules in laboratories that must be applied included, but not limited to:
 		</p>
 		<ul class="limit">
@@ -44,7 +44,7 @@
 		</ul>
 		<p>
 			Laboratory team members were provided with all the necessary personal protective equipment to ensure their safety. To prevent the biological pollution caused by the spread of the microorganisms, it is compulsory to take all necessary sterilisation steps before entering or leaving the laboratory premises. We also disinfected biological safety cabinets were after each use.
-		</p>	
+		</p>
 	</section>
 	<hr>
 
@@ -59,7 +59,7 @@
 		</figure>
 		<figcaption>Figure 1 the homology-based system in <i>P.pastoris</i></figcaption>
 		<p>
-			And for cell free system in our product, in which living organism is not included thus could be possibly regarded as enviromentally safe. Currently there is no study specific at the implication of transformed plasmid in CFS on environment and human health which should be considered in our laboratory work and human practice. 
+			And for cell free system in our product, in which living organism is not included thus could be possibly regarded as enviromentally safe. Currently there is no study specific at the implication of transformed plasmid in CFS on environment and human health which should be considered in our laboratory work and human practice.
 		</p>
 		<p>
 			Safety warning signs including “Gloves!” Prohibited for under 18” will be applied in product packaging and user brochure.
@@ -68,7 +68,7 @@
 		<p>
 			The project used a biochip as a container for large numbers of simultaneous biochemical reactions. The chip is a fine-scale cell chamber containing an array of microwells. In each microwell, there are numbers of engineered cells, which could not be released or exposed to the environment. No structural, report, and signaling protein produced by cells are exposed to the environment. They only transfer from one microwell to another through the microfluidic tubing. After the experiment, the biochip should be cleaned and sterilized in order to prevent the potential pollution caused by engineered cells and their productions. In an extremely unlikely case of environmental release, the cells in the biochip are equipped with robust kill-switch (as described above) mechanisms in order to prevent biological pollution.
 		</p>
-		
+
 	</section>
 	<hr>
 
@@ -122,7 +122,7 @@ main {
 
 .pageName {
     width: 100%;
-    border-bottom-style:solid; 
+    border-bottom-style:solid;
     border-bottom-width:medium;
     margin-bottom: 5vh;
     margin-top:0;
@@ -168,13 +168,13 @@ main .ref ol {
 }
 
 </style>
- 
+
 <script>
 import safe from '../assets/safety/safety.jpg'
 export default {
-  data: function(){
-    return{
-      safe: safe,
+  data: function () {
+    return {
+      safe: safe
     }
   }
 }

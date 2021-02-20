@@ -23,22 +23,21 @@
 		<div class="divider"></div>
 	</div>
 
-
 	<section>
 		<h2 id="Subtitle1">Our Inspiration - Where we start it</h2>
-		<p>   
+		<p>
 			Hepatocellular carcinoma (HCC) is a primary liver malignant tumor that typically develops in the setting of chronic liver disease, particularly in patients with cirrhosis or chronic hepatitis B virus infection.It is typically diagnosed late in its course, and the median survival following diagnosis is only approximately 6 to 20 months. (Dimri & Satyanarayana, 2020)
 		</p>
 		<p>
 			Multiple risk factors for the development of HCC have been identified, and with advances in tumor biology and molecular genetic profiling, different signaling pathways and molecular mechanisms have been identified as responsible for initiating and promoting HCC. Targeting these critical pathways, has led to the identification of novel therapeutics for HCC treatment. And with emerging of organ chip, we are inspired to design a product that can help test potential carcinogenicity of small molecules and anticipate the potential targets for therapeutic drug development especially for HCC. (Massarweh & El-Serag, 2017)
-		</p>	
+		</p>
 	</section>
 	<hr>
 
 	<section>
 		<h2 id="Subtitle2">Academic Importance - Why we need it</h2>
 		<p>
-			Previously, in order to understand the effect small molecule or medicine has on the signaling pathway, researchers have to introduce all these compositions into cell system and then conduct Western blotting and immunofluorescence which is laborious and time-consuming. 
+			Previously, in order to understand the effect small molecule or medicine has on the signaling pathway, researchers have to introduce all these compositions into cell system and then conduct Western blotting and immunofluorescence which is laborious and time-consuming.
 		</p>
 		<p>
 			Numerous studies in synthetic biology have attempted to develop gene circuits and signaling pathways (Meng & Ellis, 2020; Voigt, 2020), using a combination of biotechnology tools like molecular cloning (Lessard, 2013), genome editing (Wolt, 2017), and directed evolution (Mate et al., 2017). These devices are fundamental to the complex information processing in biological organisms (Seelig et al., 2006; Erbas-Cakmak et al., 2018; Chen et al., 2020).
@@ -52,13 +51,13 @@
 	<section>
 		<h2 id="Subtitle3">A Novel Method Created By Us - How we make it</h2>
 		<p>
-			We managed to simulate the cell signaling pathway on a small chip. With the technology of microfluid chip, secreting cells <i>P. pastoris</i> ura3Δ1 aro1::URA3 are cultivated in individual cabinets. Cells in each room secret one specific type of protein in the signaling pathway and receive information from upstream cabinet. Thus, it is able for us to seperate the whole signaling pathway into several parts which are independent but interconnected. 
+			We managed to simulate the cell signaling pathway on a small chip. With the technology of microfluid chip, secreting cells <i>P. pastoris</i> ura3Δ1 aro1::URA3 are cultivated in individual cabinets. Cells in each room secret one specific type of protein in the signaling pathway and receive information from upstream cabinet. Thus, it is able for us to seperate the whole signaling pathway into several parts which are independent but interconnected.
 		</p>
 		<p>
 			Besides, inputs to individual cabinets are assessible so that researchers can put focus on specific composition of the pathway by adding reagents of interest to related chamber. How the signaling pathway and specific composition of it react to reagents or small moleclues added can be reflected by the intensity of fluorescence.
 		</p>
 		<p>
-			Three key pathways of HCC including Wnt pathway, TGF-β pathway and PI3K pathway are considered in our project as examples, all of which are involved in the development of HCC. Logic protein gates including “or” “and” “not” and etc. are created for intercellular signal conduction for our device and future use in miscellaneous signaling pathways. 
+			Three key pathways of HCC including Wnt pathway, TGF-β pathway and PI3K pathway are considered in our project as examples, all of which are involved in the development of HCC. Logic protein gates including “or” “and” “not” and etc. are created for intercellular signal conduction for our device and future use in miscellaneous signaling pathways.
 		</p>
 	</section>
 	<hr>
@@ -66,7 +65,7 @@
 	<section>
 		<h2 id="Subtitle4">Conclusion - Would you like it</h2>
 		<p>
-			Compared with current methods of studying signaling pathways, our ΣPathway has the advantages of readability and simplicity, and closeness to living organisms. In addition, adding reagent of interest in individual chamber can be used to study the effect that it will put to molecule in the context of signaling pathway. 
+			Compared with current methods of studying signaling pathways, our ΣPathway has the advantages of readability and simplicity, and closeness to living organisms. In addition, adding reagent of interest in individual chamber can be used to study the effect that it will put to molecule in the context of signaling pathway.
 		</p>
 		<p>
 			Generally speaking, our device can play an important role in cancer screening, drug target discovery and improving feasiblity of laboratory work in related research. We think it will be a promising product that can be used in daily and academic circumstance in the near future.
@@ -138,7 +137,7 @@ main {
 
 .pageName {
     width: 100%;
-    border-bottom-style:solid; 
+    border-bottom-style:solid;
     border-bottom-width:medium;
     margin-bottom: 5vh;
     margin-top:0;
@@ -184,13 +183,13 @@ main .ref ol {
 }
 
 </style>
- 
+
 <script>
 import safe from '../assets/safety/safety.jpg'
 export default {
-  data: function(){
-    return{
-      safe: safe,
+  data: function () {
+    return {
+      safe: safe
     }
   }
 }
