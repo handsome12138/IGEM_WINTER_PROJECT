@@ -24,9 +24,10 @@
               Our design is a feedback system in which the output protein <span v-katex:auto>\(RhoA\)</span> can detect the amount of input <span v-katex:auto>\(TGF-\beta\)</span> and change accordingly through a series of pathways.
             </p>
             <p>
-              The sketch of metabolic pathway is shown as following.
+              The sketch of metabolic pathway is shown as following(cf., Fig. 1).
             </p>
             <img :src="pathway_sketch" class="pathway-sketch">
+            <div class="fig-caption">Figure 1: The sketch of our model</div>
           </div>
 
           <a class="anchor" name="submodels" id="submodels"></a>
@@ -116,6 +117,17 @@
           <div class="model-complete">
             Combining all these factors above and the sketch of metabolic pathway, the whole equations are listed as following:
             <p v-html="katexhtml2"></p>
+            <p>The related parameters in submodels are listed as Table. 1, 2, 3, 4, 5.</p>
+            <mytable :tabledata="table_para_a"> </mytable>
+            <div class="table-caption"> Table 1: Transcription Parameters </div>
+            <mytable :tabledata="table_para_km"> </mytable>
+            <div class="table-caption"> Table 2: Enzymatic Reaction and Transcription Factor Parameters </div>
+            <mytable :tabledata="table_para_b"> </mytable>
+            <div class="table-caption"> Table 3: Translation Parameters </div>
+            <mytable :tabledata="table_para_k"> </mytable>
+            <div class="table-caption"> Table 4: Protein Association and Disassociation Parameters </div>
+            <mytable :tabledata="table_para_d"> </mytable>
+            <div class="table-caption"> Table 5: Decomposition Parameters </div>
           </div>
 
           <a class="anchor" name="result" id="result"></a>
@@ -126,6 +138,7 @@
             <b> the amount of output <span v-katex:auto>\(RhoA\)</span> and some intermediate products like <span v-katex:auto>\(SGSS\)</span> are closely related to the input <span v-katex:auto>\(TGF-\beta\)</span></b>
             </p>
             <img :src="require('@/assets/model/model_wp.png')" class="figure">
+            <div class="fig-caption"> Figure 2: Our Model Result </div>
           </div>
 
           <a class="anchor" name="reference" id="reference"></a>
@@ -147,14 +160,14 @@
               Besides, the most important problem is the lack of parameters. Except for the parameters that are vaguely described, there are some parameters in the model can not be found according to their description like the initial value of the ODE.
             </p>
             <p>
-              So, I estimated some parameters and their result figure and mine are in the following respectively. Though the order of magnitudes differ from their results, the shape of each curve remains the same. 
+              So, I estimated some parameters and their result figure and mine are in the following respectively(cf., Fig. 3,4). Though the order of magnitudes differ from their results, the shape of each curve remains the same. 
               The code and the estimated parameters can be found in our <a href="https://github.com/handsome12138/IGEM_WINTER_PROJECT/tree/main/KULmodel/pythoncode" class="mylink" target="_blank"> <b>Github</b> </a>
             </p>
             <img :src="require('@/assets/model/KUL_model_ori.png')" class="figure">
-            <div style="text-align:center;marigin:auto"> <b>Original Result</b> </div>
+            <div class="fig-caption"> Figure 3: Original Result </div>
             <br>
             <img :src="require('@/assets/model/KUL_model_mine.jpg')" class="figure">
-            <div style="text-align:center;marigin:auto"> <b>Our Result</b> </div>
+            <div class="fig-caption"> Figure 4: Our Result </div>
           </div>
         </div>
     </div>
@@ -166,6 +179,7 @@ import VueKatex from 'vue-katex'
 import katex from 'katex'
 import 'katex/dist/katex.min.css'
 import sidenav from '@/components/Side_nav.vue'
+import mytable from "@/components/Mytable.vue"
 
 Vue.use(VueKatex, {
   globalOptions: {
@@ -190,7 +204,7 @@ export default {
       katexhtml2: katex.renderToString(String.raw`
       \left\{
       \begin{array}{lll}
-        \frac{\mathrm{d} mTGFBR1 }{\mathrm{d}t}  & = &  \alpha_{TGFBR1} \cdot gTGFBR1 - d_{mTGFBR1} \cdot mTGFBR1 \\[.5ex] 
+        \frac{\mathrm{d} mGrb2 }{\mathrm{d}t}  & = &  \alpha_{TGFBR1} \cdot gTGFBR1 - d_{mTGFBR1} \cdot mTGFBR1 \\[.5ex] 
         \frac{\mathrm{d} TGFBR1 }{\mathrm{d}t}  & = &  \beta_{TGFBR1} \cdot mTGFBR1 - d_{TGFBR1} \cdot mTGFB1 - v_{max,TGFBR1-P} \frac{TGF-\beta/TGFBR2 \cdot TGFBR1}{K_{m, TGFBR1} + TGFBR1} \\[.5ex] 
 
         \frac{\mathrm{d} mTGFBR2 }{\mathrm{d}t}  & = &  \alpha_{TGFBR2} \cdot gTGFBR2 - d_{mTGFBR2} \cdot mTGFBR2 \\[.5ex] 
@@ -269,11 +283,229 @@ export default {
           name: 'KU Leuven Model',
           id: 'model-KU_Leuven'
         }
-      ]
+      ],
+      table_para_a:[{
+          para:'α_TGFBR1',
+          desc:'transcription rate of TGFBR1',
+        },{
+          para:'α_TGFBR2',
+          desc:'transcription rate of TGFBR2',
+        },{
+          para:'α_Sos',
+          desc:'transcription rate of Sos',
+        },{
+          para:'α_Grb2',
+          desc:'transcription rate of Grb2',
+        },{
+          para:'α_Shc',
+          desc:'transcription rate of Shc',
+        },{
+          para:'α_Sara',
+          desc:'transcription rate of Sara',
+        },{
+          para:'α_Smad2',
+          desc:'transcription rate of Smad2',
+        },{
+          para:'α_AI-2',
+          desc:'transcription rate of AI-2',
+        },{
+          para:'α_Cqs-S',
+          desc:'transcription rate of Cqs-S',
+        },{
+          para:'α_RhoA',
+          desc:'transcription rate of RhoA',
+        }
+      ],
+      table_para_b:[{
+          para:'β_TGFBR1',
+          desc:'translation rate of TGFBR1',
+        },{
+          para:'β_TGFBR2',
+          desc:'translation rate of TGFBR2',
+        },{
+          para:'β_Sos',
+          desc:'translation rate of Sos',
+        },{
+          para:'β_Grb2',
+          desc:'translation rate of Grb2',
+        },{
+          para:'β_Shc',
+          desc:'translation rate of Shc',
+        },{
+          para:'β_Sara',
+          desc:'translation rate of Sara',
+        },{
+          para:'β_Smad2',
+          desc:'translation rate of Smad2',
+        },{
+          para:'β_AI-2',
+          desc:'translation rate of AI-2',
+        },{
+          para:'β_Cqs-S',
+          desc:'translation rate of Cqs-S',
+        },{
+          para:'β_RhoA',
+          desc:'translation rate of RhoA',
+        }
+      ],
+      table_para_k:[{
+          para:'k_as,TGFBR2',
+          desc:'association rate of TGF-β and TGFBR2',
+        },{
+          para:'k_dis,TGFBR2',
+          desc:'disassociation rate of TGF-β and TGFBR2',
+        },{
+          para:'k_as,SGSS',
+          desc:'association rate of SGSS(Sos/Grb2/Shc/Sara)',
+        },{
+          para:'k_dis,SGSS',
+          desc:'disassociation rate of SGSS(Sos/Grb2/Shc/Sara)',
+        },{
+          para:'k_as,AI-2/Cqs-S',
+          desc:'association rate of AI-2 and Cqs-S',
+        },{
+          para:'k_dis,AI-2/Cqs-S',
+          desc:'disassociation rate of AI-2/Cqs-S',
+        }
+      ],
+      table_para_d:[{
+          para:'d_mTGFBR1',
+          desc:'decomposition rate of TGFBR1 mRNA',
+        },{
+          para:'d_mTGFBR2',
+          desc:'decomposition rate of TGFBR2 mRNA',
+        },{
+          para:'d_mSos',
+          desc:'decomposition rate of Sos mRNA',
+        },{
+          para:'d_mGrb2',
+          desc:'decomposition rate of Grb2 mRNA',
+        },{
+          para:'d_mShc',
+          desc:'decomposition rate of Shc mRNA',
+        },{
+          para:'d_mSara',
+          desc:'decomposition rate of Sara mRNA',
+        },{
+          para:'d_mSmad2',
+          desc:'decomposition rate of Smad2 mRNA',
+        },{
+          para:'d_mAI-2',
+          desc:'decomposition rate of AI-2 mRNA',
+        },{
+          para:'d_mCqs-S',
+          desc:'decomposition rate of Cqs-S mRNA',
+        },{
+          para:'d_mRhoA',
+          desc:'decomposition rate of RhoA mRNA',
+        },{
+          para:'d_TGFBR1',
+          desc:'decomposition rate of TGFBR1',
+        },{
+          para:'d_TGFBR2',
+          desc:'decomposition rate of TGFBR2',
+        },{
+          para:'d_Sos',
+          desc:'decomposition rate of Sos',
+        },{
+          para:'d_Grb2',
+          desc:'decomposition rate of Grb2',
+        },{
+          para:'d_Shc',
+          desc:'decomposition rate of Shc',
+        },{
+          para:'d_Sara',
+          desc:'decomposition rate of Sara',
+        },{
+          para:'d_Smad2',
+          desc:'decomposition rate of Smad2',
+        },{
+          para:'d_AI-2',
+          desc:'decomposition rate of AI-2',
+        },{
+          para:'d_Cqs-S',
+          desc:'decomposition rate of Cqs-S',
+        },{
+          para:'d_RhoA',
+          desc:'decomposition rate of RhoA',
+        },{
+          para:'d_TFGBR1-P',
+          desc:'disassociation rate of TGFBR1-P',
+        },{
+          para:'d_Smad2-P',
+          desc:'disassociation rate of Smad2-P',
+        },{
+          para:'d_TGF-β/TGFBR2',
+          desc:'disassociation rate of TGF-β/TGFBR2',
+        },{
+          para:'d_SGSS',
+          desc:'disassociation rate of SGSS',
+        },{
+          para:'d_AI-2/Cqs-S',
+          desc:'disassociation rate of AI-2/Cqs-S',
+        }
+      ],
+      table_para_km:[{
+          para:'v_max,TGFBR1-P',
+          desc:'max phosphorylation rate of TGFBR1 per unit enzyme ',
+        },{
+          para:'K_m,TGFBR1',
+          desc:'Michaelis constant of phosphorylation of TGFBR1',
+        },{
+          para:'v_max,Smad2-P',
+          desc:'max phosphorylation rate of Smad2 per unit enzyme ',
+        },{
+          para:'K_m,Smad2',
+          desc:'Michaelis constant of phosphorylation of Smad2',
+        },{
+          para:'K_d,Smad2',
+          desc:'dissociation constant of pSmad2 and SGSS(transcription factor) when transcripting Smad2',
+        },{
+          para:'n_Smad2',
+          desc:'Hill constant of pSmad2 and SGSS(transcription factor) when transcripting Smad2',
+        },{
+          para:'K_d,AI-2',
+          desc:'dissociation constant of pRhoA and Smad2-P(transcription factor) when transcripting AI-2',
+        },{
+          para:'n_AI-2',
+          desc:'Hill constant of pRhoA and Smad2-P(transcription factor) when transcripting AI-2',
+        },{
+          para:'K_d,pLuxU',
+          desc:'dissociation constant of pLuxU and AI-2/Cqs-S(transcription factor) when transcripting RhoA',
+        },{
+          para:'n_pLuxU',
+          desc:'Hill constant of pLuxU and AI-2/Cqs-S(transcription factor) when transcripting RhoA',
+        },{
+          para:'K_d,pSos',
+          desc:'dissociation constant of pSos and TGFBR1-P(transcription factor) when transcripting Sos',
+        },{
+          para:'n_pSos',
+          desc:'Hill constant of pSos and TGFBR1-P(transcription factor) when transcripting Sos',
+        },{
+          para:'K_d,pGrb2',
+          desc:'dissociation constant of pGrb2 and TGFBR1-P(transcription factor) when transcripting Grb2',
+        },{
+          para:'n_pGrb2',
+          desc:'Hill constant of pGrb2 and TGFBR1-P(transcription factor) when transcripting Grb2',
+        },{
+          para:'K_d,pShc',
+          desc:'dissociation constant of pShc and TGFBR1-P(transcription factor) when transcripting Shc',
+        },{
+          para:'n_pShc',
+          desc:'Hill constant of pShc and TGFBR1-P(transcription factor) when transcripting Shc',
+        },{
+          para:'K_d,pSara',
+          desc:'dissociation constant of pSara and TGFBR1-P(transcription factor) when transcripting Sara',
+        },{
+          para:'n_pSara',
+          desc:'Hill constant of pSara and TGFBR1-P(transcription factor) when transcripting Sara',
+        }
+      ],
     }
   },
   components: {
-    sidenav: sidenav
+    sidenav: sidenav,
+    mytable,
   },
   mounted () {
     var item, index
@@ -343,5 +575,17 @@ export default {
   &:hover, &:active{
     color: yellowgreen
   }
+}
+.fig-caption{
+  text-align:center;
+  margin:auto;
+  font-weight: bold;
+}
+.table-caption{
+  text-align:center;
+  margin:auto;
+  padding-top: 10px;
+  padding-bottom:25px;
+  font-weight: bold;
 }
 </style>

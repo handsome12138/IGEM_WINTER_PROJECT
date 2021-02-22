@@ -89,6 +89,7 @@
 }
 
 #nav{
+  z-index:2;
   background-color: #87CEEB;
   position: fixed;
   height: 85px;
@@ -270,7 +271,7 @@ import logo from './assets/home/logo.png'
 import nav1 from './assets/home/nav3.png'
 export default {
   components: {
-    tabbar: tabbar,
+    tabbar,
     myfooter
   },
   router,
