@@ -1,6 +1,6 @@
 <template>
-<div class="row">
-  <aside class="sidenav">
+ <div class="row" style="text-align:left">
+  <!--<aside class="sidenav">
 	<ul class="leftnav">
 		<li class="nav-item">
 			<a class="nav-link" href="#Subtitle1">Lab safety</a>
@@ -12,12 +12,14 @@
 		<a class="nav-link" href="#Subtitle3">References</a>
 		</li>
 	</ul>
-  </aside>
+  </aside>   -->
+
+  <sidenav :navs="navs" class="sidenav"></sidenav>
 
   <main>
 	<div class="pageName">
 		<h1>Safety</h1>
-		<div class="divider"></div>
+		
 	</div>
 
 	<section>
@@ -28,7 +30,8 @@
 	<hr>
 
 	<section>
-		<h2 id="Subtitle1">Lab Safety</h2>
+		<a class="anchor1" name="lab" id="lab"></a>
+		<h2>Lab Safety</h2>
 		<p>
 			All of the laboratory team members in our team underwent detailed safety training before any laboratory work had begun. Basic rules in laboratories that must be applied included, but not limited to:
 		</p>
@@ -49,13 +52,14 @@
 	<hr>
 
 	<section>
-		<h2 id="Subtitle2">Project Design</h2>
+		<a class="anchor1" name="prodes" id="prodes"></a>
+		<h2>Project Design</h2>
 		<h3>Joshua Safety</h3>
 		<p>
 			Based on bioethics guideline of synthetic biology, we are convinced that our engineered Pichia pastoris should be friendly to environment and our staff even in the case of leakage. Thus, we managed to introduce a traditional homology‐based system for targeted gene aro1 disruption in P. pastoris ura3Δ1 parent strain according to scheme following below, which blocked biosynthesis of all three aromatic amino acids tyrosine, phenylalanine, and tryptophan, making it an auxotrophic strain (Figure 1). Aro1 was disrupted by an auxotrophic biomarker ura3. The strain <i>P. pastoris</i> ura3Δ1 aro1::URA3 constructed showed a surprising sensitivity to rich culture medium and must be grown in supplemented minimal medium with three aromatic amino acids, which means it is unable to survive outside culture medium. And it is confirmed that this strain can function as a powerful expression host for eukaryotic proteins.1
 		</p>
 		<figure>
-			<img :src="safe" />
+			<img :src="safe" style="width: 70%; -webkit-width:40%; "/>
 		</figure>
 		<figcaption>Figure 1 the homology-based system in <i>P.pastoris</i></figcaption>
 		<p>
@@ -73,11 +77,13 @@
 	<hr>
 
 	<section class="ref">
-	<h2 id="Subtitle3">References</h2>
+	<a class="anchor1" name="rref" id="rref"></a>
+	<h2>References</h2>
 	<ol>
 		<li id="ref1">Whittaker, M. M., & Whittaker, J. W. (2005). Construction and characterization of Pichia pastoris strains for labeling aromatic amino acids in recombinant proteins. <i>Protein expression and purification, 41(2), 266-274.</i></li>
 	</ol>
 	</section>
+
   </main>
 
 </div>
@@ -87,41 +93,28 @@
 
 .row {
     display: flex;
-}
-
-.sidenav{
-	flex: 0 0 20%;
-}
-
-.sidenav ul {
-    font-family: 'Sansita',sans-serif;
-    list-style-type: none;
-    position:fixed;
-    padding-top: 30px;
-    padding-left:40px;
-}
-
-.sidenav a {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #767676;
-}
-
-.sidenav a.active {
-    color: white;
-    background-color: #8BBED5;
-    border-radius: 1rem;
+    -moz-display: flex;/* Firefox */
+    -webkit-display: flex; /* Safari and Chrome */
+    -o-display: flex; /* Opera */
+    -ms-display: flex;
+    
 }
 
 main {
-    padding-top: 12vh;
-    padding-left: 6vw;
-    flex: 0 0 80%;
+	padding-top: 12vh;
+    flex: 0 0 65%;
+    -ms-flex: 0 0 60%;
+    -moz-flex: 0 0 65%;/* Firefox */
+    -webkit-flex: 0 0 65%; /* Safari and Chrome */
+    -o-flex: 0 0 65%; /* Opera */
     text-align: left;
+    background-color: white;
+    padding-left: 5%;
+    margin-left: 3%;
 }
 
 .pageName {
-    width: 100%;
+    width: 90%;
     border-bottom-style:solid;
     border-bottom-width:medium;
     margin-bottom: 5vh;
@@ -140,15 +133,15 @@ figure,figcaption{
 }
 
 main section {
-    padding-left: 0px;
-    padding-right: 120px;
+    padding-left: 0%;
+    padding-right: 10%;
 }
 
 main hr {
     border-style: solid;
     border-color: #2C2C2C;
-    margin-right: 3vw;
-    margin-left: 3vw;
+    margin-right: 15%;
+    margin-bottom: 5%;
 }
 
 main p{
@@ -167,14 +160,46 @@ main .ref ol {
     font-size: 0.9rem;
 }
 
+.anchor1{
+  position: relative;
+  top: -100px;
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
 </style>
 
 <script>
 import safe from '../assets/safety/safety.jpg'
+import sidenav from '../components/Side_nav'
+
+
 export default {
+  components: {
+    sidenav: sidenav
+  },
+
   data: function () {
     return {
-      safe: safe
+      safe: safe,
+      navs:[
+     	{
+     		name: 'Lab Safety',
+     		id: 'lab'
+
+     	},
+     	{
+     		name: 'Project Design',
+     		id: 'prodes'
+
+     	},
+     	{
+     		name: 'References',
+     		id: 'rref'
+
+     	}
+      ]
     }
   }
 }
