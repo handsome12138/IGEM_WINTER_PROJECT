@@ -9,6 +9,12 @@ import Design from '../views/Design.vue'
 import Safety from '../views/Safety.vue'
 import Results from '../views/Results.vue'
 import Future from '../views/Future.vue'
+import Hardware from '../views/Hardware.vue'
+import HP from '../views/HP.vue'
+import IHP from '../views/IHP.vue'
+import EAE from '../views/EAE.vue'
+import Inclusion from '../views/Inclusion.vue'
+import Bioethics from '../views/Bioethics.vue'
 
 Vue.use(VueRouter)
 
@@ -57,6 +63,36 @@ const routes = [
     path: '/Project',
     name: 'Project',
     component: Project
+  },
+  {
+    path: '/Hardware',
+    name: 'Hardware',
+    component: Hardware
+  },
+  {
+    path: '/Bioethics',
+    name: 'Bioethics',
+    component: Bioethics
+  },
+  {
+    path: '/HP',
+    name: 'HP',
+    component: HP
+  },
+  {
+    path: '/IHP',
+    name: 'IHP',
+    component: IHP
+  },
+  {
+    path: '/EAE',
+    name: 'EAE',
+    component: EAE
+  },
+  {
+    path: '/Inclusion',
+    name: 'Inclusion',
+    component: Inclusion
   },
   {
     path: '/*',
