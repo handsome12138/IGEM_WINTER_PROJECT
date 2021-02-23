@@ -1,21 +1,8 @@
 <template>
-<div class="row">
-  <aside class="sidenav">
-	<ul class="leftnav">
-		<li class="nav-item">
-			<a class="nav-link" href="#Subtitle1">Our Inspiration</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="#Subtitle2">Academic Importance</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="#Subtitle3">A Novel Method</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="#Subtitle3">Conclusion</a>
-		</li>
-	</ul>
-  </aside>
+<div class="row" style="text-align:left">
+
+
+  <sidenav :navs="navs" class="sidenav"></sidenav>
 
   <main>
 	<div class="pageName">
@@ -24,7 +11,8 @@
 	</div>
 
 	<section>
-		<h2 id="Subtitle1">Our Inspiration - Where we start it</h2>
+		<a class="anchor1" name="Inspiration" id="Inspiration"></a>
+		<h2>Our Inspiration - Where we start it</h2>
 		<p>
 			Hepatocellular carcinoma (HCC) is a primary liver malignant tumor that typically develops in the setting of chronic liver disease, particularly in patients with cirrhosis or chronic hepatitis B virus infection.It is typically diagnosed late in its course, and the median survival following diagnosis is only approximately 6 to 20 months. (Dimri & Satyanarayana, 2020)
 		</p>
@@ -35,7 +23,8 @@
 	<hr>
 
 	<section>
-		<h2 id="Subtitle2">Academic Importance - Why we need it</h2>
+		<a class="anchor1" name="academic" id="academic"></a>
+		<h2>Academic Importance - Why we need it</h2>
 		<p>
 			Previously, in order to understand the effect small molecule or medicine has on the signaling pathway, researchers have to introduce all these compositions into cell system and then conduct Western blotting and immunofluorescence which is laborious and time-consuming.
 		</p>
@@ -45,11 +34,16 @@
 		<p>
 			Like a physical sensor, cells can sense, process and react to environmental signals by controlling their gene regulatory networks (Wang & Buck, 2012) which is also true for the IGEM competition, where numerous signaling pathways have been used for specific biological functions. Some pathways, however, are used quite frequently, such as TFG–β (Massagué, 1998), JAK/STAT (Rawlings et al., 2004), p53 (Agarwal et al., 1998), and NF-κB signaling pathways (Hayden & Ghosh, 2004). The ability to design integrated signaling pathway modules containing these signaling pathways could pave the way for future research related to signaling pathways. Thus it is of necesscity to make a reuseable in vivo device that can help in integrated modular signaling pathway study and play its role in cancer screening, drug target verification, academic hypothesis testing and etc —— let's just name it ΣPathway.
 		</p>
+
 	</section>
+	
 	<hr>
+	
+
 
 	<section>
-		<h2 id="Subtitle3">A Novel Method Created By Us - How we make it</h2>
+		<a class="anchor1" name="method" id="method"></a>
+		<h2>A Novel Method Created By Us - How we make it</h2>
 		<p>
 			We managed to simulate the cell signaling pathway on a small chip. With the technology of microfluid chip, secreting cells <i>P. pastoris</i> ura3Δ1 aro1::URA3 are cultivated in individual cabinets. Cells in each room secret one specific type of protein in the signaling pathway and receive information from upstream cabinet. Thus, it is able for us to seperate the whole signaling pathway into several parts which are independent but interconnected.
 		</p>
@@ -60,10 +54,13 @@
 			Three key pathways of HCC including Wnt pathway, TGF-β pathway and PI3K pathway are considered in our project as examples, all of which are involved in the development of HCC. Logic protein gates including “or” “and” “not” and etc. are created for intercellular signal conduction for our device and future use in miscellaneous signaling pathways.
 		</p>
 	</section>
+
 	<hr>
+	
 
 	<section>
-		<h2 id="Subtitle4">Conclusion - Would you like it</h2>
+		<a class="anchor1" name="Conclusion" id="Conclusion"></a>
+		<h2>Conclusion - Would you like it</h2>
 		<p>
 			Compared with current methods of studying signaling pathways, our ΣPathway has the advantages of readability and simplicity, and closeness to living organisms. In addition, adding reagent of interest in individual chamber can be used to study the effect that it will put to molecule in the context of signaling pathway.
 		</p>
@@ -100,96 +97,40 @@
 
 <style>
 
-.row {
-    display: flex;
-}
 
-.sidenav{
-	flex: 0 0 20%;
-}
-
-.sidenav ul {
-    font-family: 'Sansita',sans-serif;
-    list-style-type: none;
-    position:fixed;
-    padding-top: 30px;
-    padding-left:40px;
-}
-
-.sidenav a {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #767676;
-}
-
-.sidenav a.active {
-    color: white;
-    background-color: #8BBED5;
-    border-radius: 1rem;
-}
-
-main {
-    padding-top: 12vh;
-    padding-left: 6vw;
-    flex: 0 0 80%;
-    text-align: left;
-}
-
-.pageName {
-    width: 100%;
-    border-bottom-style:solid;
-    border-bottom-width:medium;
-    margin-bottom: 5vh;
-    margin-top:0;
-    padding-left: 0%;
-
-}
-
-.limit{
-	padding-left: 20px;
-}
-
-figure,figcaption{
-	text-align: center;
-	padding-bottom: 10px;
-}
-
-main section {
-    padding-left: 0px;
-    padding-right: 120px;
-}
-
-main hr {
-    border-style: solid;
-    border-color: #2C2C2C;
-    margin-right: 3vw;
-    margin-left: 3vw;
-}
-
-main p{
-	white-space: pre-wrap;
-	text-indent: 1em;
-}
-
-main .ref ol {
-    margin-left: 1.1em;
-    padding-left: 0px;
-}
-.ref h2 {
-    font-weight: normal;
-}
-.ref ol {
-    font-size: 0.9rem;
-}
 
 </style>
 
 <script>
-import safe from '../assets/safety/safety.jpg'
+import sidenav from '../components/Side_nav'
+
 export default {
+   components: {
+    sidenav: sidenav
+  },
+
   data: function () {
     return {
-      safe: safe
+      navs: [ 	{
+     		name: 'Our Inspiration',
+     		id: 'Inspiration'
+
+     	},
+     	{
+     		name: 'Academic Importance',
+     		id: 'academic'
+
+     	},
+     	{
+     		name: 'A Novel Method',
+     		id: 'method'
+
+     	},
+     	{
+     		name: 'Conclusion',
+     		id: 'Conclusion'
+
+     	}]
     }
   }
 }
