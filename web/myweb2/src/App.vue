@@ -14,7 +14,7 @@
 
                 <li><router-link to="/Home" id="ahome">Home</router-link></li>
 
-                <li><router-link to="/Project" class="aproject">Project</router-link>
+                <li><router-link to="/Description" class="aproject">Project</router-link>
 
                   <div class="dropdown-content1">
 
@@ -28,6 +28,8 @@
 
                     <router-link to="/Future">Future</router-link>
 
+                    <router-link to="/Hardware">Hardware</router-link>
+
                   </div>
 
                 </li>
@@ -40,9 +42,15 @@
 
                   <div class="dropdown-content2">
 
-                    <router-link to="/HP">HP1</router-link>
+                    <router-link to="/HP">Human Practice</router-link>
 
-                    <router-link to="/HP">HP2</router-link>
+                    <router-link to="/IHP">Integrated Human Practice</router-link>
+
+                    <router-link to="/EAE">Education and Engagement</router-link>
+
+                    <router-link to="/Inclusion">Inclusion</router-link>
+
+                    <router-link to="/Bioethics">Bioethics</router-link>
 
                   </div>
 
@@ -69,11 +77,11 @@
     </div>
     <br>
     <router-view id="insert" />
-    <br>
+    <br style="background-color: white;">
     <myfooter> </myfooter>
     <!-- <myfooter v-bind:class="{'bottom-fix-footer': isnotFull}"> </myfooter> -->
     <div id="goup" style="display: inline;" v-if="isshow">
-      <img :src="up" style="width: 100%;" @click="backtop" />
+      <img :src="up" style="width: 90%;transform: rotate(-30deg);" @click="backtop" />
     </div>
   </div>
 
@@ -86,65 +94,66 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color: #4F4F4F;
 }
 
 #nav{
-  z-index:2;
   background-color: #87CEEB;
   position: fixed;
   height: 85px;
   width: 100%;
+  z-index: 100;
 }
 
 #ahome{
   position: fixed;
-  left:400px;
-  top:15px;
-  font-size: 20px;
+  left:33%;
+  top:3%;
+  font-size: 21px;
 }
 
 .aproject{
   position: fixed;
-  left:513px;
-  top:25px;
+  left:42%;
+  top:4.5%;
 }
 
 #amodel{
   position: fixed;
-  left:623px;
-  top:25px;
+  left:51%;
+  top:4.5%;
 }
 
 #ahp{
   position: fixed;
-  left:870px;
-  top:25px;
+  left:70.5%;
+  top:4.5%;
 }
 
 #ateam{
   position: fixed;
-  left:760px;
-  top:25px;
+  left:62%;
+  top:4.5%;
 }
 
 #logo{
-  height:110px;
-  width:130px;
+  height:20%;
+  width:13%;
   float: left;
-  left:0px;
+  left:0%;
   position: fixed;
 }
 
 #train{
-  height:90px;
-  width:750px;
+  height:16%;
+  width:60%;
   float: left;
-  left: 300px;
+  left: 25%;
   position: fixed;
 }
 
 #insert{
-  margin-top: 60px;
+  margin-top: 4%;
 }
 
 // .bottom-fix-footer{
@@ -155,7 +164,7 @@
 .header_bottom{
   margin:0 auto;
   padding: 0px;
-  height:75px;
+  height:10%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -163,7 +172,7 @@
 
 .header_bottom ul{
   height:30px;
-  line-height:30px;
+  line-height:5%;
   width:680px;
   color: #0f8f3c;
   display: flex;
@@ -196,27 +205,27 @@
 
 .dropdown-content1{
   display: none;
-  position: relative;
-  margin-top: 37px;
-  margin-left: 225px;
+  position: fixed;
+  margin-top: 5.5%;
+  margin-left: 19%;
   padding: 0;
   background-color: black;
 }
 
 .dropdown-content2{
   display: none;
-  position: relative;
-  margin-top: 37px;
-  margin-left: 582px;
+  position: fixed;
+  margin-top: 5.5%;
+  margin-left: 48%;
   padding: 0;
   background-color: black;
 }
 
 .dropdown-content3{
   display: none;
-  position: relative;
-  margin-top: 37px;
-  margin-left: 462px;
+  position: fixed;
+  margin-top: 5.5%;
+  margin-left: 38%;
   padding: 0;
   background-color: black;
 }
@@ -247,17 +256,17 @@
 #goup{
   position: fixed;
   z-index: 90;
-  right: 30px;
-  bottom: 31px;
+  right: 3%;
+  bottom: 5%;
   display: none;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
+  width: 4%;
+  height: 9%;
   border-radius: 50%;
   transition: all 0.5s;
   text-align: center;
   box-shadow: 0 0.9px 1px 0 rgba(0,0,0,0.16), 0 1px 3px 0 rgba(0,0,0,0.12);
 }
+
 
 </style>
 
@@ -266,12 +275,12 @@ import Vue from 'vue'
 import myfooter from './components/Footer'
 import router from './router/index.js'
 import tabbar from './components/Tabbar'
-import up from './assets/logo.png'
+import up from './assets/up.png'
 import logo from './assets/home/logo.png'
 import nav1 from './assets/home/nav3.png'
 export default {
   components: {
-    tabbar,
+    tabbar: tabbar,
     myfooter
   },
   router,
