@@ -1,15 +1,7 @@
 <template>
-<div class="row">
-  <aside class="sidenav">
-	<ul class="leftnav">
-		<li class="nav-item">
-			<a class="nav-link" href="#Subtitle1">Biological Part</a>
-		</li>
-        <li class="nav-item">
-            <a class="nav-link" href="#Subtitle2">Non-Biological Part</a>
-        </li>
-	</ul>
-  </aside>
+<div class="row" style="text-align:left">
+
+  <sidenav :navs="navs" class="sidenav"></sidenav>
 
   <main>
 	<div class="pageName">
@@ -18,7 +10,8 @@
 	</div>
 
 	<section>
-        <h2 id="Subtitle1">Biological Part</h2>
+        <a class="anchor1" name="bio" id="bio"></a>
+        <h2>Biological Part</h2>
         <p>
             There are still some difficulties in protein interactions with phosphorylation involved. For instance, phosphorylation cannot be simulated by extracellular signals.In order to achieve multi-level phosphorylation simulations such as the MAPKKK pathway, here we propose two solutions for that:
         </p>
@@ -36,7 +29,8 @@
     <hr>
 
     <section>
-        <h2 id="Subtitle2">Non-Biological Part</h2>
+        <a class="anchor1" name="nbio" id="nbio"></a>
+        <h2>Non-Biological Part</h2>
         <p>
             While we are making progress on our project, we also go through the previous IGEM teams’ projects concerning signaling pathways. Collection of the achievements of those projects would be another target that we make endeavor on.
         </p>
@@ -56,80 +50,30 @@
 
 <style>
 
-.row {
-    display: flex;
-}
 
-.sidenav{
-	flex: 0 0 20%;
-}
-
-.sidenav ul {
-    font-family: 'Sansita',sans-serif;
-    list-style-type: none;
-    position:fixed;
-    padding-top: 30px;
-    padding-left:40px;
-}
-
-.sidenav a {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #767676;
-}
-
-.sidenav a.active {
-    color: white;
-    background-color: #8BBED5;
-    border-radius: 1rem;
-}
-
-.solution{
-    padding-left: 20px;
-}
-
-main {
-    padding-top: 12vh;
-    padding-left: 6vw;
-    flex: 0 0 80%;
-    text-align: left;
-}
-
-.pageName {
-    width: 100%;
-    border-bottom-style:solid;
-    border-bottom-width:medium;
-    margin-bottom: 5vh;
-    margin-top:0;
-    padding-left: 0%;
-
-}
-
-main section {
-    padding-left: 0px;
-    padding-right: 120px;
-}
-
-main hr {
-    border-style: solid;
-    border-color: #2C2C2C;
-    margin-right: 3vw;
-    margin-left: 3vw;
-}
-
-main p{
-	white-space: pre-wrap;
-	text-indent: 1em;
-}
 
 </style>
 
 <script>
+import sidenav from '../components/Side_nav'
 
 export default {
+   components: {
+    sidenav: sidenav
+  },
+
   data: function () {
     return {
+      navs: [   {
+            name: 'Biological Part',
+            id: 'bio'
 
+        },
+        {
+            name: 'Non-Biological Part',
+            id: 'nbio'
+
+        }]
     }
   }
 }
