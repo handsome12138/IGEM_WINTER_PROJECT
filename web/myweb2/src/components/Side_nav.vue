@@ -1,10 +1,10 @@
-template>
+<template>
     <div class="mynav" id="mynav">
         <ul class="leftnav">
             <li v-for="nav in navs" class="nav-item" v-bind:key="nav.name">
                 <!-- <a class="nav-link" :href="'#' + nav.id">{{nav.name}}</a> -->
                 <div class="rail">
-                    <img :src="side" style="width: 20%;" />
+                    <!-- <img :src="side" style="width: 20%;" /> -->
                     <a class="nav-link" @click="jump_anchor(nav.id)">{{nav.name}}</a>
                 </div>            
                 
@@ -20,6 +20,7 @@ template>
 <style lang="scss" scoped>
 .mynav{
 	flex: 0 0 20%;
+    padding-top:5%;
     -ms-flex: 0 0 20%;
     -moz-flex: 0 0 20%;/* Firefox */
     -webkit-flex: 0 0 20%; /* Safari and Chrome */
@@ -35,7 +36,7 @@ template>
             font-size: 1rem;
             color: #767676;
             cursor: pointer;
-            position: absolute;
+            // position: absolute;
             top: 30%;
             left: 0.8%;
             &:link, &:visited{
@@ -46,19 +47,6 @@ template>
             }
         }
     }
-    // margin-top: 5%;
-    // margin-left:5%;
-    // // position:absolute;
-    // div a{
-    //     transition: color 100ms linear;
-    //     text-decoration: none;
-    //     &:link, &:visited{
-    //         color:black
-    //     }
-    //     &:hover, &:active{
-    //         color: yellowgreen
-    //     }
-    // }
 }
 
 .rail{

@@ -1,42 +1,49 @@
 <template>
-    <div>
-        <h1>Team</h1>
+    <div class="team">
+        <h1>Our Team</h1>
         <div class="member-card-box">
             <div v-for="member in members" :key="member.id" class='member-card'>
                 <img :src="member.avatar" style="width:100%">
                 <b>{{member.name}}</b>
                 <p>{{member.info}}</p>
+                <p><b>contribution:</b>{{member.attr}}</p>
             </div>
         </div>
     </div>
 </template>
 
 <style lang="scss">
-.member-card-box{
-    width:80%;
-    display:flex;
-    margin:auto;
-    flex-wrap: wrap;
+.team{
+  padding-top:20px;
+  .member-card-box{
+      width:80%;
+      display:flex;
+      margin:auto;
+      flex-wrap: wrap;
 
+  }
+  .member-card {
+      img{
+          border-radius:50px;
+          width:100%;
+      }
+      b{
+          text-align: left;
+          padding: 1em;
+      }
+      p{
+          text-align: left;
+          padding: 1em;
+          white-space: pre-line;
+          b{
+            padding:0;
+          }
+      }
+      width:25%;
+      // text-align:left;
+  }
 }
 
-.member-card {
-    img{
-        border-radius:50px;
-        width:100%;
-    }
-    b{
-        text-align: left;
-        padding: 1em;
-    }
-    p{
-        text-align: left;
-        padding: 1em;
-        white-space: pre-line;
-    }
-    width:25%;
-    // text-align:left;
-}
 </style>
 
 <script>

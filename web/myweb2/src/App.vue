@@ -3,8 +3,10 @@
   <div id="app">
 
     <div id="nav" >
-
+      
+      <a href="/">
       <img :src="logo" id="logo" />
+      </a>
 
       <img :src="nav1" id="train" />
 
@@ -58,7 +60,7 @@
 
                 <li><router-link to="/Team" id="ateam">Team</router-link>
 
-                <div class="dropdown-content3">
+                <!-- <div class="dropdown-content3">
 
                   <router-link to="/Team">Team</router-link>
 
@@ -66,7 +68,7 @@
 
                   <router-link to="/Attributions">Attributions</router-link>
 
-                </div>
+                </div> -->
 
                 </li>
 
@@ -94,7 +96,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-color: #4F4F4F;
+  // background-color: #4F4F4F;
 }
 
 #nav{

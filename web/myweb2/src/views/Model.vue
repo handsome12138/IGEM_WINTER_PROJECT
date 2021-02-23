@@ -1,5 +1,5 @@
 <template>
-    <div class="model" style="text-align:left">
+    <div class="model" style="text-align:left;background:white">
         <sidenav :navs="mynav" class="sidenav"> </sidenav>
         <div class="model-body">
           <a class="anchor" name="notation" id="notation"></a>
@@ -537,13 +537,15 @@ export default {
 }
 .model{
   display: flex;
+  // width:70%;
+  flex: 0 0 65%;
   .sidenav{
     width:15%;
   }
   .model-body{
     margin:0% 5% 5% 5%;
     h1{
-      text-align: center;
+      text-align: left;
       margin-top: 5%;
       margin-bottom: 2%;
     }
