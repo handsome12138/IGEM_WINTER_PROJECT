@@ -69,7 +69,7 @@
 		<a class="anchor1" name="edu" id="edu"></a>
 		<h2>Student Education</h2>
 		<p>
-			In this project, we put our focus on the student struggled with their education because of  individual povelty and imbalanced development. It is widely believed that wealth shouldn’t be a shortcut to higher education and decent life which can otherwise lead to serious social immobility. We are born to be equitable and should be treated especially equally in terms of issues regrading education and health. Thus it’s our responsiblity and core spirit which drives us to give docking school of ZJU more educational resources of synthetic biology. You can see <router-link to="">education and engagement</router-link> for the detailed information.
+			In this project, we put our focus on the student struggled with their education because of  individual povelty and imbalanced development. It is widely believed that wealth shouldn’t be a shortcut to higher education and decent life which can otherwise lead to serious social immobility. We are born to be equitable and should be treated especially equally in terms of issues regrading education and health. Thus it’s our responsiblity and core spirit which drives us to give docking school of ZJU more educational resources of synthetic biology. You can see <router-link to="/EAE">education and engagement</router-link> for the detailed information.
 		</p>
 	</section>
 	<hr>
