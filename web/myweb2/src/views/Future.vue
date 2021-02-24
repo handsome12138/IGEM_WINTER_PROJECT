@@ -43,6 +43,8 @@
     </section>
     <hr>
 
+    <router-link to='/Results' id="ljump" class="ljump"><p id="ljumpto">Results</p><p id="larrow"><-</p></router-link>
+
   </main>
 
 </div>
