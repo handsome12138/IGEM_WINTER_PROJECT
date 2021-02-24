@@ -76,6 +76,9 @@
 	</section>
 	<hr>
 
+	<router-link to='/Hardware' id="ljump" class="ljump"><p id="ljumpto">Hardware</p><p id="larrow"><-</p></router-link>
+	<router-link to='/Results' id="jump" class="jump"><p id="arrow">-></p><p id="jumpto">Results</p></router-link>
+
 	<section class="ref">
 	<a class="anchor1" name="rref" id="rref"></a>
 	<h2>References</h2>
@@ -102,14 +105,14 @@
 
 main {
 	padding-top: 12vh;
-    flex: 0 0 65%;
-    -ms-flex: 0 0 60%;
-    -moz-flex: 0 0 65%;/* Firefox */
-    -webkit-flex: 0 0 65%; /* Safari and Chrome */
-    -o-flex: 0 0 65%; /* Opera */
+    flex: 0 0 70%;
+    -ms-flex: 0 0 65%;
+    -moz-flex: 0 0 70%;/* Firefox */
+    -webkit-flex: 0 0 70%; /* Safari and Chrome */
+    -o-flex: 0 0 70%; /* Opera */
     text-align: left;
     background-color: white;
-    padding-left: 5%;
+    padding-left: 3%;
     margin-left: 3%;
 }
 
@@ -158,6 +161,10 @@ main .ref ol {
 }
 .ref ol {
     font-size: 0.9rem;
+}
+
+.ref{
+	padding-top: 10%;
 }
 
 .anchor1{

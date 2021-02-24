@@ -49,6 +49,9 @@ final output into a standard result.
 	</section>
 	<hr>
 
+	<router-link to='/Safety' id="ljump" class="ljump"><p id="ljumpto">Safety</p><p id="larrow"><-</p></router-link>
+	<router-link to='/Future' id="jump" class="jump"><p id="arrow">-></p><p id="jumpto">Future</p></router-link>
+
   </main>
 
 </div>

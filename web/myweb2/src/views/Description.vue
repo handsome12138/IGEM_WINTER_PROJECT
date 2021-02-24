@@ -70,6 +70,12 @@
 	</section>
 	<hr>
 
+	<!--<div id="jump">
+		<p style="color: red;margin-top: 3px;">-></p>
+		<router-link to='/Design' id="jumpto">Design</router-link>
+	</div>	-->
+	<router-link to='/Design' id="jump" class="jump"><p id="arrow">-></p><p id="jumpto">Design</p></router-link>
+
 	<section class="ref">
 	<h2>References</h2>
 	<ol>
@@ -97,7 +103,28 @@
 
 <style>
 
+#jump{
+	display: flex;
+	float: right;
+	margin-right: 12%;
+	border: 1px solid black;
+	border-radius: 8px 8px 8px 8px;
+	font-weight: bold;
+	font-size: 20px;
+	text-decoration: none;
 
+}
+
+#jumpto{
+	margin: 4px 8px 6px 0px;
+	color: black;
+	font-family: 'Comic Sans MS','华文细黑';
+}
+
+#arrow{
+	margin: 4px 0px 0px 0px;
+	color: red;
+}
 
 </style>
 
@@ -135,3 +162,4 @@ export default {
   }
 }
 </script>
+

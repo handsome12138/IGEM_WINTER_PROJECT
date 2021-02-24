@@ -36,7 +36,7 @@
 		<a class="anchor1" name="environment" id="environment"></a>
 		<h2>Environment friendly</h2>
 		<p>
-			ZJU_China has always been and will be a team with highly standarded responsiblity in bioethics. This year we introduce a traditional homology‐based system for targeted gene aro1 disruption in <i>P. pastoris</i> ura3Δ1 parent strain according to scheme following below, which blocked biosynthesis of all three aromatic amino acids tyrosine, phenylalanine, and tryptophan, making it an auxotrophic strain which must be grown in supplemented minimal medium. See <a href="">safety</a> for more detailed information.
+			ZJU_China has always been and will be a team with highly standarded responsiblity in bioethics. This year we introduce a traditional homology‐based system for targeted gene aro1 disruption in <i>P. pastoris</i> ura3Δ1 parent strain according to scheme following below, which blocked biosynthesis of all three aromatic amino acids tyrosine, phenylalanine, and tryptophan, making it an auxotrophic strain which must be grown in supplemented minimal medium. See <router-link to="/Safety">safety</router-link> for more detailed information.
 		</p>
 	</section>
 	<hr>
@@ -61,6 +61,8 @@
 		</p>
 	</section>
 	<hr>
+
+	<router-link to='/Inclusion' id="ljump" class="ljump"><p id="ljumpto">Inclusion</p><p id="larrow"><-</p></router-link>
 
 	
   </main>

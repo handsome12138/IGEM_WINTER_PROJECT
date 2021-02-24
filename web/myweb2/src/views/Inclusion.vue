@@ -84,6 +84,9 @@
 	</section>
 	<hr>
 
+	<router-link to='/EAE' id="ljump" class="ljump"><p id="ljumpto">Education and Engagement</p><p id="larrow"><-</p></router-link>
+	<router-link to='/Bioethics' id="jump" class="jump"><p id="arrow">-></p><p id="jumpto">Bioethics</p></router-link>
+
 
   </main>
 
@@ -117,12 +120,12 @@ export default {
 
      	},
      	{
-     		name: 'Inclusion Within IGEM',
+     		name: 'Within IGEM',
      		id: 'gem'
 
      	},
      	{
-     		name: 'Inclusion Within ΣPathway',
+     		name: 'Within ΣPathway',
      		id: 'path'
 
      	},

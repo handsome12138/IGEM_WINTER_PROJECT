@@ -3,7 +3,7 @@
         <sidenav :navs="mynav" class="sidenav"> </sidenav>
         <div class="model-body">
           <a class="anchor" name="notation" id="notation"></a>
-          <h1> Notations </h1>
+          <h2> Notations </h2>
           <div class="model-notations">
             Here are some conventions about notation.
             <ol style="text-align:left">
@@ -18,7 +18,7 @@
           </div>
 
           <a class="anchor" name="basic" id="basic"></a>
-          <h1> Basic View of Our Model </h1>
+          <h2> Basic View of Our Model </h2>
           <div class="model-basic">
             <p>
               Our design is a feedback system in which the output protein <span v-katex:auto>\(RhoA\)</span> can detect the amount of input <span v-katex:auto>\(TGF-\beta\)</span> and change accordingly through a series of pathways.
@@ -31,7 +31,7 @@
           </div>
 
           <a class="anchor" name="submodels" id="submodels"></a>
-          <h1> Submodels </h1>
+          <h2> Submodels </h2>
           <div class="model-submodel">
             <p>
               For each possible chemical reaction process, we build a submodel to describe it.
@@ -113,7 +113,7 @@
           </div>
 
           <a class="anchor" name="mainmodel" id="mainmodel"></a>
-          <h1> Complete model </h1>
+          <h2> Complete model </h2>
           <div class="model-complete">
             Combining all these factors above and the sketch of metabolic pathway, the whole equations are listed as following:
             <p v-html="katexhtml2"></p>
@@ -131,7 +131,7 @@
           </div>
 
           <a class="anchor" name="result" id="result"></a>
-          <h1> Results </h1>
+          <h2> Results </h2>
           <div>
             <p>
             Because of the time constraint, most parameters are estimated by ourselves and the value can be found in our <a href="https://github.com/handsome12138/IGEM_WINTER_PROJECT/tree/main/model/code" class="mylink" target="_blank"> <b>Github</b> </a>. The result are shown as following where <span style="color:green"> <b>green</b></span> curve is high <span v-katex:auto>\(TGF-\beta\)</span> situation while <span style="color:red"> <b>red</b></span> curve is low <span v-katex:auto>\(TGF-\beta\)</span> situation.We can see that the shape of curve indicates that
@@ -142,13 +142,13 @@
           </div>
 
           <a class="anchor" name="reference" id="reference"></a>
-          <h1>Refenrences</h1>
+          <h2>Refenrences</h2>
           <div>
               The model design mainly refers to <a href="http://2015.igem.org/Team:KU_Leuven/Modeling" class="mylink">2015 igem KU Leuven Model</a>
           </div>
 
           <a class="anchor" name="model-KU_Leuven" id="model-KU_Leuven"></a>
-          <h1> Appendix: Reproduction of 2015 igem KU Leuven Model </h1>
+          <h2> Appendix: Reproduction of 2015 igem KU Leuven Model </h2>
           <div class="model-KU">
             <p>
               As their model is described in detail in their own wiki, I am going to share the problems I met when I was trying to reproduce their results.
@@ -549,7 +549,7 @@ export default {
   }
   .model-body{
     margin:0% 5% 5% 5%;
-    h1{
+    h2{
       text-align: left;
       margin-top: 5%;
       margin-bottom: 2%;
