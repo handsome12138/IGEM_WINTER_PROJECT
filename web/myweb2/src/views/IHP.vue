@@ -23,12 +23,43 @@
 	</section>
 	<hr>
 
+  <div style="display: flex;">
+    <router-link to='/HP' id="eljump" class="eljump"><p id="ljumpto">Human Practice</p><p id="larrow"><-</p></router-link>
+    <router-link to='/EAE' id="ejump" class="ejump"><p id="arrow">-></p><p id="jumpto">Education and Engagement</p></router-link>
+  </div>
+
+  
+
   </main>
 
 </div>
 </template>
 
 <style>
+
+#ejump{
+  display: flex;
+  float: right;
+  margin-right: 12%;
+  border: 1px solid black;
+  border-radius: 8px 8px 8px 8px;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+
+}
+
+#eljump{
+  display: flex;
+  float: left;
+  margin-right: 10%;
+  border: 1px solid black;
+  border-radius: 8px 8px 8px 8px;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+
+}
 
 
 </style>
