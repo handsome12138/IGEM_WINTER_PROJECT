@@ -96,8 +96,8 @@
 					</li>
 				</ul>
 			</div>
-			<div class="pho">
-				<img :src="pro1" style="width: 50%;margin-left: 20%;margin-top: 5%;" />
+			<div class="pho" style="margin-left: 10%;">
+				<img :src="pro1" style="width: 55%;height:70%;margin-top: 5%;margin-left: 10%;" />
 			</div>
 		</div>
 		<div class="pro">
@@ -109,8 +109,8 @@
 					<li>University of Melbourne</li>
 				</ul>
 			</div>
-			<div class="pho">
-				<img :src="pro2" style="width: 50%;margin-left: 55%;margin-top: 7%;" />
+			<div class="pho" style="margin-left: 10%;">
+				<img :src="pro2" style="width: 60%;height:60%;margin-top: 15%;" />
 			</div>
 		</div>
 		<div class="pro">
@@ -125,7 +125,7 @@
 				</ul>
 			</div>
 			<div class="pho">
-				<img :src="pro3" style="width: 60%;margin-top: 15%;margin-left: 5%;" />
+				<img :src="pro3" style="width: 60%;margin-top: 15%;" />
 			</div>
 		</div>
 	</section>
@@ -163,6 +163,10 @@
 	</section>
 	<hr>
 
+
+	<router-link to='/IHP' id="jump" class="jump"><p id="arrow">-></p><p id="ljumpto">Integrated Human Practice</p></router-link>
+	
+
   </main>
 
 </div>
@@ -177,8 +181,8 @@
 	padding-left: 5%;
 	padding-top: 2%;
 	padding-bottom: 2%;
-	margin-left: 10%;
-	width: 70%;
+	margin-left: 5%;
+	width: 85%;
 	border-radius: 4% / 8%;
 }
 
@@ -190,6 +194,11 @@
 	padding-bottom: 1%;
 	width: 93%;
 	border-radius: 3% / 12%;
+}
+
+.info{
+	width: 75%;
+	margin-right: 5%;
 }
 
 .info li{
@@ -237,17 +246,17 @@ export default {
 
      	},
      	{
-     		name: 'Interview Of Stakeholders',
+     		name: 'Interview Stakeholders',
      		id: 'stake'
 
      	},
      	{
-     		name: 'Interviewing The Experts',
+     		name: 'Interview The Experts',
      		id: 'experts'
 
      	},
      	{
-     		name: 'Callback With The Stakeholders',
+     		name: 'Callback',
      		id: 'Callback'
 
      	}
