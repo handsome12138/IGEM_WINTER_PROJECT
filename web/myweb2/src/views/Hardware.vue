@@ -121,12 +121,20 @@ liquid flow drive. It can be seen that the driving force of liquid is osmotic pr
 optimization of micropump can be transformed into the process of condition optimization affecting
 osmotic pressure. First, according to the calculation formula of osmotic pressure,
 		</p>
+		<div style="display: flex;text-align: center;justify-content: center;">
+			<p style="font-weight: bold;font-family: 'Comic Sans MS','华文细黑';">&#928 = CR</p>
+			<p style="position: absolute;right: 18%;">(1.1)</p>
+		</div>
 		<p>
 			Where C is the molar concentration of solute, R is the gas constant, and F is the absolute temperature. It
 can be seen that the osmotic pressure depends on th e concentration of osmotic driving reagent and the
 ambient temperature. According to the calculation formula of the volume velocity of water passing through
 the semi permeable membrane
 		</p>
+		<div style="display: flex;text-align: center;justify-content: center;">
+			<p style="font-weight: bold;font-family: 'Comic Sans MS','华文细黑';">J=KA(σ △ Π - △P)</p>
+			<p style="position: absolute;right: 18%;">(1.2)</p>
+		</div>
 		<p>
 			Where j is the volume
 flow rate, K is the permeability coefficient, a is the effective permeability area, σ is
@@ -141,6 +149,9 @@ the driven liquid is pure water, △ Π is equal to the osmotic pressure Π of s
 difference △ p between the two sides of the semi permeable membrane is ignored, a nd then equation(1.1) is introduced into equation (1.2), a simplified formula for calculating the volume velocity of water can be
 obtained
 		</p>
+		<div style="display: flex;text-align: center;justify-content: center;">
+			<p style="font-weight: bold;font-family: 'Comic Sans MS','华文细黑';">J = KAσCRT</p>
+		</div>
 		<p>
 			In this formula, because the permeability coefficient K is also a
 constant, the flow rate of water driven
@@ -186,6 +197,9 @@ and flow through the microchannel in a continuous way.
 
 	</section>
 	<hr>
+
+	<router-link to='/Design' id="ljump" class="ljump"><p id="ljumpto">Design</p><p id="larrow"><-</p></router-link>
+	<router-link to='/Safety' id="jump" class="jump"><p id="arrow">-></p><p id="jumpto">Safety</p></router-link>
 
 	<section class="ref">
 	<h2>References</h2>
@@ -258,7 +272,7 @@ export default {
 
      	},
      	{
-     		name: 'Design & Manufacture',
+     		name: 'Design & Material & Manufacture',
      		id: 'dmm'
 
      	},
