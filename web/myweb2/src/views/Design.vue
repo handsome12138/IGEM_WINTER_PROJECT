@@ -55,9 +55,9 @@ Smad4 (Co-Smad). The Smad complex is imported into the nucleus and regulates the
 of target genes by direct binding to the target gene promoter and/or through the interaction with
 transcriptional cofactors in a cell-type-specific manner.
 		</p>
-		<a href="https://www.sinobiological.com/pathways/tgf-beta-pathway">https://www.sinobiological.com/pathways/tgf-beta-pathway</a>
+		<a href="https://www.sinobiological.com/pathways/tgf-beta-pathway" style="margin-left: 2rem;">https://www.sinobiological.com/pathways/tgf-beta-pathway</a>
 		<figure>
-			<img :src="beta" style="width: 60%; -webkit-width: 50%;" />
+			<img :src="beta" style="padding-top: 3%; width: 60%; -webkit-width: 50%;" />
 		</figure>
 		<h4>Wnt-β-catenin</h4>
 		<p>Receptor：FZD-5</p>
@@ -74,9 +74,9 @@ Activation of Dvl induces the dissociation of GSK-3β from Axin and leads to the
 inactivation of the "destruction complex". Subsequently, stabilized β-catenin translocates into the
 nucleus leading to changes in different target gene expressions.</p>
 		
-		<a href="https://www.sinobiological.com/pathways/canonical-wnt-pathway">https://www.sinobiological.com/pathways/canonical-wnt-pathway</a>
+		<a href="https://www.sinobiological.com/pathways/canonical-wnt-pathway" style="margin-left: 2rem;">https://www.sinobiological.com/pathways/canonical-wnt-pathway</a>
 		<figure>
-			<img :src="wnt" style="width: 60%; -webkit-width: 50%;"/>
+			<img :src="wnt" style="padding-top: 3%; width: 60%; -webkit-width: 50%;"/>
 		</figure>
 		<h4>PI3K</h4>
 		<p>Upon growth factor stimulation and subsequent activation of receptor tyrosine kinases (RTKs),
@@ -97,9 +97,9 @@ pathway is deregulated in the majority of human cancers. In sporadic tumors and 
 lines, there are numerous other genetic and epigenetic changes that have been extensively
 documented by the human cancer genome project</p>
 		
-		<a href="https://www.sinobiological.com/research/enzymes/phosphatidylinositol-3-kinase">https://www.sinobiological.com/research/enzymes/phosphatidylinositol-3-kinase</a>
+		<a href="https://www.sinobiological.com/research/enzymes/phosphatidylinositol-3-kinase" style="margin-left: 2rem;">https://www.sinobiological.com/research/enzymes/phosphatidylinositol-3-kinase</a>
 		<figure>
-			<img :src="pik" style="width: 60%; -webkit-width: 50%;"/>
+			<img :src="pik" style="padding-top: 3%; width: 60%; -webkit-width: 50%;"/>
 		</figure>
 	</section>
 	<hr>
@@ -157,7 +157,9 @@ multiple signaling pathways to the input layer, which can make it possible to se
 environmental signals.
 		</p>
 		<h4>Hidden Layer (optional)</h4>
-		<p>
+		<div style="display: flex;">
+			<div style="width: 120%;">
+				<p>
 			In the hidden layer, we utilized protein-based logic gates proposed by Chen et al. (Chen et al.,
 2002) to process complex information from the input layer. These logic gates include AND, OR,
 and NOT gate, constructed by a series of heterodimeric molecules. For example, given
@@ -167,11 +169,14 @@ a repressor. When the signal molecule A’–B occurs, a simple system A: A’ �
 inhibits the gene expression (Fig. 2). Other logic gates are designed according to similar
 mechanisms. These logic gates can be used repetitively to construct complex information
 processing systems.
-		</p>
+				</p></div>
+				<div style="margin-left: 5%;">
 		<figure>
-			<img :src="gate" style="width: 50%; -webkit-width: 50%;"/>
+			<img :src="gate" style="width: 80%;height:60%; -webkit-width: 50%;"/>
 		</figure>
-		<figcaption>Figure 2. The design of NOT gate.</figcaption>
+		<figcaption>Figure 2. The design of NOT gate.</figcaption></div>
+		</div>
+		
 		<h4>Output Layer</h4>
 		<p>
 			This layer is used to customize cell behavior by using various structural and report genes. Genes
@@ -187,7 +192,7 @@ the logic gate in the chosen signaling pathways. It will be shown in the followi
 			As for more complex logic relationship, we could also use some hardware methods to control the
 flow such as using micro-valves to control the flow on/off state.
 		</p>
-		<h3>Intercellular communication</h3>
+		<h3>Intercellular Communication</h3>
 		<p>As the proteins in signal pathways are typically non-secreting proteins, we decide to use a transfer
 system to let it's information strength to be passed to the next level of chamber. We try to find
 possible communication method from some intercellular communication pathways and we finally
@@ -284,8 +289,13 @@ the stimulus cleaves plasmid R1 but not R2. The expression of the Cas9-sgRNA com
 controlled by the signal of interest and results in R1 depletion in the bacteria. (Tang & Liu, 2018)
 		</p>
 		
-		<figure>
-			<img :src="f8" />
+		<figure style="display: flex;">
+			<img :src="f81" style="width: 270px;height: 220px;margin-left: 5%;" />
+			<ul style="list-style: none;">
+				<li><img :src="f82" style="width:250px;margin-top: 10%;" /></li>
+				<li><img :src="f83" style="width: 250px;margin-top: 15%;" /></li>
+			</ul>
+			
 		</figure>
 		<figcaption>Figure 8. Both R1 and R2 confer resistance to different antibiotics. Which means the memory system can be rewritten by adding specific antibiotics which adjust the ratio of R1:R2 to the default.</figcaption>
 
@@ -319,8 +329,12 @@ yeast and there have already been much mature products in the market.
 			<img :src="f10" style="width: 60%" />
 		</figure>
 		<figcaption>Figure 10. The plasmid profile of pCMV-HA</figcaption>
-
 	</section>
+	<hr>
+
+
+	<router-link to='/Description' id="ljump" class="ljump"><p id="ljumpto">Description</p><p id="larrow"><-</p></router-link>
+	<router-link to='/Hardware' id="jump" class="jump"><p id="arrow">-></p><p id="jumpto">Hardware</p></router-link>
 
 	<section class="ref">
 	<h2>Bibliography</h2>
@@ -351,6 +365,44 @@ LuxR/HapR Master Regulators in Vibrios. <i>Journal of Bacteriology, 199</i>(19).
 
 <style>
 
+#ljump{
+	display: flex;
+	float: left;
+	margin-right: 12%;
+	border: 1px solid black;
+	border-radius: 8px 8px 8px 8px;
+	font-weight: bold;
+	font-size: 20px;
+	text-decoration: none;	
+}
+
+.jump:hover{
+	background-color: #CFCFCF;
+}
+
+.ljump:hover{
+	background-color: #CFCFCF;
+}
+
+.ejump:hover{
+	background-color: #CFCFCF;
+}
+
+.eljump:hover{
+	background-color: #CFCFCF;
+}
+
+
+#ljumpto{
+	color: black;
+	margin: 4px 0px 6px 0px;
+	font-family: 'Comic Sans MS','华文细黑';
+}
+
+#larrow{
+	color:red;
+	margin: 6px 8px 0px 0px;
+}
 
 
 </style>
@@ -366,6 +418,9 @@ import f4 from '../assets/design/f4.png'
 import f5 from '../assets/design/f5.png'
 import f6 from '../assets/design/f6.png'
 import f7 from '../assets/design/f7.png'
+import f81 from '../assets/design/81.png'
+import f82 from '../assets/design/82.png'
+import f83 from '../assets/design/83.png'
 import f9 from '../assets/design/f9.png'
 import f10 from '../assets/design/f10.png'
 import sidenav from '../components/Side_nav'
@@ -388,6 +443,9 @@ export default {
       f5: f5,
       f6: f6,
       f7: f7,
+      f81: f81,
+      f82: f82,
+      f83: f83,
       f9: f9,
       f10: f10,
       navs:[
@@ -397,7 +455,7 @@ export default {
 
      	},
      	{
-     		name: 'Intercelluar Communication',
+     		name: 'Intercelluar Commmunication',
      		id: 'intercom'
 
      	},
@@ -421,5 +479,4 @@ export default {
   }
 }
 </script>
-
 
