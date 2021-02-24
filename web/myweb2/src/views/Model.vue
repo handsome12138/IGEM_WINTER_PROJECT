@@ -151,7 +151,7 @@
           <h1> Appendix: Reproduction of 2015 igem KU Leuven Model </h1>
           <div class="model-KU">
             <p>
-            As their model is described in detail in their own wiki, I am going to share the problems I met when I was trying to reproduce their results.
+              As their model is described in detail in their own wiki, I am going to share the problems I met when I was trying to reproduce their results.
             </p>
             <p>
               First, there are some mistakes in their ODE. For example, the mistake of writing <span v-katex:auto>\(k_{+}\)</span> as <span v-katex:auto>\(k_{-}\)</span>. According to the symmetry of the formula, it is not hard to find these mistakes.
@@ -168,6 +168,11 @@
             <br>
             <img :src="require('@/assets/model/KUL_model_mine.jpg')" class="figure">
             <div class="fig-caption"> Figure 4: Our Result </div>
+            <br>
+            <p>
+              During reproduction, we get to know some traditional models which can be used in our future applications. For example, Hill function, protein association and disassociation are already used in the above model. 
+              Beside, the leak term and spread term are also important factors.
+            </p>
           </div>
         </div>
     </div>
