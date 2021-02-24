@@ -3,7 +3,7 @@
   <div id="app">
 
     <div id="nav" >
-      
+
       <a href="/">
       <img :src="logo" id="logo" />
       </a>
@@ -24,13 +24,15 @@
 
                     <router-link to="/Design">Design</router-link>
 
+                    <router-link to="/Hardware">Hardware</router-link>
+
                     <router-link to="/Safety">Safety</router-link>
 
                     <router-link to="/Results">Results</router-link>
 
                     <router-link to="/Future">Future</router-link>
 
-                    <router-link to="/Hardware">Hardware</router-link>
+                    
 
                   </div>
 
@@ -60,14 +62,11 @@
 
                 <li><router-link to="/Team" id="ateam">Team</router-link>
 
-                <!-- <div class="dropdown-content3">
-
+                  <!-- <div class="dropdown-content3">
                   <router-link to="/Team">Team</router-link>
-
                   <router-link to="/Members">Members</router-link>
-
                   <router-link to="/Attributions">Attributions</router-link>
-
+                </div>
                 </div> -->
 
                 </li>
@@ -83,7 +82,7 @@
     <myfooter> </myfooter>
     <!-- <myfooter v-bind:class="{'bottom-fix-footer': isnotFull}"> </myfooter> -->
     <div id="goup" style="display: inline;" v-if="isshow">
-      <img :src="up" style="width: 90%;transform: rotate(-30deg);" @click="backtop" />
+      <img :src="up" style="width: 85%;transform: rotate(-30deg);" @click="backtop" />
     </div>
   </div>
 
@@ -96,62 +95,79 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  // background-color: #4F4F4F;
+  //background-color: #4F4F4F;
 }
 
 #nav{
   background-color: #87CEEB;
   position: fixed;
-  height: 85px;
+  height: 105px;
   width: 100%;
   z-index: 100;
+  margin:0;
+  padding:0;
+  opacity: 0.92;
 }
 
 #ahome{
   position: fixed;
-  left:33%;
-  top:3%;
-  font-size: 21px;
+  left:29%;
+  top:21px;
+  font-size: 1.5rem;
 }
 
 .aproject{
   position: fixed;
-  left:42%;
-  top:4.5%;
+  left:40%;
+  top:34px;
 }
 
 #amodel{
   position: fixed;
-  left:51%;
-  top:4.5%;
+  left:50%;
+  top:34px;
 }
 
 #ahp{
   position: fixed;
-  left:70.5%;
-  top:4.5%;
+  left:72.5%;
+  top:34px
 }
 
 #ateam{
   position: fixed;
-  left:62%;
-  top:4.5%;
+  left:63%;
+  top:34px;
 }
 
 #logo{
-  height:20%;
-  width:13%;
   float: left;
   left:0%;
   position: fixed;
+  height: 130px;
 }
 
 #train{
-  height:16%;
-  width:60%;
+  height:105px;
+  width:70%;
   float: left;
-  left: 25%;
+  left: 20%;
   position: fixed;
+}
+
+h1{
+  font-family: 'Comic Sans MS';
+  font-weight: bold !important;
+  font-size: 3rem !important;
+}
+
+h2{
+  font-family: 'Comic Sans MS','微软雅黑';
+  font-size: 1.9rem !important;
+}
+
+h3{
+  padding-top: 3%;
 }
 
 #insert{
@@ -187,7 +203,7 @@
 
 .header_bottom ul li a{
   color:#afeeee;
-  font-size:17px;
+  font-size:1.1rem;
   font-weight: bold;
   text-decoration: none;
 }
@@ -208,8 +224,8 @@
 .dropdown-content1{
   display: none;
   position: fixed;
-  margin-top: 5.5%;
-  margin-left: 19%;
+  margin-top: 75px;
+  margin-left: 22%;
   padding: 0;
   background-color: black;
 }
@@ -217,20 +233,12 @@
 .dropdown-content2{
   display: none;
   position: fixed;
-  margin-top: 5.5%;
-  margin-left: 48%;
+  margin-top: 75px;
+  margin-left: 54%;
   padding: 0;
   background-color: black;
 }
 
-.dropdown-content3{
-  display: none;
-  position: fixed;
-  margin-top: 5.5%;
-  margin-left: 38%;
-  padding: 0;
-  background-color: black;
-}
 
 .dropdown-content1 a,.dropdown-content2 a,.dropdown-content3 a{
   text-align: left;
@@ -258,17 +266,17 @@
 #goup{
   position: fixed;
   z-index: 90;
-  right: 3%;
-  bottom: 5%;
+  right: 30px;
+  bottom: 31px;
   display: none;
-  width: 4%;
-  height: 9%;
+  width: 53px;
+  height: 53px;
+  line-height:50px;
   border-radius: 50%;
   transition: all 0.5s;
   text-align: center;
   box-shadow: 0 0.9px 1px 0 rgba(0,0,0,0.16), 0 1px 3px 0 rgba(0,0,0,0.12);
 }
-
 
 </style>
 
