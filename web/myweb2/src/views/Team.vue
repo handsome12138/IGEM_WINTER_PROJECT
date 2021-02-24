@@ -6,7 +6,8 @@
                 <img :src="member.avatar" style="width:100%">
                 <b>{{member.name}}</b>
                 <p>{{member.info}}</p>
-                <p><b>contribution:</b>{{member.attr}}</p>
+                <p><b>Contribution:</b></p>
+                <p>{{member.attr}}</p>
             </div>
         </div>
     </div>
@@ -14,7 +15,7 @@
 
 <style lang="scss">
 .team{
-  padding-top:20px;
+  padding-top:40px;
   .member-card-box{
       width:80%;
       display:flex;
@@ -55,7 +56,8 @@ export default {
           id: 1,
           name: '陈雨涵',
           avatar: require('@/assets/avatars/chen.jpg'),
-          info: "I'm Electricity Chan, a girl with a cat, who is trying to finish the daily grind while amusing herself."
+          info: "I'm Electricity Chan, a girl with a cat, who is trying to finish the daily grind while amusing herself.",
+          attr:"The art designer of the team,who designed the logo, webpage style, poster, and PPT template."
         },
         {
           id: 2,
@@ -79,7 +81,8 @@ export default {
           id: 5,
           name: '雷江楚',
           avatar: require('@/assets/avatars/lei.jpg'),
-          info: 'Joshua Rae\nZJU MBBS\nUWA BioMed\nand\nPre-igemer!'
+          info: 'Joshua Rae\nZJU MBBS\nUWA BioMed\nand\nPre-igemer!',
+          attr: "Named project, integrated description，concepted design， proposed recording system，gene circuit and signaling pathways, constructed safety, HP"
         },
         {
           id: 6,
@@ -91,7 +94,8 @@ export default {
           id: 7,
           name: '汪奕晨',
           avatar: require('@/assets/avatars/wang.jpg'),
-          info: 'Handsome12138. \n Love you three thousand.'
+          info: 'Handsome12138. \n Love you three thousand.',
+          attr: "Model design, part of web including model, sidebar, footer."
         },
         {
           id: 8,
