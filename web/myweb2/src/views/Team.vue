@@ -6,7 +6,7 @@
                 <img :src="member.avatar" style="width:100%">
                 <b>{{member.name}}</b>
                 <p>{{member.info}}</p>
-                <p><b>contribution:</b>{{member.attr}}</p>
+                <p><b>Contribution:</b>{{member.attr}}</p>
             </div>
         </div>
     </div>
@@ -20,7 +20,6 @@
       display:flex;
       margin:auto;
       flex-wrap: wrap;
-
   }
   .member-card {
       img{
@@ -43,7 +42,6 @@
       // text-align:left;
   }
 }
-
 </style>
 
 <script>
@@ -55,31 +53,36 @@ export default {
           id: 1,
           name: '陈雨涵',
           avatar: require('@/assets/avatars/chen.jpg'),
-          info: "I'm Electricity Chan, a girl with a cat, who is trying to finish the daily grind while amusing herself."
+          info: "I'm Electricity Chan, a girl with a cat, who is trying to finish the daily grind while amusing herself.",
+          attr: '\nThe art designer of the team,who designed the logo, webpage style, poster, and PPT template.'
         },
         {
           id: 2,
           name: '程纪瓯',
           avatar: require('@/assets/avatars/cheng.jpg'),
-          info: "Hey I'm Kristall, a girl from Lishui, Zhejiang. Glad to participate in our iGem project. Come and tell me your stories!"
+          info: "Hey I'm Kristall, a girl from Lishui, Zhejiang. Glad to participate in our iGem project. Come and tell me your stories!",
+          attr: '\nSignaling pathway selection, design in each chamber, future, presentation'
         },
         {
           id: 3,
           name: '黄冠睿',
           avatar: require('@/assets/avatars/huang.jpg'),
-          info: 'el psy kongroo'
+          info: 'el psy kongroo',
+          attr: '\nOriginal topic proponent. Take part in most parts of the total design and also carry out the responsibility of several specific parts such as amount control, intercellular communication, etc.'
         },
         {
           id: 4,
           name: '姬俊哲',
           avatar: require('@/assets/avatars/ji.jpg'),
-          info: 'this is my info'
+          info: 'This is Junzhe Ji.\nTell your heart to never stop.\nLock your eyes only on the spot.',
+          attr: 'Wiki'
         },
         {
           id: 5,
           name: '雷江楚',
           avatar: require('@/assets/avatars/lei.jpg'),
-          info: 'Joshua Rae\nZJU MBBS\nUWA BioMed\nand\nPre-igemer!'
+          info: 'Joshua Rae\nZJU MBBS\nUWA BioMed\nand\nPre-igemer!',
+          attr: '\nNamed project, integrated description，concepted design， proposed recording system，gene circuit and signaling pathways, constructed safety, HP'
         },
         {
           id: 6,
@@ -103,7 +106,8 @@ export default {
           id: 9,
           name: '于佳正',
           avatar: require('@/assets/avatars/yu.jpg'),
-          info: 'Bjersgen，dream of Iron Man'
+          info: 'Bjersgen，dream of Iron Man',
+          attr: '\nHardware'
         },
         {
           id: 10,
