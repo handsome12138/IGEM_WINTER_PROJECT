@@ -6,7 +6,8 @@
                 <img :src="member.avatar" style="width:100%">
                 <b>{{member.name}}</b>
                 <p>{{member.info}}</p>
-                <p><b>Contribution:</b>{{member.attr}}</p>
+                <p><b>Contribution:</b></p>
+                <p>{{member.attr}}</p>
             </div>
         </div>
     </div>
@@ -75,7 +76,7 @@ export default {
           name: '姬俊哲',
           avatar: require('@/assets/avatars/ji.jpg'),
           info: 'This is Junzhe Ji.\nTell your heart to never stop.\nLock your eyes only on the spot.',
-          attr: 'Wiki'
+          attr: '\nWiki'
         },
         {
           id: 5,
@@ -88,20 +89,22 @@ export default {
           id: 6,
           name: '沈雨萱',
           avatar: require('@/assets/avatars/shen.jpg'),
-          info: 'hi my name‘s Yuxuan Shen. Nice to meet you!'
+          info: 'hi my name‘s Yuxuan Shen. Nice to meet you!',
+          attr: '\nintegrated design, integrated  and improved ppt'
         },
         {
           id: 7,
           name: '汪奕晨',
           avatar: require('@/assets/avatars/wang.jpg'),
           info: 'Handsome12138. \n Love you three thousand.',
-          attr: "Model design, part of web including model, sidebar, footer."
+          attr: "\nModel design, part of web including model, sidebar, footer."
         },
         {
           id: 8,
           name: '吴浩然',
           avatar: require('@/assets/avatars/wu.jpg'),
-          info: "I'm Robby Wu, an undergraduate specialized in ecology, ZJU."
+          info: "I'm Robby Wu, an undergraduate specialized in ecology, ZJU.",
+          attr: '\nliterature review of the present project, intercellular signaling, protein-based logic gates, lab safety, hardware safety, proposed database of signaling pathways of preliminary IGEM projects, video script (figures & texts)'
         },
         {
           id: 9,
@@ -114,7 +117,8 @@ export default {
           id: 10,
           name: '张伯彦',
           avatar: require('@/assets/avatars/zhang.jpg'),
-          info: 'The ending must be good, if it is not good enough, then it is not the ending.'
+          info: 'The ending must be good, if it is not good enough, then it is not the ending.',
+          attr: '\nresearch questions and objectives, promoters, gene circuit and signaling pathways, intergrate design, future'
         },
         {
           id: 11,
