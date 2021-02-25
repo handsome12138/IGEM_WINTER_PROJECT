@@ -23,6 +23,21 @@
 	</div>
 
 	<section>
+		<h3>Integrated Signaling Pathway Modules In Each Chamber</h3>
+		<p>
+			To enable the biologists to build intercellular synthetic biology circuits, we proposed an signaling
+pathway system. This is a toolkit includes a series of cells with integrated signaling pathway
+modules. Each cell has two or three layers that are used for information processing. These are
+input, hidden, and output layer (Fig. 1).
+		</p>
+		<figure>
+			<img :src="sys" style="width: 60%" />
+		</figure>
+		<figcaption>Figure 1. Construction of a signaling pathway system.</figcaption>
+	</section>
+	<hr>
+
+	<section>
 		<a class="anchor1" name="signal" id="signal"></a>
 		<h2>Signaling Pathways</h2>
 		<h3>Chosen Pathways</h3>
@@ -55,10 +70,14 @@ Smad4 (Co-Smad). The Smad complex is imported into the nucleus and regulates the
 of target genes by direct binding to the target gene promoter and/or through the interaction with
 transcriptional cofactors in a cell-type-specific manner.
 		</p>
-		<a href="https://www.sinobiological.com/pathways/tgf-beta-pathway" style="margin-left: 2rem;">https://www.sinobiological.com/pathways/tgf-beta-pathway</a>
+		<h5>The chamber design of TGF-β</h5>
 		<figure>
-			<img :src="beta" style="padding-top: 3%; width: 60%; -webkit-width: 50%;" />
+			<img :src="beta" style="padding-top: 3%; width: 70%; -webkit-width: 50%;" />
 		</figure>
+		<figcaption>Figure 2. These pictures show the design of the cells in each chamber from the upper level to the
+bottom level. Cells in each chamber have to secrete different protein and signaling molecule to
+make the TGF-β signaling pathway be in motion. We use the ‘AND’ gate to simulate the poccess of
+complex formation.</figcaption>
 		<h4>Wnt-β-catenin</h4>
 		<p>Receptor：FZD-5</p>
 		<p>Downstream：DVL-1——β-catenin（CTNNB1）</p>
@@ -74,10 +93,12 @@ Activation of Dvl induces the dissociation of GSK-3β from Axin and leads to the
 inactivation of the "destruction complex". Subsequently, stabilized β-catenin translocates into the
 nucleus leading to changes in different target gene expressions.</p>
 		
-		<a href="https://www.sinobiological.com/pathways/canonical-wnt-pathway" style="margin-left: 2rem;">https://www.sinobiological.com/pathways/canonical-wnt-pathway</a>
+		<h5>The chamber design of Wnt-β-catenin</h5>
 		<figure>
-			<img :src="wnt" style="padding-top: 3%; width: 60%; -webkit-width: 50%;"/>
+			<img :src="wnt" style="padding-top: 3%; width: 60%; -webkit-width: 50%;" />
 		</figure>
+		<figcaption>Figure 3. It shows the simulation of Wnt -β-catenin pathway in two chambers.</figcaption>
+
 		<h4>PI3K</h4>
 		<p>Upon growth factor stimulation and subsequent activation of receptor tyrosine kinases (RTKs),
 class IA PI3Ks, consisting of p110α/p85, p110β/p85 and p110δ/p85, are recruited to the
@@ -97,10 +118,11 @@ pathway is deregulated in the majority of human cancers. In sporadic tumors and 
 lines, there are numerous other genetic and epigenetic changes that have been extensively
 documented by the human cancer genome project</p>
 		
-		<a href="https://www.sinobiological.com/research/enzymes/phosphatidylinositol-3-kinase" style="margin-left: 2rem;">https://www.sinobiological.com/research/enzymes/phosphatidylinositol-3-kinase</a>
+		<h5>The chamber design of PI3K pathway</h5>
 		<figure>
-			<img :src="pik" style="padding-top: 3%; width: 60%; -webkit-width: 50%;"/>
+			<img :src="pik" style="padding-top: 3%; width: 60%; -webkit-width: 50%;" />
 		</figure>
+		<figcaption>Figure 4. The chamber design of PI3K pathway</figcaption>
 	</section>
 	<hr>
 
@@ -130,17 +152,7 @@ secreting protein to stay in a right glycosylated modified state and folding lev
 that we need. Besides, in order to get cells in different chambers be able to communicate with
 each other, we construct a signal transmission system.
 		</p>
-		<h3>Integrated Signaling Pathway Modules In Each Chamber</h3>
-		<p>
-			To enable the biologists to build intercellular synthetic biology circuits, we proposed an signaling
-pathway system. This is a toolkit includes a series of cells with integrated signaling pathway
-modules. Each cell has two or three layers that are used for information processing. These are
-input, hidden, and output layer (Fig. 1).
-		</p>
-		<figure>
-			<img :src="sys" style="width: 60%" />
-		</figure>
-		<figcaption>Figure 1. Construction of a signaling pathway system.</figcaption>
+		
 		
 		<h4>Input Layer</h4>
 		<p>
@@ -166,7 +178,7 @@ and NOT gate, constructed by a series of heterodimeric molecules. For example, g
 hypothetical heterodimer pairs A: A’, B: B’ (here “:” denotes noncovalent interaction), a NOT gate
 can be constructed by A’, B’, and A’–B (here “–” denotes covalent interaction), where B’ is binding to
 a repressor. When the signal molecule A’–B occurs, a simple system A: A’ –B: B’ forms, which
-inhibits the gene expression (Fig. 2). Other logic gates are designed according to similar
+inhibits the gene expression (Fig. 5). Other logic gates are designed according to similar
 mechanisms. These logic gates can be used repetitively to construct complex information
 processing systems.
 				</p></div>
@@ -174,7 +186,7 @@ processing systems.
 		<figure>
 			<img :src="gate" style="width: 80%;height:60%; -webkit-width: 50%;"/>
 		</figure>
-		<figcaption>Figure 2. The design of NOT gate.</figcaption></div>
+		<figcaption>Figure 5. The design of NOT gate.</figcaption></div>
 		</div>
 		
 		<h4>Output Layer</h4>
@@ -209,14 +221,14 @@ for CAI-I signal pathway works similar to AI-2 signal pathway. It's detected by 
 		<figure>
 			<img :src="f3" style="width: 60%" />
 		</figure>
-		<figcaption>Figure 3. AI-2 pathway. Left: the first level chamber. Right: the next level chamber; X protein
+		<figcaption>Figure 6. AI-2 pathway. Left: the first level chamber. Right: the next level chamber; X protein
 means the protein which is in the signal pathway that we want to simulate. X is expressed inside
 the present chamber. X+1 protein means the protein which on the next level of X protein in the
 signal pathway. X+1 protein is expressed inside the next chamber.</figcaption>
 		<figure>
 			<img :src="f4" style="width: 60%" />
 		</figure>
-		<figcaption>Figure 4. CAI-I pathway. Left: the first level chamber. Right: the next level chamber</figcaption>
+		<figcaption>Figure 7. CAI-I pathway. Left: the first level chamber. Right: the next level chamber</figcaption>
 
 	</section>
 	<hr>
@@ -251,7 +263,7 @@ controlled. We firstly use C14-HSL/LuxI/VjbR/ccdB QS system to realize the desig
 		<figure>
 			<img :src="f5"  style="width: 60%" />
 		</figure>
-		<figcaption>Figure 5. C14-HSL/LuxI/VjbR/ccdB system</figcaption>
+		<figcaption>Figure 8. C14-HSL/LuxI/VjbR/ccdB system</figcaption>
 		<p>Moreover, as the signal molecules are secreted into the surrounding environment, it's possible
 that the signal molecules will flow into the next chamber. So if only one type of system is used,
 the regular growth of cells in the next chamber will be interrupted. Therefore, we decide to use
@@ -261,11 +273,11 @@ to control the growth (Khajanchi et al., 2009).
 		<figure>
 			<img :src="f6" style="width: 60%"  />
 		</figure>
-		<figcaption>Figure 6. C4-HSL/SwrI/SwrR/ccdB system</figcaption>
+		<figcaption>Figure 9. C4-HSL/SwrI/SwrR/ccdB system</figcaption>
 		<figure>
 			<img :src="f7" style="width: 60%"  />
 		</figure>
-		<figcaption>Figure 7. By changing the signal molecules, adjacent signal molecules will not interrupt with each other.</figcaption>
+		<figcaption>Figure 10. By changing the signal molecules, adjacent signal molecules will not interrupt with each other.</figcaption>
 
 	</section>
 
@@ -281,7 +293,7 @@ a rough estimate to the result or they can use luminometer to have an accurate e
 		<p>Our recording system includes a pair of nearly identical recording plasmids, R1 and R2, that differ
 only by 3 nucleotides in an EGFP gene that encodes enhanced green fluorescent protein. The
 EGFP gene in R1 expresses full-length fluorescent protein, whereas the EGFP gene in R2 contains
-a premature stop codon and cannot produce fluorescent protein (Fig. 10A)
+a premature stop codon and cannot produce fluorescent protein (Fig. 11)
 		</p>
 		<p>The R1/R2 ratio serves as the information carrier that reflects the signal of interest in an analog
 mode. To convert the signal of interest into an R1/R2 ratio change, a Cas9-sgRNA pair induced by
@@ -297,7 +309,7 @@ controlled by the signal of interest and results in R1 depletion in the bacteria
 			</ul>
 			
 		</figure>
-		<figcaption>Figure 8. Both R1 and R2 confer resistance to different antibiotics. Which means the memory system can be rewritten by adding specific antibiotics which adjust the ratio of R1:R2 to the default.</figcaption>
+		<figcaption>Figure 11. Both R1 and R2 confer resistance to different antibiotics. Which means the memory system can be rewritten by adding specific antibiotics which adjust the ratio of R1:R2 to the default.</figcaption>
 
 	</section>
 
@@ -317,7 +329,7 @@ efficiency. Therefore, we decide to use it to express all proteins of the signal
 		<figure>
 			<img :src="f9" style="width: 60%" />
 		</figure>
-		<figcaption>Figure 9. The plasmid profile of pPIC9k</figcaption>
+		<figcaption>Figure 12. The plasmid profile of pPIC9k</figcaption>
 		<p>Besides, our design also contains some prokaryotic genes to express. These genes play roles in
 the QS and intercellular communication parts. So we have to find ways to allow prokaryotic genes
 to be expressed stably inside <i>P.pastoris</i>. Therefore, we decide to use the most common shuffle
@@ -328,7 +340,7 @@ yeast and there have already been much mature products in the market.
 		<figure>
 			<img :src="f10" style="width: 60%" />
 		</figure>
-		<figcaption>Figure 10. The plasmid profile of pCMV-HA</figcaption>
+		<figcaption>Figure 13. The plasmid profile of pCMV-HA</figcaption>
 	</section>
 	<hr>
 
@@ -408,8 +420,8 @@ LuxR/HapR Master Regulators in Vibrios. <i>Journal of Bacteriology, 199</i>(19).
 </style>
 
 <script>
-import beta from '../assets/design/beta.jpg'
-import wnt from '../assets/design/wnt.jpg'
+import beta from '../assets/design/beta.png'
+import wnt from '../assets/design/wnt.png'
 import sys from '../assets/design/sys.png'
 import gate from '../assets/design/gate.png'
 import pik from '../assets/design/pik.png'
@@ -448,6 +460,7 @@ export default {
       f83: f83,
       f9: f9,
       f10: f10,
+      scroll: scroll,
       navs:[
      	{
      		name: 'Signaling Pathways',
@@ -476,7 +489,14 @@ export default {
      	}
       ]
     }
+  },
+
+  mounted(){
+  		
+	},
+
+  methods: {
+
   }
 }
 </script>
-
