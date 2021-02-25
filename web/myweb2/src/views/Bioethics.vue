@@ -56,9 +56,6 @@
 		<p>
 			All of the laboratory team members in our team will receive detailed safety training before any laboratory work had begun. Basic rules in laboratories that must be applied. Don’t forget to take a look at it in <router-link to="/Safety">safety</router-link>.
 		</p>
-		<p>
-			We hope through joint effort of iGEM community, ethics can be regarded as a common view in the development of synthetic biology.
-		</p>
 	</section>
 	<hr>
 
