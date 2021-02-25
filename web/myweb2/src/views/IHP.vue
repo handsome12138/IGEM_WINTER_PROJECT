@@ -14,7 +14,7 @@
         <a class="anchor1" name="intro" id="intro"></a>
         <h2>Introduction</h2>
 		<p>
-			In the integrated Human Practices section, we will elaborate on how interaction with stakeholders shapes our project. Make sure to also read how and why we interact with stakeholders in Human Practices. Integrated Human Practices is displayed in two ways one tells you per stakeholder (or event) its main impact that led us to the creation of ΣPathway, the other links all of our human practices efforts together by describing the stakeholders’ or experts’ perceptions of the problem and the solution, ethical, safety and security considerations and how we envision ΣPathway to be applied in the real world.
+			In the integrated Human Practices section, we will elaborate on how interaction with stakeholders shapes our project. Make sure to also read how and why we interact with stakeholders in <router-link to='/HP'>Human Practices</router-link>.. Integrated Human Practices is displayed in two ways one tells you per stakeholder (or event) its main impact that led us to the creation of ΣPathway, the other links all of our human practices efforts together by describing the stakeholders’ or experts’ perceptions of the problem and the solution, ethical, safety and security considerations and how we envision ΣPathway to be applied in the real world.
 		</p>
         <p style="font-weight: bold;">Note: This part is not done yet. Introduction is given above.</p>
 		<figure>
