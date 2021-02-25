@@ -11,7 +11,21 @@
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="app"></div>
+    <div id="app">
+      <div id='loading'></div>
+    </div>
     <!-- built files will be auto injected -->
   </body>
 </html>
+    
+<style type="text/css">
+#loading {
+  position: fixed;
+  left: 0;
+  top: 30%;
+  background: url('~@/assets/home/loading.gif') center center no-repeat #fff;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+}
+</style>
