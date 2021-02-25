@@ -311,9 +311,14 @@ export default {
     }
   },
 
+  created () {
+    document.body.removeChild(document.getElementById('loading'));
+  },
+
   mounted () {
     window.addEventListener('scroll', this.handleScroll, true)
   },
+
   methods: {
     handleScroll () {
       const that = this
