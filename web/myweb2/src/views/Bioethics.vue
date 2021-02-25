@@ -34,7 +34,7 @@
 
 	<section>
 		<a class="anchor1" name="environment" id="environment"></a>
-		<h2>Environment friendly</h2>
+		<h2>Environment Friendly</h2>
 		<p>
 			ZJU_China has always been and will be a team with highly standarded responsiblity in bioethics. This year we introduce a traditional homology‐based system for targeted gene aro1 disruption in <i>P. pastoris</i> ura3Δ1 parent strain according to scheme following below, which blocked biosynthesis of all three aromatic amino acids tyrosine, phenylalanine, and tryptophan, making it an auxotrophic strain which must be grown in supplemented minimal medium. See <router-link to="/Safety">safety</router-link> for more detailed information.
 		</p>
@@ -43,7 +43,7 @@
 
 	<section>
 		<a class="anchor1" name="user" id="user"></a>
-		<h2>User friendly</h2>
+		<h2>User Friendly</h2>
 		<p>
 			When we finally market our ΣPathway product, we will set down a user manual to ensure that all our users are aware of the possible harm of it and the appropriate way to deal with it. Safety warning signs including “Gloves!” Prohibited for under 18” will be applied in product packaging and user brochure. A small portable biological waste bin will be included in our package and we will recommend our user to dump it in the nearest biological waste bin. The product chamber will be entirely sealed to minimize the possibility of leakage.
 		</p>
@@ -52,10 +52,19 @@
 
 	<section>
 		<a class="anchor1" name="Staff" id="Staff"></a>
-		<h2>Staff friendly</h2>
+		<h2>Staff Friendly</h2>
 		<p>
 			All of the laboratory team members in our team will receive detailed safety training before any laboratory work had begun. Basic rules in laboratories that must be applied. Don’t forget to take a look at it in <router-link to="/Safety">safety</router-link>.
 		</p>
+		<p>
+			We hope through joint effort of iGEM community, ethics can be regarded as a common view in the development of synthetic biology.
+		</p>
+	</section>
+	<hr>
+
+	<section>
+		<a class="anchor1" name="con1" id="con1"></a>
+		<h2>Conclusion</h2>
 		<p>
 			We hope through joint effort of iGEM community, ethics can be regarded as a common view in the development of synthetic biology.
 		</p>
@@ -95,18 +104,23 @@ export default {
 
      	},
      	{
-     		name: 'Environment friendly',
+     		name: 'Environment Friendly',
      		id: 'environment'
 
      	},
      	{
-     		name: 'User friendly',
+     		name: 'User Friendly',
      		id: 'user'
 
      	},
      	{
-     		name: 'Staff friendly',
+     		name: 'Staff Friendly',
      		id: 'Staff'
+
+     	},
+     	{
+     		name: 'Conclusion',
+     		id: 'con1'
 
      	},
       ]
