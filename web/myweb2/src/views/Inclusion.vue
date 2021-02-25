@@ -120,12 +120,12 @@ export default {
 
      	},
      	{
-     		name: 'Within IGEM',
+     		name: 'Inclusion Within IGEM',
      		id: 'gem'
 
      	},
      	{
-     		name: 'Within ΣPathway',
+     		name: 'Inclusion Within ΣPathway',
      		id: 'path'
 
      	},
