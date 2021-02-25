@@ -116,7 +116,7 @@
 }
 
 #jumpto{
-	margin: 4px 8px 6px 0px;
+	margin: 4px 12px 6px 0px;
 	color: black;
 	font-family: 'Comic Sans MS','华文细黑';
 }
@@ -162,4 +162,3 @@ export default {
   }
 }
 </script>
-
