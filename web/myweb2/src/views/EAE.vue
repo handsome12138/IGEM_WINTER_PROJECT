@@ -71,15 +71,15 @@
 			<div>
 			<p style="margin-left: 5%;width: 95%;">For schools with electronic facilities, live lectures will be held to best restore the effect of face to face study. With investigation with local educational department and combining with the actual situation of local students, we will work out an feasible live lecture plan. Face-to-face lectures will be given if permitted by authorisation and COVID-19 situation. The broadcasting will also be played by ZJUBTV for educational uses in ZJU.</p></div>
 			<div style="margin-left: 5%;">
-			<img :src="lb" style="width: 155%;height: 70%;margin-top: 15%;" />
+			<img :src="lb" style="width: 165%;height: 70%;margin-top: 15%;" />
 			</div>
 		</div>
 		<h3 style="margin-left: 3%;">Video</h3>
 		<div style="display: flex;width: 90%;">
 			<div>
-			<p style="margin-left: 5%;">The videos for knowledge popularization can be divided into the basic knowledge of biology, synthetic biology two projects, the vedio adapted to different level learner will be made. Through these videos, we integrated daily biology knowledge in all the aspects of children's life, which can be amusing for them to study and we will gradually teach the children knowledge and stimulate their interest in the life sciences when they have certain background knowledge. These videos will be posted in Bilibili and Youtube which are assessible for all.</p></div>
-			<div style="margin-left: 5%;">
-			<img :src="video" style="width: 155%;height: 60%;margin-top: 30%;" />
+			<p style="margin-left: 5%;width: 90%;">The videos for knowledge popularization can be divided into the basic knowledge of biology, synthetic biology two projects, the vedio adapted to different level learner will be made. Through these videos, we integrated daily biology knowledge in all the aspects of children's life, which can be amusing for them to study and we will gradually teach the children knowledge and stimulate their interest in the life sciences when they have certain background knowledge. These videos will be posted in Bilibili and Youtube which are assessible for all.</p></div>
+			<div style="margin-left: 1%;">
+			<img :src="video" style="width: 170%;height: 60%;margin-top: 30%;" />
 			</div>
 		</div>
 		<h3 style="margin-left: 3%;">Education To Public</h3>
