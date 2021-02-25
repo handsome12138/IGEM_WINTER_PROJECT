@@ -302,11 +302,7 @@ controlled by the signal of interest and results in R1 depletion in the bacteria
 		</p>
 		
 		<figure style="display: flex;">
-			<img :src="f81" style="width: 270px;height: 220px;margin-left: 5%;" />
-			<ul style="list-style: none;">
-				<li><img :src="f82" style="width:250px;margin-top: 10%;" /></li>
-				<li><img :src="f83" style="width: 250px;margin-top: 15%;" /></li>
-			</ul>
+			<img :src="f8" style="width: 80%;height: 20%;margin-left: 10%;" />
 			
 		</figure>
 		<figcaption>Figure 11. Both R1 and R2 confer resistance to different antibiotics. Which means the memory system can be rewritten by adding specific antibiotics which adjust the ratio of R1:R2 to the default.</figcaption>
@@ -430,9 +426,7 @@ import f4 from '../assets/design/f4.png'
 import f5 from '../assets/design/f5.png'
 import f6 from '../assets/design/f6.png'
 import f7 from '../assets/design/f7.png'
-import f81 from '../assets/design/81.png'
-import f82 from '../assets/design/82.png'
-import f83 from '../assets/design/83.png'
+import f8 from '../assets/design/f8.png'
 import f9 from '../assets/design/f9.png'
 import f10 from '../assets/design/f10.png'
 import sidenav from '../components/Side_nav'
@@ -455,9 +449,7 @@ export default {
       f5: f5,
       f6: f6,
       f7: f7,
-      f81: f81,
-      f82: f82,
-      f83: f83,
+      f8: f8,
       f9: f9,
       f10: f10,
       scroll: scroll,
@@ -500,3 +492,4 @@ export default {
   }
 }
 </script>
+
