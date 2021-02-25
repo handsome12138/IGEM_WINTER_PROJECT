@@ -5,6 +5,7 @@
                 <!-- <a class="nav-link" :href="'#' + nav.id">{{nav.name}}</a> -->
                 <div class="rail">
                     <!-- <img :src="side" style="width: 20%;" /> -->
+                    <img :src="time" style="height: 40px;width: auto;" />
                     <a class="nav-link" @click="jump_anchor(nav.id)">{{nav.name}}</a>
                 </div>            
                 
@@ -19,7 +20,7 @@
 
 <style lang="scss" scoped>
 .mynav{
-	flex: 0 0 20%;
+    flex: 0 0 20%;
     padding-top:5%;
     -ms-flex: 0 0 20%;
     -moz-flex: 0 0 20%;/* Firefox */
@@ -43,7 +44,8 @@
                 color:black
             }
             &:hover, &:active{
-                color: yellowgreen
+                color: yellowgreen;
+                font-weight: bold;               
             }
         }
     }
@@ -51,19 +53,21 @@
 
 .rail{
     position: relative;
+    display: flex;
+    height: 40px;
 }
+
 </style>
 
 <script>
-import side from '../assets/side.png'
-
+import time0 from '../assets/time0.png'
 export default {
   props: [
     'navs'
   ],
   data () {
     return {
-        side: side
+        time: time0
     }
   },
   methods: {
@@ -71,10 +75,11 @@ export default {
       console.log(id)
       const downloadEle = document.querySelector('#mynav')
       if (downloadEle) {
-        downloadEle.scrollIntoView(true) // true 是默认的
+        downloadEle.scrollIntoView({behavior: "smooth"}) // true 是默认的
       }
-      document.querySelector('#' + id).scrollIntoView(true)
+      document.querySelector('#' + id).scrollIntoView({behavior: "smooth"})  
     }
   }
+
 }
 </script>
