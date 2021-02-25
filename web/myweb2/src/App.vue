@@ -81,7 +81,7 @@
     <br style="background-color: white;">
     <myfooter> </myfooter>
     <!-- <myfooter v-bind:class="{'bottom-fix-footer': isnotFull}"> </myfooter> -->
-    <div id="goup" style="display: inline;" v-if="isshow">
+    <div id="goup" style="display: inline;" v-if="isshow" title="Back to top">
       <img :src="up" style="width: 85%;transform: rotate(-30deg);" @click="backtop" />
     </div>
   </div>
@@ -99,7 +99,7 @@
 }
 
 #nav{
-  background-color: #87CEEB;
+  background-color: #009ACD;
   position: fixed;
   height: 105px;
   width: 100%;
@@ -166,7 +166,7 @@ h2{
   font-size: 1.9rem !important;
 }
 
-h3{
+h3, h4{
   padding-top: 3%;
 }
 
