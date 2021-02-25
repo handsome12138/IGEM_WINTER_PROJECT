@@ -40,12 +40,12 @@
 			<img :src="chip1" id="chip"/>
 			<img :src="chip2" id="chip"/> 
 		</figure>
-		<figcaption>Figure 1 Microchip</figcaption>
+		<figcaption>Figure 1. Microchip</figcaption>
 		<figure>
 			<img :src="pump1" id="chip"/>
 			<img :src="pump2" id="chip"/> 
 		</figure>
-		<figcaption>Figure 2 Micropump</figcaption>
+		<figcaption>Figure 2. Micropump</figcaption>
 		<h3>The overall design of the chip is divided into four layers</h3>
 		<h4>From top to bottom</h4>
 		<ol>
@@ -70,32 +70,32 @@
 				<figure>
 					<img :src="screw1" id="screw" /> 
 				</figure>
-				<figcaption>Figure 3 Screw</figcaption>
+				<figcaption>Figure 3. Screw</figcaption>
 			</li>
 			<li><p>Fixing screws for connecting four layers</p>
 				<figure>
 					<img :src="screw2" id="screw" /> 
 				</figure>
-				<figcaption>Figure 4 Fixing Screw</figcaption>
+				<figcaption>Figure 4. Fixing Screw</figcaption>
 			</li>
 			<li><p>Sliding structure to control Protection layer 1</p>
 				<figure>
 					<img :src="slide" id="screw" /> 
 				</figure>
-				<figcaption>Figure 5 Sliding structure</figcaption>
+				<figcaption>Figure 5. Sliding structure</figcaption>
 			</li>
 			<li><p>Insert for connection between chips</p>
 				<figure>
 					<img :src="inserted" style="width: 60%;" /> 
 				</figure>
-				<figcaption>Figure 6 Connected Chips</figcaption>
+				<figcaption>Figure 6. Connected Chips</figcaption>
 			</li>
 		</ol>
 		<h3>The overall design of the micropump is as follows:</h3>
 		<figure>
 			<img :src="opump" style="width: 50%;" /> 
 		</figure>
-		<figcaption>Figure 7 Overall Design of Micropump</figcaption>
+		<figcaption>Figure 7. Overall Design of Micropump</figcaption>
 		<h4>The main parts of micropump are as follows</h4>
 		<ol>
 			
@@ -190,7 +190,7 @@ and flow through the microchannel in a continuous way.
 		<figure>
 			<img :src="future" style="width: 60%;" />
 		</figure>
-		<figcaption>Figure 1 Future Design</figcaption>
+		<figcaption>Figure 8. Future Design</figcaption>
 		<p>
 			The cell and pipeline layer is divided into five parts from left to right, and the number of cells in each part can be planned by itself, because the connection and output between each part are unified. The chip designed on this basis can fre ely choose single input / double input / multi input, and the middle logic gate can also be designed according to the path.
 		</p>
