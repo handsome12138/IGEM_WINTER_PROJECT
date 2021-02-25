@@ -225,7 +225,7 @@ h3, h4{
   display: none;
   position: fixed;
   margin-top: 75px;
-  margin-left: 22%;
+  margin-left: 17%;
   padding: 0;
   background-color: black;
 }

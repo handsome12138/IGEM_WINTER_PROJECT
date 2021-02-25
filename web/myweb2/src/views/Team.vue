@@ -6,8 +6,8 @@
                 <img :src="member.avatar" style="width:100%">
                 <b>{{member.name}}</b>
                 <p>{{member.info}}</p>
-                <p><b>Contribution:</b></p>
-                <p>{{member.attr}}</p>
+                <p><b>Contribution:</b>
+                {{member.attr}}</p>
             </div>
         </div>
     </div>
