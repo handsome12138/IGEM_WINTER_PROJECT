@@ -42,7 +42,7 @@
 			The iGEM foundation acknowledges the values of equity, equality, diversity and inclusivity within the scientific community, and has therefore developed an open community in which they encourage collaboration. Since 2013, iGEM has formed a committee focusing on diversity and inclusivity. And for us, ZJU-CHINA, more work needs to be done to ensure an inclusive and welcoming community in China since China has a highly homologous society. 
 		</p>
 		<figure>
-			<img :src="igem" style="width: 60%" />
+			<img :src="igem" style="width: 70%" />
 		</figure>
 	</section>
 	<hr>
@@ -62,6 +62,10 @@
 		<p>
 			We are a team of members with individual and shared values, different living habits and educational background. During our winter project, we quickly realised that this can be an advantage for this team. Throughout the winter project we created an inclusive atmosphere where all team members can freely express their ideas, and make them have a feeling of belonging, and our values are accommodated to the best of our abilities. We do this to ensure that everyone can learn as much as they can from the iGEM experience and get the most out of our project. 
 		</p>
+		<figure>
+			<img :src="team1" style="width: 40%" />
+			<img :src="team2" style="width: 39%" />
+		</figure>
 	</section>
 	<hr>
 
@@ -101,6 +105,8 @@
 <script>
 import equal from '../assets/hp/equal.jpg'
 import igem from '../assets/hp/igem.jpg'
+import team1 from '../assets/hp/team1.jpg'
+import team2 from '../assets/hp/team2.jpg'
 import sidenav from '../components/Side_nav'
 
 
@@ -113,6 +119,8 @@ export default {
     return {
       equal: equal,
       igem: igem,
+      team1: team1,
+      team2: team2,
       navs:[
      	{
      		name: 'Background',
