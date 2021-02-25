@@ -133,6 +133,12 @@ main {
 figure,figcaption{
 	text-align: center;
 	padding-bottom: 10px;
+	
+}
+
+figcaption{
+	font-weight: 200 !important;
+	font-size: 0.85rem !important;
 }
 
 main section {
